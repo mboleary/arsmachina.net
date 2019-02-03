@@ -4,5 +4,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://mboleary.gitlab.io//index.html</loc><lastmod>2019-01-10</lastmod><priority>1.0</priority></url>
+<url><loc>https://mboleary.gitlab.io//err/403.html</loc><lastmod>2019-02-02</lastmod><priority>1.0</priority></url>
+<url><loc>https://mboleary.gitlab.io//err/404.html</loc><lastmod>2019-02-02</lastmod><priority>1.0</priority></url>
+<url><loc>https://mboleary.gitlab.io//index.html</loc><lastmod>2019-02-02</lastmod><priority>1.0</priority></url>
+<url><loc>https://mboleary.gitlab.io//template_eventTimeDate.html</loc><lastmod>2019-02-02</lastmod><priority>1.0</priority></url>
 </urlset>
