@@ -1,7 +1,7 @@
 <!Doctype html>
 <html>
   <head>
-    <title> Testing Events </title>
+    <title> ArsMachina - Art of the (Computer) Machine </title>
     <link rel="stylesheet" type="text/css" href="style/main.css">
     <link rel="stylesheet" type="text/css" href="style/header.css">
     <link rel="stylesheet" type="text/css" href="style/footer.css">
@@ -9,14 +9,19 @@
     <link rel="stylesheet" type="text/css" href="style/cards.css">
     <link rel="stylesheet" type="text/css" href="style/article.css">
     <link rel="stylesheet" type="text/css" href="style/misc.css">
+    <link rel="stylesheet" type="text/css" href="style/print.css">
     <meta charset="UTF-8">
+    <meta name="description" content="Blank Template Page">
+    <meta name="author" content="Webtemplate">
+    <meta name="generator" content="none">
+    <meta name="keywords" content="keywords, go, here">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#00121a"> <!-- Colored Chrome Mobile Tabs! -->
     <link rel="icon" type="image/png" href="/favicon.png">
   </head>
   <body>
     <!-- This is the Header of the Page -->
-    <header>
+    <header class="">
       <div id="title">
         <h1><span class="black">Ars</span><span class="blue">Machina</span></h1>
         <p> Art of the (Computer) Machine! </p>
@@ -27,85 +32,118 @@
           <li>
             <a href="/"> Home </a>
           </li>
-          <li><span> ... </span></li>
-          <li><span> ... </span></li>
-          <li><span> ... </span></li>
-          <li><span> ... </span></li>
+          <li><a href="aboutme.html"> About Me </a></li>
+          <li class="dropdown">
+            <a href="/#projects"> Projects </a>
+            <div class="dropdownContent">
+              <a href="p1.html"> Project 1 </a>
+              <a href="p2.html"> Project 2 </a>
+              <a href="p3.html"> Project 3 </a>
+              <a href="p4.html"> Project 4 </a>
+            </div>
+          </li>
+          <li><a href="code.html"> Code </a></li>
+          <li><a href="contact.html"> Contact Me </a></li>
         </ul>
       </div>
     </header>
     
     <!-- this is the content of the page -->
     <main>
-<!-- Temporary for while the website is being built -->
 
-<p><section class="flashcard">
+<section class="flashcard grayscale">
   <div class="container">
-    <h1> 🌵🌟🍟 <br> Hello World! <br> 🕶🌮🍙</h1>
+    <h1> Brady O'Leary </h1>
     <hr>
-    <p> This is a Work in Progress. </p>
+    <p> MART380 Documentation Website (For Now) </p>
   </div>
 </section>
-<section>
-  <div class="container">
-    <h1> Hello ! </h1>
-    <p> This website is a work-in-progress. I am setting up the workflow to generate content on this website using a static site generator. More to come soon! </p>
+<span id="projects"></span>
+
+<section class="flashcard img" style=" background-image: url('/asset/p1_bg.jpg');">
+  <div class="container light">
+    <h1> Project 1 - What if the Matrix was real? </h1>
+    <hr>
+    <p> What if the Matrix is real? What if all of humanity is living in a simulation? There are millions of related questions that we can ask ourselves related to these questions. While I don’t believe that we live in a simulation, as depicted in the popular move, The Matrix, I do believe that we have some elements of it in our daily lives. <br> <a class="button" href="p1.html"> Read More ⮞ </a> </p>
+    
   </div>
-</section></p>
+</section>
+<section class="flashcard img" style=" background-image: url('/asset/p2_bg.jpg');">
+  <div class="container light">
+    <h1> Project 2 - Why aren't we all using free Software? </h1>
+    <hr>
+    <p> Why aren't we all using Free and Open Source Software? Early Computers back in the 1950s to the 1970s often had the source code distributed with their programs, so why is it that we cannot continue this tradition? There certainly is a profound movement back into using free and open source software, which is getting better by the day, backed by an active software developer community. <br> <a class="button" href="p2.html"> Read More ⮞ </a> </p>
+    
+  </div>
+</section>
+<section class="flashcard img" style=" background-image: url('/asset/p3_bg.png');">
+  <div class="container light">
+    <h1> Project 3 - What if there was an Alternate Universe? </h1>
+    <hr>
+    <p> What if, in a world devoid of color, there was an alternate universe with splashes of color? How would you escape to this world? <br> <a class="button" href="p3.html"> Read More ⮞ </a> </p>
+    
+  </div>
+</section>
+<section class="flashcard img" style=" background-image: url('/asset/p4_bg.jpg');">
+  <div class="container light">
+    <h1> Project 4 - What if you can make music with just your hands? </h1>
+    <hr>
+    <p> What if you could make music just by waving your hands in front of a sensor? <br> This system makes music based on the position of your hands in front of a pair of ultrasonic sensors using pentationic scales. <br> <a class="button" href="p4.html"> Read More ⮞ </a> </p>
+    
+  </div>
+</section>
+<section class="flashcard blue-green" style="">
+  <div class="container ">
+    <h1> About Me </h1>
+    <hr>
+    <p> I am Brady O’Leary, a Senior Computer Science Major, graduating May 11th, 2019 from the University of South Carolina. <br> <a class="button" href="aboutme.html"> Read More ⮞ </a> </p>
+    
+  </div>
+</section>
+<section class="flashcard grayscale-light" style="">
+  <div class="container ">
+    <h1> About This Website </h1>
+    <hr>
+    <p> Information about this website. <br> <a class="button" href="aboutsite.html"> Read More ⮞ </a> </p>
+    
+  </div>
+</section>
+
     </main>
+    
     <!-- this is the footer of the page -->
     <footer>
       <div id="footer-top">
         <div class="container">
           <dl>
-            <dt class="green"> <a href="https://cse.sc.edu"> Section Title </a> </dt>
-            <dd><a href="https://sc.edu"> link </a></dd>
-            <dd> link </dd>
-            <dd> link </dd>
-            <dd> link </dd>
-            <dd> link </dd>
-            <dd> link </dd>
+            <dt class="green"> <a href="/"> Portfolio </a> </dt>
+            <dd><a href="/"> Home </a></dd>
+            <dd> <a href="aboutme.html"> About Me </a> </dd>
+            <dd> <a href="/#projects"> Projects </a> </dd>
+            <dd> <a href="code.html"> Code </a> </dd>
           </dl>
           <dl class="column">
-            <dt class="red"> <a href="https://cse.sc.edu"> Section Title </a> </dt>
-            <dd><a href="https://sc.edu"> link </a></dd>
-            <dd> link </dd>
-            <dd> link </dd>
-            <dd> link </dd>
-            <dd> link </dd>
-            <dd> link </dd>
+            <dt class="blue"> <a href="contact.html"> Contact Info </a> </dt>
+            <dd><a href="contact.html#form"> Contact Me </a></dd>
           </dl>
           <dl class="column">
-            <dt class="blue"> <a href="https://cse.sc.edu"> Section Title </a> </dt>
-            <dd><a href="https://sc.edu"> link </a></dd>
-            <dd> link </dd>
-            <dd> link </dd>
-            <dd> link </dd>
-            <dd> link </dd>
-            <dd> link </dd>
-          </dl>
-          <dl class="column">
-            <dt class="orange"> <a href="https://cse.sc.edu"> Section Title </a> </dt>
-            <dd><a href="https://sc.edu"> link </a></dd>
-            <dd> link </dd>
-            <dd> link </dd>
-            <dd> link </dd>
-            <dd> link </dd>
-            <dd> link </dd>
+            <dt class="red"> <a href="aboutsite.html"> Source Code </a> </dt>
+            <dd><a href="https://github.com/Nesdood007/WebsiteTemplate"> Website Template </a></dd>
+            <dd><a href="https://gitlab.com/mboleary/mboleary.gitlab.io"> Portfolio Source Code </a> </dd>
           </dl>
         </div>
       </div>
       <div id="footer-bottom">
         <div class="left">
           <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
-          <a href="https://gitlab.com/mboleary"><img alt="Gitlab" src="/img/gitlab.svg" style="width: auto; height: 32px;"></a>
-          <a href="https://github.com/Nesdood007/ssgtools"><img alt="Github" src="/img/github.png"></a>
+          <a href="https://gitlab.com/mboleary/mboleary.gitlab.io"><img alt="Gitlab" src="img/gitlab.svg" style="width: auto; height: 32px;"></a>
+          <a href="https://github.com/Nesdood007/WebsiteTemplate"><img alt="Github" src="img/github.png"></a>
         </div>
         <div>
-          <p> © 2019 - Brady O'Leary (<a href="https://gitlab.com/mboleary/mboleary.gitlab.io"> View Source </a>) </p>
+          <p> © 2019 - Brady O'Leary </p>
         </div>
         <div class="right">
-          <a class="email" href="https://gitlab.com/mboleary/mboleary.gitlab.io/issues/service_desk">Contact Webmaster</a>
+          <a class="email" href="mailto:mboleary@email.sc.edu?subject=website">Contact Webmaster</a>
         </div>
       </div>
     </footer>

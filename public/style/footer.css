@@ -161,7 +161,7 @@ footer div#footer-bottom div p {
 }
 
 footer div#footer-bottom div a.email {
-  background-image: url('/img/mail_light.svg');
+  background-image: url('../img/mail_light.svg');
   background-repeat: no-repeat;
   background-size: contain;
   padding-left: 1.5em;

@@ -1,0 +1,194 @@
+<!Doctype html>
+<html>
+  <head>
+    <title> ArsMachina - Art of the (Computer) Machine </title>
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link rel="stylesheet" type="text/css" href="style/header.css">
+    <link rel="stylesheet" type="text/css" href="style/footer.css">
+    <link rel="stylesheet" type="text/css" href="style/content.css">
+    <link rel="stylesheet" type="text/css" href="style/cards.css">
+    <link rel="stylesheet" type="text/css" href="style/article.css">
+    <link rel="stylesheet" type="text/css" href="style/misc.css">
+    <link rel="stylesheet" type="text/css" href="style/print.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Blank Template Page">
+    <meta name="author" content="Webtemplate">
+    <meta name="generator" content="none">
+    <meta name="keywords" content="keywords, go, here">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#00121a"> <!-- Colored Chrome Mobile Tabs! -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+  </head>
+  <body>
+    <!-- This is the Header of the Page -->
+    <header class="">
+      <div id="title">
+        <h1><span class="black">Ars</span><span class="blue">Machina</span></h1>
+        <p> Art of the (Computer) Machine! </p>
+      </div>
+      <div id="menu">
+        <ul>
+          <!-- For Dropdown Menus: the <li> element must be in class "dropdown" -->
+          <li>
+            <a href="/"> Home </a>
+          </li>
+          <li><a href="aboutme.html"> About Me </a></li>
+          <li class="dropdown">
+            <a href="/#projects"> Projects </a>
+            <div class="dropdownContent">
+              <a href="p1.html"> Project 1 </a>
+              <a href="p2.html"> Project 2 </a>
+              <a href="p3.html"> Project 3 </a>
+              <a href="p4.html"> Project 4 </a>
+            </div>
+          </li>
+          <li><a href="code.html"> Code </a></li>
+          <li><a href="contact.html"> Contact Me </a></li>
+        </ul>
+      </div>
+    </header>
+    
+    <!-- this is the content of the page -->
+    <main>
+<p><section class="titlecard img" style="background-image: url('/asset/p3_bg.png');">
+  <div class="container light">
+    <h1> Project 3 - What if there was an Alternate Universe? </h1>
+  </div>
+</section></p>
+
+<p><div class="container"></p>
+
+<h1 id="Link%20to%20the%20Game%20on%20Itch.io">Link to the Game on Itch.io</h1>
+
+<p><a href="https://mboleary-usc.itch.io/escape">https://mboleary-usc.itch.io/escape</a></p>
+
+<p><a href="https://github.com/Nesdood007/escapegame">Source Code on Github</a></p>
+
+<h1 id="Project%20Information">Project Information</h1>
+
+<p>A Unity game where you must escape from the world you are currently in.</p>
+
+<h2 id="Introduction">Introduction</h2>
+
+<p>This is a First-person styled game where you must figure out how to go from world to world.</p>
+
+<h2 id="Directories">Directories</h2>
+
+<p><code>/Assets</code> - The Assets Directory to include in a new Unity Project</p>
+
+<p><code>/Build</code> - Prebuilt binaries for Linux, MacOSX, Windows, and WebGL</p>
+
+<h2 id="Controls">Controls</h2>
+
+<p><strong>Mouse</strong> - Look Around</p>
+
+<p><strong>Left Mouse Button</strong> - Shoot a Projectile. The projectile will glow all colors that it can interact with</p>
+
+<p><strong>WASD</strong> - Move Around</p>
+
+<p><strong>SHIFT</strong> - Run</p>
+
+<h2 id="How%20to%20build">How to build</h2>
+
+<p>In order to build this project, you should create a New Unity Project, and then import the assets from this assets directory into your project. It should contain all scripts and resources needed to test out the project.</p>
+
+<h2 id="Motivation">Motivation</h2>
+
+<p>Since this project used a lot of scripts, I felt that it would be good to have this project be open-source to help other students that may take this class in the future see how C# code is written, and how it can be used to make a cool game.</p>
+
+<p>There are scripts to spawn in enemies, keep track of colors, and change the music when the player collects a tessaract, among other things.</p>
+
+<hr/>
+
+<h1 id="Walkthrough">Walkthrough</h1>
+
+<p>When this game was demoed in class, I think that the objective of hte game wasn&#39;t initially obvious enough, so I have made a walkthrough to help people play through it.</p>
+
+<h2 id="Main%20Objective">Main Objective</h2>
+
+<p>The entire world is governed by collecting colored cubes, giving the player the ability to interact with other objects that also are the same color.</p>
+
+<h2 id="Objects">Objects</h2>
+
+<figure>
+  <img src="/asset/p3_1.png">
+  <figcaption> This is a Tessaract Piece. Your objective is to collect all four of these. They are all different colors. </figcaption>
+</figure>
+
+<figure>
+  <img src="/asset/p3_2.png">
+  <figcaption> This is a Colored Switch. You touch this to make the miniature capsule rotate, which signifies that the state of the switch has changed. These can make walls disappear, or make other things happen. There is also a colorless variety.</figcaption>
+</figure>
+
+<figure>
+  <img src="/asset/p3_3.png">
+  <figcaption> Surrounding the tree are Colored Enemies. You must have collected the cooresponding color of tessaract to make these disappear. Pro Tip, they are actually harmless and were placed simply to be a nuisance. (Perhaps you can modify them to be harmful to the player?) </figcaption>
+</figure>
+
+<h2 id="Areas">Areas</h2>
+
+<h3 id="Light%20World%20(First%20Scene)">Light World (First Scene)</h3>
+
+<p>You, the player are in a cube. You must touch the switch to escape this bow, but you aren&#39;t finished escaping yet! Go and investigate that suspicially large and dark tree in the middle of the area.</p>
+
+<figure>
+  <img src="/asset/p3_bg.png">
+  <figcaption> This is the tree that you should go toward. </figcaption>
+</figure>
+
+<h3 id="Darker%20World%20(Second%20Scene)">Darker World (Second Scene)</h3>
+
+<p>You have been teleported to a darker version of the world you were just in. Off in the distance, you should see colored Tessaract Cubes (as seen above) in each corner of the area. You can collect them in any order that you choose. When you collect all 4, you will be teleported to another area.</p>
+
+<h3 id="Darkest%20World%20(Last%20Scene)">Darkest World (Last Scene)</h3>
+
+<p>You should see a lighter tree in the middle of the field, like the first one that you initially touched to get to the Dark World. Go touch that tree!</p>
+
+<figure>
+  <img src="/asset/p3_3.png">
+  <figcaption> This is the tree that you should go toward. </figcaption>
+</figure>
+
+<p>After this you are teleported back to the Light World. You can go around again, if you want, or try to escape a different way in the Darkest World. <em>Hint: Then enemies don&#39;t always stay on the ground!</em>. Also this breaks the game, FYI.</p>
+
+<p></div></p>
+    </main>
+    
+    <!-- this is the footer of the page -->
+    <footer>
+      <div id="footer-top">
+        <div class="container">
+          <dl>
+            <dt class="green"> <a href="/"> Portfolio </a> </dt>
+            <dd><a href="/"> Home </a></dd>
+            <dd> <a href="aboutme.html"> About Me </a> </dd>
+            <dd> <a href="/#projects"> Projects </a> </dd>
+            <dd> <a href="code.html"> Code </a> </dd>
+          </dl>
+          <dl class="column">
+            <dt class="blue"> <a href="contact.html"> Contact Info </a> </dt>
+            <dd><a href="contact.html#form"> Contact Me </a></dd>
+          </dl>
+          <dl class="column">
+            <dt class="red"> <a href="aboutsite.html"> Source Code </a> </dt>
+            <dd><a href="https://github.com/Nesdood007/WebsiteTemplate"> Website Template </a></dd>
+            <dd><a href="https://gitlab.com/mboleary/mboleary.gitlab.io"> Portfolio Source Code </a> </dd>
+          </dl>
+        </div>
+      </div>
+      <div id="footer-bottom">
+        <div class="left">
+          <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+          <a href="https://gitlab.com/mboleary/mboleary.gitlab.io"><img alt="Gitlab" src="img/gitlab.svg" style="width: auto; height: 32px;"></a>
+          <a href="https://github.com/Nesdood007/WebsiteTemplate"><img alt="Github" src="img/github.png"></a>
+        </div>
+        <div>
+          <p> © 2019 - Brady O'Leary </p>
+        </div>
+        <div class="right">
+          <a class="email" href="mailto:mboleary@email.sc.edu?subject=website">Contact Webmaster</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

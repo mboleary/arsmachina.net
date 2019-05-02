@@ -5,42 +5,42 @@
 /* Fonts */
 @font-face {
   font-family: title;
-  src: url('/font/LeagueMono-ExtraBold.woff2');
+  src: url('../font/LeagueMono-ExtraBold.woff2');
 }
 
 @font-face {
   font-family: menu;
-  src: url('/font/LeagueMono-Regular.woff2');
+  src: url('../font/LeagueMono-Regular.woff2');
 }
 
 @font-face {
   font-family: bold;
-  src: url('/font/LeagueMono-Bold.woff2');
+  src: url('../font/LeagueMono-Bold.woff2');
 }
 
 @font-face {
   font-family: light;
-  src: url('/font/LeagueMono-Light.woff2');
+  src: url('../font/LeagueMono-Light.woff2');
 }
 
 @font-face {
   font-family: medium;
-  src: url('/font/LeagueMono-Medium.woff2');
+  src: url('../font/LeagueMono-Medium.woff2');
 }
 
 @font-face {
   font-family: semibold;
-  src: url('/font/LeagueMono-SemiBold.woff2');
+  src: url('../font/LeagueMono-SemiBold.woff2');
 }
 
 @font-face {
   font-family: thin;
-  src: url('/font/LeagueMono-Thin.woff2');
+  src: url('../font/LeagueMono-Thin.woff2');
 }
 
 @font-face {
   font-family: ultralight;
-  src: url('/font/LeagueMono-UltraLight.woff2');
+  src: url('../font/LeagueMono-UltraLight.woff2');
 }
 
 /* Color Variables */
@@ -117,6 +117,7 @@ main.sidebar {
 .container {
   margin: 0% 20%;
   overflow: auto;
+  width: 60%;
 }
 
 .container.left {
@@ -127,6 +128,7 @@ main.sidebar {
 @media only screen and (max-width: 767px) {
   .container {
     margin: 0% 1%;
+    width: 98%;
   }
 }
 
@@ -228,6 +230,11 @@ main h6 {
   padding: 1px 1px 1px 10px;
 }
 
+main *.no-line {
+  border-left: 0;
+  padding: 0;
+}
+
 main .invert {
   background-color: #333;
   color: white;
@@ -268,6 +275,22 @@ main figure figcaption {
   padding: 5px 5px 5px 20px;
   font-family: ultralight;
   border-left: 5px solid #004966;
+}
+
+main figure.white {
+  background-color: white;
+  color: #333;
+  font-family: bold;
+  padding: 5px;
+  margin: 0;
+}
+
+main figure.white figcaption {
+  color: #333;
+  font-family: bold;
+  border-left: 0;
+  text-align: center;
+  padding: 0;
 }
 
 img.noresize {
@@ -468,4 +491,22 @@ samp {
 dl dt {
   font-family: semibold;
 }
+
+/* BEGIN Text Alignment */
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+/* END Text Alignment */
+
+/* BEGIN Content Indentation */
+.indent {
+  margin-left: 3em;
+}
+/* END Content Indentation */
 

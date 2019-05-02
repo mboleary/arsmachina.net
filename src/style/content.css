@@ -44,40 +44,7 @@ main div.ts.err h1 {
 }
 /* END Text Sections */
 
-/* For Code Displays */
-main pre {
-  margin: 0px 0px 0px 10px;
-  counter-reset: line; /* Counter used for Code */
-  border-left: 1px solid gray;
-  background-color:#eee;
-  border-left: 5px solid #2682A6;
-  margin: 5px 0px;
-  padding: 1em;
-  white-space: pre-wrap;
-  font-family: ultralight;
-  color: #2682A6; /* For anything not in the code */
-}
-
-main pre code {
-  counter-increment: line;
-  word-wrap: break-word;
-  padding: .5em;
-  font-family: light;
-  line-height: 1.5rem;
-  color: black;
-  background-color: transparent;
-}
-
-main pre code:before {
-  content: counter(line);
-  -webkit-user-select: none;
-  border-right: 1px solid #777;
-  color: #777;
-  display: inline-block;
-  padding:0 0.5em;
-  margin-right: .5em;
-}
-/* END Code Display Box */
+/* NOTE: CODE DISPLAYS REMOVED IN THIS TEMPLATE */
 
 /* Block for Date / Time / Location Descriptors in a document */
 
@@ -88,7 +55,8 @@ main pre code:before {
   font-size: 1.5em;
   background-image: url("/img/clock.svg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 1em 1em;
+  background-position: center left;
   padding: 0 0 0 1.5em;
 }
 
@@ -100,7 +68,8 @@ main pre code:before {
   font-size: 1.5em;
   background-image: url("/img/calendar.svg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 1em 1em;
+  background-position: center left;
   padding: 0 0 0 1.5em;
 }
 
@@ -111,7 +80,8 @@ main pre code:before {
   font-size: 1.5em;
   background-image: url("/img/map.svg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 1em 1em;
+  background-position: center left;
   padding: 0 0 0 1.5em;
 }
 
@@ -122,9 +92,58 @@ main pre code:before {
   font-size: 1.5em;
   background-image: url("/img/download.svg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 1em 1em;
+  background-position: center left;
   padding: 0 0 0 1.5em;
   border-bottom: 1px solid #333;
 }
 
 /* END Time/Date/Location/Downloads Block */
+
+/* START Grid Block */
+
+/* TODO Change number of columns based on screen width */
+.gridContainer {
+	display: grid;
+	width: 100%;
+	grid-gap: 1em;
+	grid-template-columns: repeat(4, 1fr);
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.gridContainer .title {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+/* ROWxCOL */
+.g_1x1 {
+	background-color: white;
+	color: #333;
+	grid-row: span 1;
+	grid-column: span 1;
+}
+
+.g_2x1 {
+	background-color: white;
+	color: #333;
+	grid-row: span 2;
+	grid-column: span 1;
+}
+
+.g_1x2 {
+	background-color: white;
+	color: #333;
+	grid-row: span 1;
+	grid-column: span 2;
+}
+
+.g_2x2 {
+	background-color: white;
+	color: #333;
+	grid-row: span 2;
+	grid-column: span 2;
+}
+
+/* END Grid Block */

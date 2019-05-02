@@ -1,6 +1,15 @@
+./aboutme.md
+./aboutsite.md
+./code.md
+./contact.md
+./err/401.html
 ./err/403.html
 ./err/404.html
-./index.md
+./err/500.html
+./p1.md
+./p2.md
+./p3.md
+./p4.md
 ./style/article.css
 ./style/cards.css
 ./style/content.css
@@ -9,5 +18,5 @@
 ./style/header.css
 ./style/main.css
 ./style/misc.css
+./style/print.css
 ./style/sharebar.css
-./template_eventTimeDate.html
