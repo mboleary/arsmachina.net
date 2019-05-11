@@ -137,7 +137,7 @@ section.titlecard hr {
 
 /* Use Inline Styling to replace the background image */
 section.flashcard.img, section.titlecard.img {
-  background-image: url("temp/bg1.jpg"); /* This is a Demonstration Image. TODO Remove this when finalized */
+  background-image: url("/temp/bg1.jpg"); /* This is a Demonstration Image. TODO Remove this when finalized */
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -197,6 +197,12 @@ section.flashcard.grayscale-light, section.titlecard.grayscale-light {
   background: rgb(255,255,255);
   background: linear-gradient(96deg, rgba(255,255,255,1) 0%, rgba(159,159,159,1) 100%);
   color: #333;
+}
+
+section.flashcard.garnet, section.titlecard.garnet {
+  background: rgb(36,0,0);
+  background: linear-gradient(82deg, rgba(36,0,0,1) 0%, rgba(115,0,10,1) 35%, rgba(161,119,119,1) 100%);
+  color: white;
 }
 
 /* END flashcard and titlecard styling */
