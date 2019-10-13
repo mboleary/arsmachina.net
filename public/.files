@@ -18,9 +18,7 @@
 ./font/LeagueMono-ExtraBold.woff2
 ./p4.md
 ./code.md
-./aboutme.md
 ./contact.md
-./aboutsite.md
 ./resume/index.html
 ./resume/current.pdf
 ./img/chevron-bottom.svg
@@ -48,6 +46,8 @@
 ./asset/p3_bg.png
 ./p1.md
 ./p2.md
+./content/about/aboutme.md
+./content/about/aboutsite.md
 ./p3.md
 ./err/401.html
 ./err/404.html
