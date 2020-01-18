@@ -1,0 +1,339 @@
+<!Doctype html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/style/main.css">
+    <link rel="stylesheet" type="text/css" href="/style/header.css">
+    <link rel="stylesheet" type="text/css" href="/style/footer.css">
+    <link rel="stylesheet" type="text/css" href="/style/content.css">
+    <link rel="stylesheet" type="text/css" href="/style/cards.css">
+    <link rel="stylesheet" type="text/css" href="/style/article.css">
+    <link rel="stylesheet" type="text/css" href="/style/misc.css">
+    <link rel="stylesheet" type="text/css" href="/style/print.css">
+    <link rel="stylesheet" type="text/css" href="/style/navbar.css">
+    <link rel="stylesheet" type="text/css" href="/style/linkbuttons.css">
+    <link rel="stylesheet" type="text/css" href="/style/tag.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Index ">
+    <meta name="author" content="Webtemplate">
+    <meta name="generator" content="Zola">
+    <meta name="keywords" content="keywords, go, here">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#00121a"> <!-- Colored Chrome Mobile Tabs! -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    
+</head>
+<body>
+    
+        
+            <header class="page-header">
+                <div class="title">
+                    <h1><span class="accent-1">Ars</span><span class="accent-3">Machina</span></h1>
+                    <p> Art of the (Computer) Machine </p>
+                </div>
+                <div class="menu">
+                    <ul>
+                        
+                        
+                            <li >
+                                <!-- @TODO Add class="current" -->
+                                <a href="&#x2F;">Home</a>
+                                
+                            </li>
+                        
+                            <li >
+                                <!-- @TODO Add class="current" -->
+                                <a href="&#x2F;projects">Projects</a>
+                                
+                            </li>
+                        
+                            <li >
+                                <!-- @TODO Add class="current" -->
+                                <a href="&#x2F;about">About</a>
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            </header>
+        
+        <main>
+            
+
+<h1> Tags Single Template </h1>
+
+<p> This is still in progress </p>
+
+<hr>
+
+{
+  "config": {
+    "base_url": "https://arsmachina.net",
+    "theme": null,
+    "title": null,
+    "description": null,
+    "default_language": "en",
+    "languages": [],
+    "translations": {},
+    "highlight_code": true,
+    "highlight_theme": "base16-ocean-dark",
+    "generate_rss": false,
+    "rss_limit": null,
+    "hard_link_static": false,
+    "taxonomies": [
+      {
+        "name": "tags",
+        "paginate_by": null,
+        "paginate_path": null,
+        "rss": true,
+        "lang": "en"
+      },
+      {
+        "name": "categories",
+        "paginate_by": null,
+        "paginate_path": null,
+        "rss": true,
+        "lang": "en"
+      }
+    ],
+    "compile_sass": true,
+    "build_search_index": true,
+    "ignored_content": [],
+    "extra_syntaxes": [],
+    "extra": {},
+    "build_timestamp": 1579320778
+  },
+  "current_path": "/categories/projects",
+  "current_url": "https://arsmachina.net/categories/projects/",
+  "lang": "en",
+  "taxonomy": {
+    "name": "categories",
+    "paginate_by": null,
+    "paginate_path": null,
+    "rss": true,
+    "lang": "en"
+  },
+  "term": {
+    "name": "projects",
+    "slug": "projects",
+    "permalink": "https://arsmachina.net/categories/projects/",
+    "pages": [
+      {
+        "relative_path": "projects/p3.md",
+        "content": "<h1 id=\"link-to-the-game-on-itch-io\">Link to the Game on Itch.io</h1>\n<p><a href=\"https://mboleary-usc.itch.io/escape\">https://mboleary-usc.itch.io/escape</a></p>\n<p><a href=\"https://github.com/Nesdood007/escapegame\">Source Code on Github</a></p>\n<h1 id=\"project-information\">Project Information</h1>\n<p>A Unity game where you must escape from the world you are currently in.</p>\n<h2 id=\"introduction\">Introduction</h2>\n<p>This is a First-person styled game where you must figure out how to go from world to world.</p>\n<h2 id=\"directories\">Directories</h2>\n<p><code>/Assets</code> - The Assets Directory to include in a new Unity Project</p>\n<p><code>/Build</code> - Prebuilt binaries for Linux, MacOSX, Windows, and WebGL</p>\n<h2 id=\"controls\">Controls</h2>\n<p><strong>Mouse</strong> - Look Around</p>\n<p><strong>Left Mouse Button</strong> - Shoot a Projectile. The projectile will glow all colors that it can interact with</p>\n<p><strong>WASD</strong> - Move Around</p>\n<p><strong>SHIFT</strong> - Run</p>\n<h2 id=\"how-to-build\">How to build</h2>\n<p>In order to build this project, you should create a New Unity Project, and then import the assets from this assets directory into your project. It should contain all scripts and resources needed to test out the project.</p>\n<h2 id=\"motivation\">Motivation</h2>\n<p>Since this project used a lot of scripts, I felt that it would be good to have this project be open-source to help other students that may take this class in the future see how C# code is written, and how it can be used to make a cool game.</p>\n<p>There are scripts to spawn in enemies, keep track of colors, and change the music when the player collects a tessaract, among other things.</p>\n<hr />\n<h1 id=\"walkthrough\">Walkthrough</h1>\n<p>When this game was demoed in class, I think that the objective of hte game wasn't initially obvious enough, so I have made a walkthrough to help people play through it.</p>\n<h2 id=\"main-objective\">Main Objective</h2>\n<p>The entire world is governed by collecting colored cubes, giving the player the ability to interact with other objects that also are the same color.</p>\n<h2 id=\"objects\">Objects</h2>\n<figure>\n  <img src=\"/asset/p3_1.png\">\n  <figcaption> This is a Tessaract Piece. Your objective is to collect all four of these. They are all different colors. </figcaption>\n</figure>\n<figure>\n  <img src=\"/asset/p3_2.png\">\n  <figcaption> This is a Colored Switch. You touch this to make the miniature capsule rotate, which signifies that the state of the switch has changed. These can make walls disappear, or make other things happen. There is also a colorless variety.</figcaption>\n</figure>\n<figure>\n  <img src=\"/asset/p3_3.png\">\n  <figcaption> Surrounding the tree are Colored Enemies. You must have collected the cooresponding color of tessaract to make these disappear. Pro Tip, they are actually harmless and were placed simply to be a nuisance. (Perhaps you can modify them to be harmful to the player?) </figcaption>\n</figure>\n<h2 id=\"areas\">Areas</h2>\n<h3 id=\"light-world-first-scene\">Light World (First Scene)</h3>\n<p>You, the player are in a cube. You must touch the switch to escape this bow, but you aren't finished escaping yet! Go and investigate that suspicially large and dark tree in the middle of the area.</p>\n<figure>\n  <img src=\"/asset/p3_bg.png\">\n  <figcaption> This is the tree that you should go toward. </figcaption>\n</figure>\n<h3 id=\"darker-world-second-scene\">Darker World (Second Scene)</h3>\n<p>You have been teleported to a darker version of the world you were just in. Off in the distance, you should see colored Tessaract Cubes (as seen above) in each corner of the area. You can collect them in any order that you choose. When you collect all 4, you will be teleported to another area.</p>\n<h3 id=\"darkest-world-last-scene\">Darkest World (Last Scene)</h3>\n<p>You should see a lighter tree in the middle of the field, like the first one that you initially touched to get to the Dark World. Go touch that tree!</p>\n<figure>\n  <img src=\"/asset/p3_3.png\">\n  <figcaption> This is the tree that you should go toward. </figcaption>\n</figure>\n<p>After this you are teleported back to the Light World. You can go around again, if you want, or try to escape a different way in the Darkest World. <em>Hint: Then enemies don't always stay on the ground!</em>. Also this breaks the game, FYI.</p>\n",
+        "permalink": "https://arsmachina.net/projects/p3/",
+        "slug": "p3",
+        "ancestors": [
+          "_index.md",
+          "projects/_index.md"
+        ],
+        "title": "Project 3 - What if there was an Alternate Universe?",
+        "description": "What if, in a world devoid of color, there was an alternate universe with splashes of color? How would you escape to this world?",
+        "date": null,
+        "year": null,
+        "month": null,
+        "day": null,
+        "taxonomies": {
+          "tags": [
+            "unity",
+            "escape",
+            "test"
+          ],
+          "categories": [
+            "projects",
+            "MART380"
+          ]
+        },
+        "extra": {
+          "titlecard": "img light",
+          "img": "/asset/p3_bg.png"
+        },
+        "path": "projects/p3/",
+        "components": [
+          "projects",
+          "p3"
+        ],
+        "summary": null,
+        "word_count": 627,
+        "reading_time": 4,
+        "assets": [],
+        "draft": false,
+        "lang": "en",
+        "lighter": null,
+        "heavier": null,
+        "earlier": null,
+        "later": null,
+        "translations": []
+      },
+      {
+        "relative_path": "projects/p4.md",
+        "content": "<h1 id=\"links\">Links</h1>\n<p><a href=\"https://github.com/Nesdood007/mart380_musigen\">Source Code</a></p>\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/XsCLcTWwn0g\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Tb5iDYDCC1g\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n<h1 id=\"the-device\">The Device</h1>\n<p>I created this device in a few hours using the base of an old keyboard I took apart a long time ago, and a lot of Sticky Putty.</p>\n<figure>\n  <img src=\"/asset/p4_1.jpg\">\n  <figcaption> Here is the device I made for the project. </figcaption>\n</figure>\n<figure>\n  <img src=\"/asset/p4_2.jpg\">\n  <figcaption> Full Device. </figcaption>\n</figure>\n<figure>\n  <img src=\"/asset/p4_3.jpg\">\n  <figcaption> Here is the device connected to my computer. </figcaption>\n</figure>\n<h1 id=\"project-information\">Project Information</h1>\n<p>This was the final project in my MART380 class.</p>\n<h2 id=\"motivation\">Motivation</h2>\n<p>I have recently been researching more about Computer Music, and decided that this would be a cool concept to peruse for my final project in this class. I had some experience in working with the Distance Sensor for an Arduino, so I decided to go with that.</p>\n<h2 id=\"music\">Music</h2>\n<p>I decided to go with using a Pentatonic Scale, as well as 7th chords with added 2nds to make my music. There are a few distinct parts of the music generation process: The Arpeggio, Chords, Melody, and Bass. The Melody is randomly generated by picking one of the 5 notes to play. Chords change on the user putting their hands close to the device, which causes a new Chord to be randomly selected.</p>\n<h1 id=\"system-requirements\">System Requirements</h1>\n<p>Currently I only support linux, but in theory this project can be modified to work on other platforms, such as Windows or MacOS.</p>\n<p>Software Required:</p>\n<ul>\n<li>\n<p>Pure Data (In particular the <strong>i2ork version</strong>, which can be <a href=\"https://puredata.info/downloads/Pd-L2Ork\">found here</a>)</p>\n<ul>\n<li>\n<p>The following Packages Must be installed:</p>\n<ul>\n<li>\n<p>Comport (serial communication module)</p>\n</li>\n<li>\n<p>Reverb</p>\n</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>\n<p>Jack Audio Connection Kit (for Linux users to route MIDI and Audio streams through software, <a href=\"http://jackaudio.org/\">link here</a>)</p>\n</li>\n<li>\n<p>ZynAddSubFX (Audio Synthesizer, makes the sound for the project. <a href=\"http://zynaddsubfx.sourceforge.net/download.html\">Download Here</a>. Please Download the <strong>Non-ZynFusion</strong> version.)</p>\n</li>\n<li>\n<p>USB 2.0 Connections, or otherwise able to communicate with an arduino through a serial interface.</p>\n</li>\n</ul>\n<h1 id=\"tools-needed\">Tools Needed</h1>\n<p>In order to setup this system, you will need:</p>\n<ul>\n<li>\n<p>2 Arduinos</p>\n</li>\n<li>\n<p>2 Arduino Ultrasonic Sensors</p>\n</li>\n<li>\n<p>Wires and USB cables as appropriate</p>\n</li>\n</ul>\n<h1 id=\"setup-procedure\">Setup Procedure</h1>\n<p>This is a brief guide to setting up the Arduino software and hardware, as well as Pure Data.</p>\n<h2 id=\"arduino\">Arduino</h2>\n<ol>\n<li>Connect the Arduino to the Distance Sensor.</li>\n</ol>\n<p><strong>NOTE: Be sure that the ultrasonic sensors point opposite of each other, otherwise interference may occur.</strong></p>\n<ol start=\"2\">\n<li>\n<p>Connect Arduinos to PC</p>\n</li>\n<li>\n<p>Write Program to both Arduinos</p>\n</li>\n</ol>\n<h2 id=\"pc\">PC</h2>\n<ol>\n<li>Start Jack</li>\n</ol>\n<p>a. Note that QJackCtl has a nice GUI to help with setup if you are into that type of thing</p>\n<ol start=\"2\">\n<li>Start Pure Data</li>\n</ol>\n<ul>\n<li>\n<p>Turn on the DSP</p>\n</li>\n<li>\n<p>Open up <code>mart380_final.pd</code></p>\n</li>\n</ul>\n<ol start=\"3\">\n<li>Start ZynAddSubFX</li>\n</ol>\n<ul>\n<li>Load <code>inst.xmz</code></li>\n</ul>\n<ol start=\"4\">\n<li>\n<p>Make connections</p>\n</li>\n<li>\n<p>In the Opened Pure Data Project, click on the large <strong>Bang</strong> Object (looks like a button) at the top-left corner of the window, where there is a comment saying &quot;Start&quot;.</p>\n</li>\n</ol>\n<h1 id=\"use\">Use</h1>\n<p>By default, the system should be quiet, as the reverb is on full-blast, and the notes are very short. Place hands in front of the sensors, about 20 inches away, and move around, probably closer to the sensor, until the <code>L</code> LED on the Arduino illuminates. When this light is lit, you will know that your hand is within the range of the sensor, and a non-zero or 127 value will be sent to the computer.</p>\n<p>First, try moving your hands closer to the sensors and listen for the music to get louder. To change Chords, move your hands closely in front of the sensors, until the lights go out (from your hands being too close). After a few ticks, the chord should randomly change.</p>\n<h1 id=\"modification\">Modification</h1>\n<p>This program can be modified to accomodate different instruments, sensors, or chords. </p>\n",
+        "permalink": "https://arsmachina.net/projects/p4/",
+        "slug": "p4",
+        "ancestors": [
+          "_index.md",
+          "projects/_index.md"
+        ],
+        "title": "Project 4 - What if you can make music with just your hands?",
+        "description": "What if you could make music just by waving your hands in front of a sensor? <br> This system makes music based on the position of your hands in front of a pair of ultrasonic sensors using pentationic scales.",
+        "date": null,
+        "year": null,
+        "month": null,
+        "day": null,
+        "taxonomies": {
+          "categories": [
+            "projects",
+            "MART380",
+            "computer music"
+          ],
+          "tags": [
+            "arduino",
+            "escape",
+            "opensource",
+            "test"
+          ]
+        },
+        "extra": {
+          "titlecard": "img light",
+          "img": "/asset/p4_bg.jpg"
+        },
+        "path": "projects/p4/",
+        "components": [
+          "projects",
+          "p4"
+        ],
+        "summary": null,
+        "word_count": 666,
+        "reading_time": 4,
+        "assets": [],
+        "draft": false,
+        "lang": "en",
+        "lighter": null,
+        "heavier": null,
+        "earlier": null,
+        "later": null,
+        "translations": []
+      },
+      {
+        "relative_path": "test/post1.md",
+        "content": "<h1 id=\"hello-world\">Hello World</h1>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<h1 id=\"hello-world-2\">Hello World 2</h1>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p id=\"zola-continue-reading\"><a name=\"continue-reading\"></a></p>\n<h1 id=\"hello-world-3\">Hello World 3</h1>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n",
+        "permalink": "https://arsmachina.net/test/post1/",
+        "slug": "post1",
+        "ancestors": [
+          "_index.md",
+          "test/_index.md"
+        ],
+        "title": "This is a test",
+        "description": "Test",
+        "date": null,
+        "year": null,
+        "month": null,
+        "day": null,
+        "taxonomies": {
+          "tags": [
+            "test",
+            "tag",
+            "blue",
+            "pizza"
+          ],
+          "categories": [
+            "projects"
+          ]
+        },
+        "extra": {
+          "titlecard": "bg-a1-a3"
+        },
+        "path": "test/post1/",
+        "components": [
+          "test",
+          "post1"
+        ],
+        "summary": "<h1 id=\"hello-world\">Hello World</h1>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<h1 id=\"hello-world-2\">Hello World 2</h1>\n<p>This is a test.</p>\n<p>This is a test.</p>\n",
+        "word_count": 153,
+        "reading_time": 1,
+        "assets": [],
+        "draft": false,
+        "lang": "en",
+        "lighter": null,
+        "heavier": null,
+        "earlier": null,
+        "later": null,
+        "translations": []
+      },
+      {
+        "relative_path": "test2/post1.md",
+        "content": "<h1 id=\"hello-world\">Hello World</h1>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<h1 id=\"hello-world-2\">Hello World 2</h1>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p id=\"zola-continue-reading\"><a name=\"continue-reading\"></a></p>\n<h1 id=\"hello-world-3\">Hello World 3</h1>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n",
+        "permalink": "https://arsmachina.net/test2/post1/",
+        "slug": "post1",
+        "ancestors": [
+          "_index.md",
+          "test2/_index.md"
+        ],
+        "title": "This is a test",
+        "description": "Test",
+        "date": null,
+        "year": null,
+        "month": null,
+        "day": null,
+        "taxonomies": {
+          "categories": [
+            "projects"
+          ],
+          "tags": [
+            "test",
+            "tag"
+          ]
+        },
+        "extra": {
+          "titlecard": "bg-a1-a3"
+        },
+        "path": "test2/post1/",
+        "components": [
+          "test2",
+          "post1"
+        ],
+        "summary": "<h1 id=\"hello-world\">Hello World</h1>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<h1 id=\"hello-world-2\">Hello World 2</h1>\n<p>This is a test.</p>\n<p>This is a test.</p>\n",
+        "word_count": 153,
+        "reading_time": 1,
+        "assets": [],
+        "draft": false,
+        "lang": "en",
+        "lighter": null,
+        "heavier": null,
+        "earlier": null,
+        "later": null,
+        "translations": []
+      }
+    ]
+  },
+  "data": {
+    "topMenu": [
+      {
+        "name": "Home",
+        "url": "/",
+        "class": "accent-3",
+        "children": []
+      },
+      {
+        "name": "Projects",
+        "url": "/projects",
+        "class": "",
+        "children": []
+      },
+      {
+        "name": "About",
+        "url": "/about",
+        "class": "",
+        "children": []
+      }
+    ],
+    "footerMenu": []
+  }
+}
+
+
+        </main>
+        
+        
+    
+</body>

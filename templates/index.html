@@ -1,0 +1,69 @@
+{% import "macros.html" as macros %}
+
+<!Doctype html>
+<head>
+    <title>{% block title %}{{config.title}}{% endblock title %}</title>
+    <link rel="stylesheet" type="text/css" href="/style/main.css">
+    <link rel="stylesheet" type="text/css" href="/style/header.css">
+    <link rel="stylesheet" type="text/css" href="/style/footer.css">
+    <link rel="stylesheet" type="text/css" href="/style/content.css">
+    <link rel="stylesheet" type="text/css" href="/style/cards.css">
+    <link rel="stylesheet" type="text/css" href="/style/article.css">
+    <link rel="stylesheet" type="text/css" href="/style/misc.css">
+    <link rel="stylesheet" type="text/css" href="/style/print.css">
+    <link rel="stylesheet" type="text/css" href="/style/navbar.css">
+    <link rel="stylesheet" type="text/css" href="/style/linkbuttons.css">
+    <link rel="stylesheet" type="text/css" href="/style/tag.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="{% block description %}Index {% endblock description %}">
+    <meta name="author" content="Webtemplate">
+    <meta name="generator" content="Zola">
+    <meta name="keywords" content="keywords, go, here">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#00121a"> <!-- Colored Chrome Mobile Tabs! -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    {% block head %}
+    {% endblock head %}
+</head>
+<body>
+    {% block body %}
+        {% block header %}
+            <header class="page-header">
+                <div class="title">
+                    <h1><span class="accent-1">Ars</span><span class="accent-3">Machina</span></h1>
+                    <p> Art of the (Computer) Machine </p>
+                </div>
+                <div class="menu">
+                    <ul>
+                        {% set data = load_data(path="content/menu.json") %}
+                        {% for entry in data.topMenu %}
+                            <li {% if entry.children %}class="dropdown"{% endif %}>
+                                <!-- @TODO Add class="current" -->
+                                <a href="{{entry.url}}">{{entry.name}}</a>
+                                {% if entry.children %}
+                                    <div class="dropdownContent">
+                                        {% for subentry in entry.children %}
+                                            <a href="{{subentry.url}}">{{subentry.name}}</a>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </header>
+        {% endblock header %}
+        <main>
+            {% block content %}
+                {% if page.content %}
+                {{ page.content | safe }}
+                {% endif %}
+                {% if section.content %}
+                {{ section.content | safe }}
+                {% endif %}
+            {% endblock content %}
+        </main>
+        {% block footer %}
+        {% endblock footer %}
+    {% endblock body %}
+</body>

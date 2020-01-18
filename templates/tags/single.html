@@ -1,0 +1,55 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<div class="titlecard">
+    <div class="container">
+        <h1> Search Results for: </h1>
+        {{macros::bigTag(tag=term.name)}}
+    </div>
+</div>
+
+{% for page in term.pages %}
+    <div class="container">
+        <!-- @TODO Be sure to re-implement this when Articles get changed! -->
+        <article class="short">
+            <div class="left">
+                <header class="article-header">
+                    <h1><a href="/{{page.path}}"> {{page.title}} </a></h1>
+                    <p class="info"> 
+                        {% if page.date %}{{page.date}} | {% endif %}
+                        {% if page.taxonomies and page.taxonomies.categories %}
+                            Filed under
+                            {% for cat in page.taxonomies.categories %}
+                                {{ macros::category(name=cat)}}
+                            {% endfor %} |
+                        {% endif %}
+                        {% if page.taxonomies.tags %}
+                            {% for tag in page.taxonomies.tags %}
+                                {{macros::tag(tag=tag)}}
+                            {% endfor %}
+                        {% endif %}
+                    </p>
+                </header>
+            </div>
+            {% if page.summary %}
+                <div class="left">
+                    {{page.summary | safe}}
+                </div>
+                <a href="/{{page.path}}#continue-reading" class="continue"> Continue Reading ... </a>
+            {% elif page.description %}
+                <div class="left">
+                    {{page.description}}
+                </div>
+                <a href="/{{page.path}}" class="continue"> Continue Reading ... </a>
+            {% endif %}
+        </article>
+    </div>
+{% endfor %}
+
+
+<hr>
+
+{{ __tera_context }}
+
+{% endblock content %}

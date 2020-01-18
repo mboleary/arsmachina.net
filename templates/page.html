@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+
+{% block content %}
+{% if page.extra %}
+    {% set titlecardStyle = false %}
+    {% set titlecardImg = false %}
+    {% if page.extra.titlecard %}
+        {% set titlecardStyle = page.extra.titlecard %}
+    {% endif %}
+    {% if page.extra.img %}
+        {% set titlecardImg = page.extra.img %}
+    {% endif %}
+    {{ macros::titlecard(title=page.title, subtitle=page.description, style=titlecardStyle, img=titlecardImg) }}
+{% else %}
+    {{ macros::titlecard(title=page.title, subtitle=page.description) }}
+{% endif %}
+
+<nav class="pagenav">
+    <div class="container">
+        <ul>
+            <li>Section:</li>
+            {% if toc | length > 0 %}
+                {% for section in toc -%}
+                <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
+                {% endfor -%}
+            {% endif %}
+            {% if page.extra.toc %}
+                {% for section in page.extra.toc -%}
+                <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
+                {% endfor -%}
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+<div class="container">
+{{ page.content | safe }}
+</div>
+{% endblock content %}
+

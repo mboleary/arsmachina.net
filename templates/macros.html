@@ -1,0 +1,58 @@
+<!-- Macros (Shortcodes for Templates) -->
+
+{% macro tag(tag) %}
+    {% set tagData = load_data(path="tags.json") %}
+    {% if tagData[tag] %}
+        {% set localTag = tagData[tag] %}
+        <a href="/tags/{{tag}}">
+            <span class="tag {% if localTag.class %}{{localTag.class}}{% endif %}" {% if localTag.fgColor or localTag.bgColor %}style="{% if localTag.fgColor %}color:{{localTag.fgColor}};{% endif %}{% if localTag.bgColor %}background-color:{{localTag.bgColor}};{% endif %}"{% endif %} {% if localTag.tooltip %}title="{{localTag.tooltip}}"{% endif %}>{% if localTag.pretext %}{{localTag.pretext}}{% endif %}{% if localTag.text %}{{localTag.text}}{% else %}{{tag}}{% endif %}{% if localTag.posttext %}{{localTag.posttext}}{% endif %}</span>
+        </a>
+    {% else %}
+        <!-- This tag isn't in tags.json! -->
+        <a href="/tags/{{tag}}">
+            <span class="tag">{{tag}}</span>
+        </a>
+    {% endif %}
+{% endmacro tag %}
+
+{% macro bigTag(tag) %}
+    {% set tagData = load_data(path="tags.json") %}
+    {% if tagData[tag] %}
+        {% set localTag = tagData[tag] %}
+        <span class="big-tag {% if localTag.class %}{{localTag.class}}{% endif %}" {% if localTag.fgColor or localTag.bgColor %}style="{% if localTag.fgColor %}color:{{localTag.fgColor}};{% endif %}{% if localTag.bgColor %}background-color:{{localTag.bgColor}};{% endif %}"{% endif %} {% if localTag.tooltip %}title="{{localTag.tooltip}}"{% endif %}>{% if localTag.pretext %}{{localTag.pretext}}{% endif %}{% if localTag.text %}{{localTag.text}}{% else %}{{tag}}{% endif %}{% if localTag.posttext %}{{localTag.posttext}}{% endif %}</span>
+    {% else %}
+        <!-- This tag isn't in tags.json! -->
+        <span class="big-tag">{{tag}}</span>
+    {% endif %}
+{% endmacro bigTag %}
+
+{% macro category(name) %}
+    <a href="/categories/{{name}}">{{name}}</a>
+{% endmacro %}
+
+{% macro titlecard(title, subtitle, style=false, img=false) %}
+<div class="titlecard {% if style %}{{ style }}{% endif %} {% if img %}img{% endif %}" {% if img %}style="background-image: url('{{img}}');"{% endif %}>
+    <div class="container">
+        <h1> {{ title }}</h1>
+        {% if subtitle %}
+        <hr>
+        <p> {{ subtitle }} </p>
+        {% endif %}
+    </div>
+</div>
+{% endmacro %}
+
+{% macro flashcard(title, subtitle, style=false, img=false, readMore=false) %}
+<div class="flashcard {% if style %}{{ style }}{% endif %} {% if img %}img{% endif %}" {% if img %}style="background-image: url('{{img}}');"{% endif %}>
+    <div class="container">
+        <h1> {{ title }}</h1>
+        {% if subtitle %}
+        <hr>
+        <p> {{ subtitle }} </p>
+        {% endif %}
+        {% if readMore %}
+            <a href="{{ readMore }}" class="button">Read More →</a>
+        {% endif %}
+    </div>
+</div>
+{% endmacro %}

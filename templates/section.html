@@ -1,0 +1,93 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<div class="titlecard {% if section.extra.titlecard %}{{ section.extra.titlecard }}{% endif %}">
+    <div class="container">
+        {% if section.title %}
+        <h1>{{section.title}}</h1>
+        {% endif %}
+        {% if section.description %}
+        <hr>
+        <p>{{section.description}}</p>
+        {% endif %}
+    </div>
+</div>
+{% if section.content %}
+<nav class="pagenav">
+    <div class="container">
+        <ul>
+            <li>Section:</li>
+            {% for section in toc -%}
+            <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
+            {% endfor -%}
+            <li><a href="#section-pages">Pages</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    {{ section.content | safe }}
+    <hr>
+</div>
+{% endif %}
+<div id="section-pages"></div>
+{% if section.pages %}
+    
+
+    {% for page in section.pages %}
+        {% if not section.extra.type or section.extra.type == "article" %}
+            <div class="container">
+                <!-- @TODO Be sure to re-implement this when Articles get changed! -->
+                <article class="short">
+                    <div class="left">
+                        <header class="article-header">
+                            <h1><a href="/{{page.path}}"> {{page.title}} </a></h1>
+                            <p class="info"> 
+                                {% if page.date %}{{page.date}} | {% endif %}
+                                {% if page.taxonomies and page.taxonomies.categories %}
+                                    Filed under
+                                    {% for cat in page.taxonomies.categories %}
+                                        {{ macros::category(name=cat)}}
+                                    {% endfor %} |
+                                {% endif %}
+                                {% if page.taxonomies.tags %}
+                                    {% for tag in page.taxonomies.tags %}
+                                        {{macros::tag(tag=tag)}}
+                                    {% endfor %}
+                                {% endif %}
+                            </p>
+                        </header>
+                    </div>
+                    {% if page.summary %}
+                        <div class="left">
+                            {{page.summary | safe}}
+                        </div>
+                        <a href="/{{page.path}}#continue-reading" class="continue"> Continue Reading ... </a>
+                    {% elif page.description %}
+                        <div class="left">
+                            {{page.description}}
+                        </div>
+                        <a href="/{{page.path}}" class="continue"> Continue Reading ... </a>
+                    {% endif %}
+                </article>
+            </div>
+        {% elif section.extra.type == "flashcard" %}
+            {% if page.extra %}
+                {% set titlecardStyle = false %}
+                {% set titlecardImg = false %}
+                {% if page.extra.titlecard %}
+                    {% set titlecardStyle = page.extra.titlecard %}
+                {% endif %}
+                {% if page.extra.img %}
+                    {% set titlecardImg = page.extra.img %}
+                {% endif %}
+                {{ macros::flashcard(title=page.title, subtitle=page.description, style=titlecardStyle, img=titlecardImg, readMore="/"~page.path) }}
+            {% else %}
+                {{ macros::flashcard(title=page.title, subtitle=page.description, readMore="/"~page.path) }}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    
+{% endif %}
+
+{% endblock content %}

@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+
+{% block body %}
+
+<div class="flashcard bg-white dark">
+    <div class="container">
+
+        <div class="lr-container">
+            <div class="left">
+                <h1 class="left"><span class="accent-1">Ars</span><span class="accent-3">Machina</span></h1>
+                <code class="left">Art of the Computer Machine</code>
+            </div>
+            <div class="left">
+                <code class="">&nbsp;________________<br>&lt;&nbsp;This&nbsp;is&nbsp;a&nbsp;test&nbsp;&gt;<br>&nbsp;----------------<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\&nbsp;&nbsp;&nbsp;^__^<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\&nbsp;&nbsp;(oo)\_______<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(__)\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)\/\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||----w&nbsp;|<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||<br></code>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="left">
+            {% set data = load_data(path="content/menu.json") %}
+            {% for entry in data.topMenu %}
+            {% set childLen = entry.children | length %}
+            <a href="{{ entry.url }}" class="button {% if entry.class %}{{entry.class}}{% endif %}">{{ entry.name }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock body %}

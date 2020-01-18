@@ -1,0 +1,17 @@
+<!-- Contains HTML for a flashcard -->
+<div class="flashcard {% if class %}{{class}}{% endif %} {% if img %}img{% endif %}" {% if img %}style="background-image: url('{{img}}'"{% endif %}>
+    <div class="container">
+        {% if not body %}
+            {% if title %}
+            <h1>{{ title }}</h1>
+            {% endif %}
+            {% if subtitle %}
+            <hr>
+            <p>{{ subtitle }}</p>
+            {% endif %}
+        {% endif %}
+        {% if body %}
+        {{ body | safe }}
+        {% endif %}
+    </div>
+</div>

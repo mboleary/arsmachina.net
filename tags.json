@@ -1,0 +1,27 @@
+{
+    "test": {
+        "tooltip": "This is a test Tag",
+        "class": "",
+        "bgColor": "black",
+        "fgColor": "red"
+    },
+    "blue": {
+        "tooltip": "This is a BLUE test Tag",
+        "class": "",
+        "bgColor": "blue",
+        "fgColor": "white",
+        "text":""
+    },
+    "pizza": {
+        "tooltip": "There WILL Be Pizza",
+        "class": "",
+        "bgColor": "red",
+        "fgColor": "white",
+        "pretext": "",
+        "text": "ThereWillBePizza",
+        "posttext": "🍕🍕🍕🍕🍕"
+    },
+    "tag": {
+        "tooltip": "Just a regular ole' tag."
+    }
+}
