@@ -7,6 +7,12 @@
             "children": []
         },
         {
+            "name": "Blog",
+            "url": "/blog",
+            "class":"",
+            "children": []
+        },
+        {
             "name": "Projects",
             "url": "/projects",
             "class":"",
@@ -20,6 +26,93 @@
         }
     ],
     "footerMenu": [
-
+        {
+            "name": "Section Title",
+            "url": "/test/",
+            "class":"green",
+            "children": [
+                {
+                    "name": "Post 1",
+                    "url": "/test/post1",
+                    "children": []
+                },
+                {
+                    "name": "Post 2",
+                    "url": "/test/post2",
+                    "children": []
+                },
+                {
+                    "name": "Post 3",
+                    "url": "/test/post3",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Section Title",
+            "url": "/test/",
+            "class":"red",
+            "children": [
+                {
+                    "name": "Post 1",
+                    "url": "/test/post1",
+                    "children": []
+                },
+                {
+                    "name": "Post 2",
+                    "url": "/test/post2",
+                    "children": []
+                },
+                {
+                    "name": "Post 3",
+                    "url": "/test/post3",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Section Title",
+            "url": "/test/",
+            "class":"blue",
+            "children": [
+                {
+                    "name": "Post 1",
+                    "url": "/test/post1",
+                    "children": []
+                },
+                {
+                    "name": "Post 2",
+                    "url": "/test/post2",
+                    "children": []
+                },
+                {
+                    "name": "Post 3",
+                    "url": "/test/post3",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Section Title",
+            "url": "/test/",
+            "class":"orange",
+            "children": [
+                {
+                    "name": "Post 1",
+                    "url": "/test/post1",
+                    "children": []
+                },
+                {
+                    "name": "Post 2",
+                    "url": "/test/post2",
+                    "children": []
+                },
+                {
+                    "name": "Post 3",
+                    "url": "/test/post3",
+                    "children": []
+                }
+            ]
+        }
     ]
 }

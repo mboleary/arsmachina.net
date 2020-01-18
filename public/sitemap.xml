@@ -22,7 +22,24 @@
         </url>
     
         <url>
+            <loc>https://arsmachina.net/blog/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://arsmachina.net/blog/firstpost/</loc>
+            
+                <lastmod>2020-01-18</lastmod>
+            
+        </url>
+    
+        <url>
             <loc>https://arsmachina.net/categories/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://arsmachina.net/categories/blog/</loc>
             
         </url>
     
@@ -77,12 +94,22 @@
         </url>
     
         <url>
+            <loc>https://arsmachina.net/tags/first/</loc>
+            
+        </url>
+    
+        <url>
             <loc>https://arsmachina.net/tags/opensource/</loc>
             
         </url>
     
         <url>
             <loc>https://arsmachina.net/tags/pizza/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://arsmachina.net/tags/post/</loc>
             
         </url>
     

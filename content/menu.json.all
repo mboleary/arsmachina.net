@@ -78,6 +78,27 @@
         }
     ],
     "footerMenu": [
-
+        {
+            "name": "Test",
+            "url": "/test/",
+            "class":"accent-2",
+            "children": [
+                {
+                    "name": "Post 1",
+                    "url": "/test/post1",
+                    "children": []
+                },
+                {
+                    "name": "Post 2",
+                    "url": "/test/post2",
+                    "children": []
+                },
+                {
+                    "name": "Post 3",
+                    "url": "/test/post3",
+                    "children": []
+                }
+            ]
+        },
     ]
 }

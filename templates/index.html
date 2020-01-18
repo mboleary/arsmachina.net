@@ -64,6 +64,28 @@
             {% endblock content %}
         </main>
         {% block footer %}
+        <footer>
+            <div id="footer-top">
+                
+                <div class="container">
+                    {% for entry in data.footerMenu %}
+                        <dl>
+                            <dt class="{{entry.class}}"> <a href="{{entry.url}}"> {{entry.name}} </a> </dt>
+                            {% if entry.children %}
+                                {% for subentry in entry.children %}
+                                    <dd><a href="{{subentry.url}}">{{subentry.name}}</a></dd>
+                                {% endfor %}
+                            {% endif %}
+                        </dl>
+                    {% endfor %}
+                </div>
+            </div>
+            <div id="footer-bottom">
+                <div class="left"> Icons Here </div>
+                <div> 2020 - Brady O'Leary </div>
+                <div class="right"> Links Here </div>
+            </div>
+        </footer>
         {% endblock footer %}
     {% endblock body %}
 </body>
