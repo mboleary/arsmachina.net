@@ -2,164 +2,189 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
         <url>
-            <loc>http://127.0.0.1:1111/</loc>
+            <loc>https://arsmachina.net/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/about/</loc>
+            <loc>https://arsmachina.net/about/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/about/aboutme/</loc>
+            <loc>https://arsmachina.net/about/aboutme/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/about/aboutsite/</loc>
+            <loc>https://arsmachina.net/about/aboutsite/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/blog/</loc>
+            <loc>https://arsmachina.net/blog/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/blog/firstpost/</loc>
+            <loc>https://arsmachina.net/blog/firstpost/</loc>
             
                 <lastmod>2020-01-18</lastmod>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/categories/</loc>
+            <loc>https://arsmachina.net/categories/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/categories/blog/</loc>
+            <loc>https://arsmachina.net/categories/art/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/categories/computer-music/</loc>
+            <loc>https://arsmachina.net/categories/blog/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/categories/mart380/</loc>
+            <loc>https://arsmachina.net/categories/computer-music/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/categories/projects/</loc>
+            <loc>https://arsmachina.net/categories/mart380/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/projects/</loc>
+            <loc>https://arsmachina.net/categories/projects/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/projects/mandelbrotexplorer/</loc>
+            <loc>https://arsmachina.net/projects/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/projects/p3/</loc>
+            <loc>https://arsmachina.net/projects/mandelbrotexplorer/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/projects/p4/</loc>
+            <loc>https://arsmachina.net/projects/p3/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/tags/</loc>
+            <loc>https://arsmachina.net/projects/p4/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/tags/arduino/</loc>
+            <loc>https://arsmachina.net/tags/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/tags/blue/</loc>
+            <loc>https://arsmachina.net/tags/arduino/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/tags/escape/</loc>
+            <loc>https://arsmachina.net/tags/blue/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/tags/first/</loc>
+            <loc>https://arsmachina.net/tags/canvas/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/tags/opensource/</loc>
+            <loc>https://arsmachina.net/tags/code/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/tags/pizza/</loc>
+            <loc>https://arsmachina.net/tags/escape/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/tags/post/</loc>
+            <loc>https://arsmachina.net/tags/first/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/tags/tag/</loc>
+            <loc>https://arsmachina.net/tags/js/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/tags/test/</loc>
+            <loc>https://arsmachina.net/tags/mandelbrot/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/tags/unity/</loc>
+            <loc>https://arsmachina.net/tags/opensource/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/test/</loc>
+            <loc>https://arsmachina.net/tags/pizza/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/test/post1/</loc>
+            <loc>https://arsmachina.net/tags/post/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/test/post2/</loc>
+            <loc>https://arsmachina.net/tags/tag/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/test/post3/</loc>
+            <loc>https://arsmachina.net/tags/test/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/test2/</loc>
+            <loc>https://arsmachina.net/tags/unity/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/test2/post1/</loc>
+            <loc>https://arsmachina.net/test/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://arsmachina.net/test/post1/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://arsmachina.net/test/post2/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://arsmachina.net/test/post3/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://arsmachina.net/test2/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://arsmachina.net/test2/post1/</loc>
             
         </url>
     
