@@ -64,6 +64,11 @@
         </url>
     
         <url>
+            <loc>http://127.0.0.1:1111/projects/mandelbrotexplorer/</loc>
+            
+        </url>
+    
+        <url>
             <loc>http://127.0.0.1:1111/projects/p3/</loc>
             
         </url>

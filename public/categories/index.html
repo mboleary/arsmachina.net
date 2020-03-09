@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="/style/navbar.css">
     <link rel="stylesheet" type="text/css" href="/style/linkbuttons.css">
     <link rel="stylesheet" type="text/css" href="/style/tag.css">
+    <link rel="stylesheet" type="text/css" href="/style/layout.css">
     <meta charset="UTF-8">
     <meta name="description" content="Index ">
     <meta name="author" content="Webtemplate">
@@ -253,7 +254,7 @@
       "pages": [
         {
           "relative_path": "projects/p3.md",
-          "content": "<h1 id=\"link-to-the-game-on-itch-io\">Link to the Game on Itch.io</h1>\n<p><a href=\"https://mboleary-usc.itch.io/escape\">https://mboleary-usc.itch.io/escape</a></p>\n<p><a href=\"https://github.com/Nesdood007/escapegame\">Source Code on Github</a></p>\n<h1 id=\"project-information\">Project Information</h1>\n<p>A Unity game where you must escape from the world you are currently in.</p>\n<h2 id=\"introduction\">Introduction</h2>\n<p>This is a First-person styled game where you must figure out how to go from world to world.</p>\n<h2 id=\"directories\">Directories</h2>\n<p><code>/Assets</code> - The Assets Directory to include in a new Unity Project</p>\n<p><code>/Build</code> - Prebuilt binaries for Linux, MacOSX, Windows, and WebGL</p>\n<h2 id=\"controls\">Controls</h2>\n<p><strong>Mouse</strong> - Look Around</p>\n<p><strong>Left Mouse Button</strong> - Shoot a Projectile. The projectile will glow all colors that it can interact with</p>\n<p><strong>WASD</strong> - Move Around</p>\n<p><strong>SHIFT</strong> - Run</p>\n<h2 id=\"how-to-build\">How to build</h2>\n<p>In order to build this project, you should create a New Unity Project, and then import the assets from this assets directory into your project. It should contain all scripts and resources needed to test out the project.</p>\n<h2 id=\"motivation\">Motivation</h2>\n<p>Since this project used a lot of scripts, I felt that it would be good to have this project be open-source to help other students that may take this class in the future see how C# code is written, and how it can be used to make a cool game.</p>\n<p>There are scripts to spawn in enemies, keep track of colors, and change the music when the player collects a tessaract, among other things.</p>\n<hr />\n<h1 id=\"walkthrough\">Walkthrough</h1>\n<p>When this game was demoed in class, I think that the objective of hte game wasn't initially obvious enough, so I have made a walkthrough to help people play through it.</p>\n<h2 id=\"main-objective\">Main Objective</h2>\n<p>The entire world is governed by collecting colored cubes, giving the player the ability to interact with other objects that also are the same color.</p>\n<h2 id=\"objects\">Objects</h2>\n<figure>\n  <img src=\"/asset/p3_1.png\">\n  <figcaption> This is a Tessaract Piece. Your objective is to collect all four of these. They are all different colors. </figcaption>\n</figure>\n<figure>\n  <img src=\"/asset/p3_2.png\">\n  <figcaption> This is a Colored Switch. You touch this to make the miniature capsule rotate, which signifies that the state of the switch has changed. These can make walls disappear, or make other things happen. There is also a colorless variety.</figcaption>\n</figure>\n<figure>\n  <img src=\"/asset/p3_3.png\">\n  <figcaption> Surrounding the tree are Colored Enemies. You must have collected the cooresponding color of tessaract to make these disappear. Pro Tip, they are actually harmless and were placed simply to be a nuisance. (Perhaps you can modify them to be harmful to the player?) </figcaption>\n</figure>\n<h2 id=\"areas\">Areas</h2>\n<h3 id=\"light-world-first-scene\">Light World (First Scene)</h3>\n<p>You, the player are in a cube. You must touch the switch to escape this bow, but you aren't finished escaping yet! Go and investigate that suspicially large and dark tree in the middle of the area.</p>\n<figure>\n  <img src=\"/asset/p3_bg.png\">\n  <figcaption> This is the tree that you should go toward. </figcaption>\n</figure>\n<h3 id=\"darker-world-second-scene\">Darker World (Second Scene)</h3>\n<p>You have been teleported to a darker version of the world you were just in. Off in the distance, you should see colored Tessaract Cubes (as seen above) in each corner of the area. You can collect them in any order that you choose. When you collect all 4, you will be teleported to another area.</p>\n<h3 id=\"darkest-world-last-scene\">Darkest World (Last Scene)</h3>\n<p>You should see a lighter tree in the middle of the field, like the first one that you initially touched to get to the Dark World. Go touch that tree!</p>\n<figure>\n  <img src=\"/asset/p3_3.png\">\n  <figcaption> This is the tree that you should go toward. </figcaption>\n</figure>\n<p>After this you are teleported back to the Light World. You can go around again, if you want, or try to escape a different way in the Darkest World. <em>Hint: Then enemies don't always stay on the ground!</em>. Also this breaks the game, FYI.</p>\n",
+          "content": "<p><em>Editor's note: This was Project 3 for my New Media Arts Class</em> </p>\n<p>Original Title: Project 3 - What if there was an Alternate Universe?</p>\n<p>Original Description: What if, in a world devoid of color, there was an alternate universe with splashes of color? How would you escape to this world?</p>\n<h1 id=\"link-to-the-game-on-itch-io\">Link to the Game on Itch.io</h1>\n<p><a href=\"https://mboleary-usc.itch.io/escape\">https://mboleary-usc.itch.io/escape</a></p>\n<p><a href=\"https://github.com/Nesdood007/escapegame\">Source Code on Github</a></p>\n<h1 id=\"project-information\">Project Information</h1>\n<p>A Unity game where you must escape from the world you are currently in.</p>\n<h2 id=\"introduction\">Introduction</h2>\n<p>This is a First-person styled game where you must figure out how to go from world to world.</p>\n<h2 id=\"directories\">Directories</h2>\n<p><code>/Assets</code> - The Assets Directory to include in a new Unity Project</p>\n<p><code>/Build</code> - Prebuilt binaries for Linux, MacOSX, Windows, and WebGL</p>\n<h2 id=\"controls\">Controls</h2>\n<p><strong>Mouse</strong> - Look Around</p>\n<p><strong>Left Mouse Button</strong> - Shoot a Projectile. The projectile will glow all colors that it can interact with</p>\n<p><strong>WASD</strong> - Move Around</p>\n<p><strong>SHIFT</strong> - Run</p>\n<h2 id=\"how-to-build\">How to build</h2>\n<p>In order to build this project, you should create a New Unity Project, and then import the assets from this assets directory into your project. It should contain all scripts and resources needed to test out the project.</p>\n<h2 id=\"motivation\">Motivation</h2>\n<p>Since this project used a lot of scripts, I felt that it would be good to have this project be open-source to help other students that may take this class in the future see how C# code is written, and how it can be used to make a cool game.</p>\n<p>There are scripts to spawn in enemies, keep track of colors, and change the music when the player collects a tessaract, among other things.</p>\n<hr />\n<h1 id=\"walkthrough\">Walkthrough</h1>\n<p>When this game was demoed in class, I think that the objective of hte game wasn't initially obvious enough, so I have made a walkthrough to help people play through it.</p>\n<h2 id=\"main-objective\">Main Objective</h2>\n<p>The entire world is governed by collecting colored cubes, giving the player the ability to interact with other objects that also are the same color.</p>\n<h2 id=\"objects\">Objects</h2>\n<figure>\n  <img src=\"/asset/p3_1.png\">\n  <figcaption> This is a Tessaract Piece. Your objective is to collect all four of these. They are all different colors. </figcaption>\n</figure>\n<figure>\n  <img src=\"/asset/p3_2.png\">\n  <figcaption> This is a Colored Switch. You touch this to make the miniature capsule rotate, which signifies that the state of the switch has changed. These can make walls disappear, or make other things happen. There is also a colorless variety.</figcaption>\n</figure>\n<figure>\n  <img src=\"/asset/p3_3.png\">\n  <figcaption> Surrounding the tree are Colored Enemies. You must have collected the cooresponding color of tessaract to make these disappear. Pro Tip, they are actually harmless and were placed simply to be a nuisance. (Perhaps you can modify them to be harmful to the player?) </figcaption>\n</figure>\n<h2 id=\"areas\">Areas</h2>\n<h3 id=\"light-world-first-scene\">Light World (First Scene)</h3>\n<p>You, the player are in a cube. You must touch the switch to escape this bow, but you aren't finished escaping yet! Go and investigate that suspicially large and dark tree in the middle of the area.</p>\n<figure>\n  <img src=\"/asset/p3_bg.png\">\n  <figcaption> This is the tree that you should go toward. </figcaption>\n</figure>\n<h3 id=\"darker-world-second-scene\">Darker World (Second Scene)</h3>\n<p>You have been teleported to a darker version of the world you were just in. Off in the distance, you should see colored Tessaract Cubes (as seen above) in each corner of the area. You can collect them in any order that you choose. When you collect all 4, you will be teleported to another area.</p>\n<h3 id=\"darkest-world-last-scene\">Darkest World (Last Scene)</h3>\n<p>You should see a lighter tree in the middle of the field, like the first one that you initially touched to get to the Dark World. Go touch that tree!</p>\n<figure>\n  <img src=\"/asset/p3_3.png\">\n  <figcaption> This is the tree that you should go toward. </figcaption>\n</figure>\n<p>After this you are teleported back to the Light World. You can go around again, if you want, or try to escape a different way in the Darkest World. <em>Hint: Then enemies don't always stay on the ground!</em>. Also this breaks the game, FYI.</p>\n",
           "permalink": "http://127.0.0.1:1111/projects/p3/",
           "slug": "p3",
           "ancestors": [
@@ -390,7 +391,7 @@
               ]
             }
           ],
-          "word_count": 627,
+          "word_count": 676,
           "reading_time": 4,
           "assets": [],
           "draft": false,
@@ -403,7 +404,7 @@
         },
         {
           "relative_path": "projects/p4.md",
-          "content": "<h1 id=\"links\">Links</h1>\n<p><a href=\"https://github.com/Nesdood007/mart380_musigen\">Source Code</a></p>\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/XsCLcTWwn0g\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Tb5iDYDCC1g\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n<h1 id=\"the-device\">The Device</h1>\n<p>I created this device in a few hours using the base of an old keyboard I took apart a long time ago, and a lot of Sticky Putty.</p>\n<figure>\n  <img src=\"/asset/p4_1.jpg\">\n  <figcaption> Here is the device I made for the project. </figcaption>\n</figure>\n<figure>\n  <img src=\"/asset/p4_2.jpg\">\n  <figcaption> Full Device. </figcaption>\n</figure>\n<figure>\n  <img src=\"/asset/p4_3.jpg\">\n  <figcaption> Here is the device connected to my computer. </figcaption>\n</figure>\n<h1 id=\"project-information\">Project Information</h1>\n<p>This was the final project in my MART380 class.</p>\n<h2 id=\"motivation\">Motivation</h2>\n<p>I have recently been researching more about Computer Music, and decided that this would be a cool concept to peruse for my final project in this class. I had some experience in working with the Distance Sensor for an Arduino, so I decided to go with that.</p>\n<h2 id=\"music\">Music</h2>\n<p>I decided to go with using a Pentatonic Scale, as well as 7th chords with added 2nds to make my music. There are a few distinct parts of the music generation process: The Arpeggio, Chords, Melody, and Bass. The Melody is randomly generated by picking one of the 5 notes to play. Chords change on the user putting their hands close to the device, which causes a new Chord to be randomly selected.</p>\n<h1 id=\"system-requirements\">System Requirements</h1>\n<p>Currently I only support linux, but in theory this project can be modified to work on other platforms, such as Windows or MacOS.</p>\n<p>Software Required:</p>\n<ul>\n<li>\n<p>Pure Data (In particular the <strong>i2ork version</strong>, which can be <a href=\"https://puredata.info/downloads/Pd-L2Ork\">found here</a>)</p>\n<ul>\n<li>\n<p>The following Packages Must be installed:</p>\n<ul>\n<li>\n<p>Comport (serial communication module)</p>\n</li>\n<li>\n<p>Reverb</p>\n</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>\n<p>Jack Audio Connection Kit (for Linux users to route MIDI and Audio streams through software, <a href=\"http://jackaudio.org/\">link here</a>)</p>\n</li>\n<li>\n<p>ZynAddSubFX (Audio Synthesizer, makes the sound for the project. <a href=\"http://zynaddsubfx.sourceforge.net/download.html\">Download Here</a>. Please Download the <strong>Non-ZynFusion</strong> version.)</p>\n</li>\n<li>\n<p>USB 2.0 Connections, or otherwise able to communicate with an arduino through a serial interface.</p>\n</li>\n</ul>\n<h1 id=\"tools-needed\">Tools Needed</h1>\n<p>In order to setup this system, you will need:</p>\n<ul>\n<li>\n<p>2 Arduinos</p>\n</li>\n<li>\n<p>2 Arduino Ultrasonic Sensors</p>\n</li>\n<li>\n<p>Wires and USB cables as appropriate</p>\n</li>\n</ul>\n<h1 id=\"setup-procedure\">Setup Procedure</h1>\n<p>This is a brief guide to setting up the Arduino software and hardware, as well as Pure Data.</p>\n<h2 id=\"arduino\">Arduino</h2>\n<ol>\n<li>Connect the Arduino to the Distance Sensor.</li>\n</ol>\n<p><strong>NOTE: Be sure that the ultrasonic sensors point opposite of each other, otherwise interference may occur.</strong></p>\n<ol start=\"2\">\n<li>\n<p>Connect Arduinos to PC</p>\n</li>\n<li>\n<p>Write Program to both Arduinos</p>\n</li>\n</ol>\n<h2 id=\"pc\">PC</h2>\n<ol>\n<li>Start Jack</li>\n</ol>\n<p>a. Note that QJackCtl has a nice GUI to help with setup if you are into that type of thing</p>\n<ol start=\"2\">\n<li>Start Pure Data</li>\n</ol>\n<ul>\n<li>\n<p>Turn on the DSP</p>\n</li>\n<li>\n<p>Open up <code>mart380_final.pd</code></p>\n</li>\n</ul>\n<ol start=\"3\">\n<li>Start ZynAddSubFX</li>\n</ol>\n<ul>\n<li>Load <code>inst.xmz</code></li>\n</ul>\n<ol start=\"4\">\n<li>\n<p>Make connections</p>\n</li>\n<li>\n<p>In the Opened Pure Data Project, click on the large <strong>Bang</strong> Object (looks like a button) at the top-left corner of the window, where there is a comment saying &quot;Start&quot;.</p>\n</li>\n</ol>\n<h1 id=\"use\">Use</h1>\n<p>By default, the system should be quiet, as the reverb is on full-blast, and the notes are very short. Place hands in front of the sensors, about 20 inches away, and move around, probably closer to the sensor, until the <code>L</code> LED on the Arduino illuminates. When this light is lit, you will know that your hand is within the range of the sensor, and a non-zero or 127 value will be sent to the computer.</p>\n<p>First, try moving your hands closer to the sensors and listen for the music to get louder. To change Chords, move your hands closely in front of the sensors, until the lights go out (from your hands being too close). After a few ticks, the chord should randomly change.</p>\n<h1 id=\"modification\">Modification</h1>\n<p>This program can be modified to accomodate different instruments, sensors, or chords. </p>\n",
+          "content": "<p><em>Editor's Note: This was Project 4 of my New Media Arts Class</em></p>\n<p>Original Title: Project 4 - What if you can make music with just your hands?</p>\n<p>Original Description: What if you could make music just by waving your hands in front of a sensor? This system makes music based on the position of your hands in front of a pair of ultrasonic sensors using pentationic scales.</p>\n<h1 id=\"links\">Links</h1>\n<p><a href=\"https://github.com/Nesdood007/mart380_musigen\">Source Code</a></p>\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/XsCLcTWwn0g\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Tb5iDYDCC1g\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n<h1 id=\"the-device\">The Device</h1>\n<p>I created this device in a few hours using the base of an old keyboard I took apart a long time ago, and a lot of Sticky Putty.</p>\n<figure>\n  <img src=\"/asset/p4_1.jpg\">\n  <figcaption> Here is the device I made for the project. </figcaption>\n</figure>\n<figure>\n  <img src=\"/asset/p4_2.jpg\">\n  <figcaption> Full Device. </figcaption>\n</figure>\n<figure>\n  <img src=\"/asset/p4_3.jpg\">\n  <figcaption> Here is the device connected to my computer. </figcaption>\n</figure>\n<h1 id=\"project-information\">Project Information</h1>\n<p>This was the final project in my MART380 class.</p>\n<h2 id=\"motivation\">Motivation</h2>\n<p>I have recently been researching more about Computer Music, and decided that this would be a cool concept to peruse for my final project in this class. I had some experience in working with the Distance Sensor for an Arduino, so I decided to go with that.</p>\n<h2 id=\"music\">Music</h2>\n<p>I decided to go with using a Pentatonic Scale, as well as 7th chords with added 2nds to make my music. There are a few distinct parts of the music generation process: The Arpeggio, Chords, Melody, and Bass. The Melody is randomly generated by picking one of the 5 notes to play. Chords change on the user putting their hands close to the device, which causes a new Chord to be randomly selected.</p>\n<h1 id=\"system-requirements\">System Requirements</h1>\n<p>Currently I only support linux, but in theory this project can be modified to work on other platforms, such as Windows or MacOS.</p>\n<p>Software Required:</p>\n<ul>\n<li>\n<p>Pure Data (In particular the <strong>i2ork version</strong>, which can be <a href=\"https://puredata.info/downloads/Pd-L2Ork\">found here</a>)</p>\n<ul>\n<li>\n<p>The following Packages Must be installed:</p>\n<ul>\n<li>\n<p>Comport (serial communication module)</p>\n</li>\n<li>\n<p>Reverb</p>\n</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>\n<p>Jack Audio Connection Kit (for Linux users to route MIDI and Audio streams through software, <a href=\"http://jackaudio.org/\">link here</a>)</p>\n</li>\n<li>\n<p>ZynAddSubFX (Audio Synthesizer, makes the sound for the project. <a href=\"http://zynaddsubfx.sourceforge.net/download.html\">Download Here</a>. Please Download the <strong>Non-ZynFusion</strong> version.)</p>\n</li>\n<li>\n<p>USB 2.0 Connections, or otherwise able to communicate with an arduino through a serial interface.</p>\n</li>\n</ul>\n<h1 id=\"tools-needed\">Tools Needed</h1>\n<p>In order to setup this system, you will need:</p>\n<ul>\n<li>\n<p>2 Arduinos</p>\n</li>\n<li>\n<p>2 Arduino Ultrasonic Sensors</p>\n</li>\n<li>\n<p>Wires and USB cables as appropriate</p>\n</li>\n</ul>\n<h1 id=\"setup-procedure\">Setup Procedure</h1>\n<p>This is a brief guide to setting up the Arduino software and hardware, as well as Pure Data.</p>\n<h2 id=\"arduino\">Arduino</h2>\n<ol>\n<li>Connect the Arduino to the Distance Sensor.</li>\n</ol>\n<p><strong>NOTE: Be sure that the ultrasonic sensors point opposite of each other, otherwise interference may occur.</strong></p>\n<ol start=\"2\">\n<li>\n<p>Connect Arduinos to PC</p>\n</li>\n<li>\n<p>Write Program to both Arduinos</p>\n</li>\n</ol>\n<h2 id=\"pc\">PC</h2>\n<ol>\n<li>Start Jack</li>\n</ol>\n<p>a. Note that QJackCtl has a nice GUI to help with setup if you are into that type of thing</p>\n<ol start=\"2\">\n<li>Start Pure Data</li>\n</ol>\n<ul>\n<li>\n<p>Turn on the DSP</p>\n</li>\n<li>\n<p>Open up <code>mart380_final.pd</code></p>\n</li>\n</ul>\n<ol start=\"3\">\n<li>Start ZynAddSubFX</li>\n</ol>\n<ul>\n<li>Load <code>inst.xmz</code></li>\n</ul>\n<ol start=\"4\">\n<li>\n<p>Make connections</p>\n</li>\n<li>\n<p>In the Opened Pure Data Project, click on the large <strong>Bang</strong> Object (looks like a button) at the top-left corner of the window, where there is a comment saying &quot;Start&quot;.</p>\n</li>\n</ol>\n<h1 id=\"use\">Use</h1>\n<p>By default, the system should be quiet, as the reverb is on full-blast, and the notes are very short. Place hands in front of the sensors, about 20 inches away, and move around, probably closer to the sensor, until the <code>L</code> LED on the Arduino illuminates. When this light is lit, you will know that your hand is within the range of the sensor, and a non-zero or 127 value will be sent to the computer.</p>\n<p>First, try moving your hands closer to the sensors and listen for the music to get louder. To change Chords, move your hands closely in front of the sensors, until the lights go out (from your hands being too close). After a few ticks, the chord should randomly change.</p>\n<h1 id=\"modification\">Modification</h1>\n<p>This program can be modified to accomodate different instruments, sensors, or chords. </p>\n",
           "permalink": "http://127.0.0.1:1111/projects/p4/",
           "slug": "p4",
           "ancestors": [
@@ -411,22 +412,22 @@
             "projects/_index.md"
           ],
           "title": "Project 4 - What if you can make music with just your hands?",
-          "description": "What if you could make music just by waving your hands in front of a sensor? <br> This system makes music based on the position of your hands in front of a pair of ultrasonic sensors using pentationic scales.",
+          "description": "This system makes music based on the position of your hands in front of a pair of ultrasonic sensors using pentationic scales.",
           "date": null,
           "year": null,
           "month": null,
           "day": null,
           "taxonomies": {
+            "categories": [
+              "projects",
+              "MART380",
+              "computer music"
+            ],
             "tags": [
               "arduino",
               "escape",
               "opensource",
               "test"
-            ],
-            "categories": [
-              "projects",
-              "MART380",
-              "computer music"
             ]
           },
           "extra": {
@@ -527,8 +528,87 @@
               "children": []
             }
           ],
-          "word_count": 666,
+          "word_count": 732,
           "reading_time": 4,
+          "assets": [],
+          "draft": false,
+          "lang": "en",
+          "lighter": null,
+          "heavier": null,
+          "earlier": null,
+          "later": null,
+          "translations": []
+        }
+      ]
+    },
+    {
+      "name": "art",
+      "slug": "art",
+      "permalink": "http://127.0.0.1:1111/categories/art/",
+      "pages": [
+        {
+          "relative_path": "projects/mandelbrotExplorer.md",
+          "content": "<p><a href=\"https://github.com/mboleary/fractals-canvas\">https://github.com/mboleary/fractals-canvas</a></p>\n<h1 id=\"mandelbrot-explorer\">Mandelbrot Explorer</h1>\n<p>This was a testing project for me to learn how the canvas works in Javascript, as well as how I can color the Mandelbrot set. This was written without the use of a Javascript Framework.</p>\n<p>There are additional Images in the repo linked above.</p>\n<h2 id=\"motivation\">Motivation</h2>\n<p>I built this demo as a way to learn Javascript, and how to specifically use the Canvas to draw things.</p>\n<h2 id=\"how-to-run-this-locally\">How to run this locally</h2>\n<p>Go to the repository above, and clone or download the code locally. In there, use <code>python3 -m http.server 8000 --bind 127.0.0.1</code> in a console, and then open a web browser and navigate to <code>localhost:8000</code>.</p>\n",
+          "permalink": "http://127.0.0.1:1111/projects/mandelbrotexplorer/",
+          "slug": "mandelbrotexplorer",
+          "ancestors": [
+            "_index.md",
+            "projects/_index.md"
+          ],
+          "title": "Mandelbrot Explorer",
+          "description": "This is a mandelbrot demo that I built in Javascript in order to learn how the canvas works",
+          "date": null,
+          "year": null,
+          "month": null,
+          "day": null,
+          "taxonomies": {
+            "tags": [
+              "code",
+              "js",
+              "mandelbrot",
+              "canvas"
+            ],
+            "categories": [
+              "projects",
+              "art"
+            ]
+          },
+          "extra": {
+            "titlecard": "img light",
+            "img": "/asset/mandelbrot.png"
+          },
+          "path": "projects/mandelbrotexplorer/",
+          "components": [
+            "projects",
+            "mandelbrotexplorer"
+          ],
+          "summary": null,
+          "toc": [
+            {
+              "level": 1,
+              "id": "mandelbrot-explorer",
+              "permalink": "http://127.0.0.1:1111/projects/mandelbrotexplorer/#mandelbrot-explorer",
+              "title": "Mandelbrot Explorer",
+              "children": [
+                {
+                  "level": 2,
+                  "id": "motivation",
+                  "permalink": "http://127.0.0.1:1111/projects/mandelbrotexplorer/#motivation",
+                  "title": "Motivation",
+                  "children": []
+                },
+                {
+                  "level": 2,
+                  "id": "how-to-run-this-locally",
+                  "permalink": "http://127.0.0.1:1111/projects/mandelbrotexplorer/#how-to-run-this-locally",
+                  "title": "How to run this locally",
+                  "children": []
+                }
+              ]
+            }
+          ],
+          "word_count": 117,
+          "reading_time": 1,
           "assets": [],
           "draft": false,
           "lang": "en",
@@ -608,7 +688,7 @@
       "pages": [
         {
           "relative_path": "projects/p4.md",
-          "content": "<h1 id=\"links\">Links</h1>\n<p><a href=\"https://github.com/Nesdood007/mart380_musigen\">Source Code</a></p>\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/XsCLcTWwn0g\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Tb5iDYDCC1g\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n<h1 id=\"the-device\">The Device</h1>\n<p>I created this device in a few hours using the base of an old keyboard I took apart a long time ago, and a lot of Sticky Putty.</p>\n<figure>\n  <img src=\"/asset/p4_1.jpg\">\n  <figcaption> Here is the device I made for the project. </figcaption>\n</figure>\n<figure>\n  <img src=\"/asset/p4_2.jpg\">\n  <figcaption> Full Device. </figcaption>\n</figure>\n<figure>\n  <img src=\"/asset/p4_3.jpg\">\n  <figcaption> Here is the device connected to my computer. </figcaption>\n</figure>\n<h1 id=\"project-information\">Project Information</h1>\n<p>This was the final project in my MART380 class.</p>\n<h2 id=\"motivation\">Motivation</h2>\n<p>I have recently been researching more about Computer Music, and decided that this would be a cool concept to peruse for my final project in this class. I had some experience in working with the Distance Sensor for an Arduino, so I decided to go with that.</p>\n<h2 id=\"music\">Music</h2>\n<p>I decided to go with using a Pentatonic Scale, as well as 7th chords with added 2nds to make my music. There are a few distinct parts of the music generation process: The Arpeggio, Chords, Melody, and Bass. The Melody is randomly generated by picking one of the 5 notes to play. Chords change on the user putting their hands close to the device, which causes a new Chord to be randomly selected.</p>\n<h1 id=\"system-requirements\">System Requirements</h1>\n<p>Currently I only support linux, but in theory this project can be modified to work on other platforms, such as Windows or MacOS.</p>\n<p>Software Required:</p>\n<ul>\n<li>\n<p>Pure Data (In particular the <strong>i2ork version</strong>, which can be <a href=\"https://puredata.info/downloads/Pd-L2Ork\">found here</a>)</p>\n<ul>\n<li>\n<p>The following Packages Must be installed:</p>\n<ul>\n<li>\n<p>Comport (serial communication module)</p>\n</li>\n<li>\n<p>Reverb</p>\n</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>\n<p>Jack Audio Connection Kit (for Linux users to route MIDI and Audio streams through software, <a href=\"http://jackaudio.org/\">link here</a>)</p>\n</li>\n<li>\n<p>ZynAddSubFX (Audio Synthesizer, makes the sound for the project. <a href=\"http://zynaddsubfx.sourceforge.net/download.html\">Download Here</a>. Please Download the <strong>Non-ZynFusion</strong> version.)</p>\n</li>\n<li>\n<p>USB 2.0 Connections, or otherwise able to communicate with an arduino through a serial interface.</p>\n</li>\n</ul>\n<h1 id=\"tools-needed\">Tools Needed</h1>\n<p>In order to setup this system, you will need:</p>\n<ul>\n<li>\n<p>2 Arduinos</p>\n</li>\n<li>\n<p>2 Arduino Ultrasonic Sensors</p>\n</li>\n<li>\n<p>Wires and USB cables as appropriate</p>\n</li>\n</ul>\n<h1 id=\"setup-procedure\">Setup Procedure</h1>\n<p>This is a brief guide to setting up the Arduino software and hardware, as well as Pure Data.</p>\n<h2 id=\"arduino\">Arduino</h2>\n<ol>\n<li>Connect the Arduino to the Distance Sensor.</li>\n</ol>\n<p><strong>NOTE: Be sure that the ultrasonic sensors point opposite of each other, otherwise interference may occur.</strong></p>\n<ol start=\"2\">\n<li>\n<p>Connect Arduinos to PC</p>\n</li>\n<li>\n<p>Write Program to both Arduinos</p>\n</li>\n</ol>\n<h2 id=\"pc\">PC</h2>\n<ol>\n<li>Start Jack</li>\n</ol>\n<p>a. Note that QJackCtl has a nice GUI to help with setup if you are into that type of thing</p>\n<ol start=\"2\">\n<li>Start Pure Data</li>\n</ol>\n<ul>\n<li>\n<p>Turn on the DSP</p>\n</li>\n<li>\n<p>Open up <code>mart380_final.pd</code></p>\n</li>\n</ul>\n<ol start=\"3\">\n<li>Start ZynAddSubFX</li>\n</ol>\n<ul>\n<li>Load <code>inst.xmz</code></li>\n</ul>\n<ol start=\"4\">\n<li>\n<p>Make connections</p>\n</li>\n<li>\n<p>In the Opened Pure Data Project, click on the large <strong>Bang</strong> Object (looks like a button) at the top-left corner of the window, where there is a comment saying &quot;Start&quot;.</p>\n</li>\n</ol>\n<h1 id=\"use\">Use</h1>\n<p>By default, the system should be quiet, as the reverb is on full-blast, and the notes are very short. Place hands in front of the sensors, about 20 inches away, and move around, probably closer to the sensor, until the <code>L</code> LED on the Arduino illuminates. When this light is lit, you will know that your hand is within the range of the sensor, and a non-zero or 127 value will be sent to the computer.</p>\n<p>First, try moving your hands closer to the sensors and listen for the music to get louder. To change Chords, move your hands closely in front of the sensors, until the lights go out (from your hands being too close). After a few ticks, the chord should randomly change.</p>\n<h1 id=\"modification\">Modification</h1>\n<p>This program can be modified to accomodate different instruments, sensors, or chords. </p>\n",
+          "content": "<p><em>Editor's Note: This was Project 4 of my New Media Arts Class</em></p>\n<p>Original Title: Project 4 - What if you can make music with just your hands?</p>\n<p>Original Description: What if you could make music just by waving your hands in front of a sensor? This system makes music based on the position of your hands in front of a pair of ultrasonic sensors using pentationic scales.</p>\n<h1 id=\"links\">Links</h1>\n<p><a href=\"https://github.com/Nesdood007/mart380_musigen\">Source Code</a></p>\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/XsCLcTWwn0g\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Tb5iDYDCC1g\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n<h1 id=\"the-device\">The Device</h1>\n<p>I created this device in a few hours using the base of an old keyboard I took apart a long time ago, and a lot of Sticky Putty.</p>\n<figure>\n  <img src=\"/asset/p4_1.jpg\">\n  <figcaption> Here is the device I made for the project. </figcaption>\n</figure>\n<figure>\n  <img src=\"/asset/p4_2.jpg\">\n  <figcaption> Full Device. </figcaption>\n</figure>\n<figure>\n  <img src=\"/asset/p4_3.jpg\">\n  <figcaption> Here is the device connected to my computer. </figcaption>\n</figure>\n<h1 id=\"project-information\">Project Information</h1>\n<p>This was the final project in my MART380 class.</p>\n<h2 id=\"motivation\">Motivation</h2>\n<p>I have recently been researching more about Computer Music, and decided that this would be a cool concept to peruse for my final project in this class. I had some experience in working with the Distance Sensor for an Arduino, so I decided to go with that.</p>\n<h2 id=\"music\">Music</h2>\n<p>I decided to go with using a Pentatonic Scale, as well as 7th chords with added 2nds to make my music. There are a few distinct parts of the music generation process: The Arpeggio, Chords, Melody, and Bass. The Melody is randomly generated by picking one of the 5 notes to play. Chords change on the user putting their hands close to the device, which causes a new Chord to be randomly selected.</p>\n<h1 id=\"system-requirements\">System Requirements</h1>\n<p>Currently I only support linux, but in theory this project can be modified to work on other platforms, such as Windows or MacOS.</p>\n<p>Software Required:</p>\n<ul>\n<li>\n<p>Pure Data (In particular the <strong>i2ork version</strong>, which can be <a href=\"https://puredata.info/downloads/Pd-L2Ork\">found here</a>)</p>\n<ul>\n<li>\n<p>The following Packages Must be installed:</p>\n<ul>\n<li>\n<p>Comport (serial communication module)</p>\n</li>\n<li>\n<p>Reverb</p>\n</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>\n<p>Jack Audio Connection Kit (for Linux users to route MIDI and Audio streams through software, <a href=\"http://jackaudio.org/\">link here</a>)</p>\n</li>\n<li>\n<p>ZynAddSubFX (Audio Synthesizer, makes the sound for the project. <a href=\"http://zynaddsubfx.sourceforge.net/download.html\">Download Here</a>. Please Download the <strong>Non-ZynFusion</strong> version.)</p>\n</li>\n<li>\n<p>USB 2.0 Connections, or otherwise able to communicate with an arduino through a serial interface.</p>\n</li>\n</ul>\n<h1 id=\"tools-needed\">Tools Needed</h1>\n<p>In order to setup this system, you will need:</p>\n<ul>\n<li>\n<p>2 Arduinos</p>\n</li>\n<li>\n<p>2 Arduino Ultrasonic Sensors</p>\n</li>\n<li>\n<p>Wires and USB cables as appropriate</p>\n</li>\n</ul>\n<h1 id=\"setup-procedure\">Setup Procedure</h1>\n<p>This is a brief guide to setting up the Arduino software and hardware, as well as Pure Data.</p>\n<h2 id=\"arduino\">Arduino</h2>\n<ol>\n<li>Connect the Arduino to the Distance Sensor.</li>\n</ol>\n<p><strong>NOTE: Be sure that the ultrasonic sensors point opposite of each other, otherwise interference may occur.</strong></p>\n<ol start=\"2\">\n<li>\n<p>Connect Arduinos to PC</p>\n</li>\n<li>\n<p>Write Program to both Arduinos</p>\n</li>\n</ol>\n<h2 id=\"pc\">PC</h2>\n<ol>\n<li>Start Jack</li>\n</ol>\n<p>a. Note that QJackCtl has a nice GUI to help with setup if you are into that type of thing</p>\n<ol start=\"2\">\n<li>Start Pure Data</li>\n</ol>\n<ul>\n<li>\n<p>Turn on the DSP</p>\n</li>\n<li>\n<p>Open up <code>mart380_final.pd</code></p>\n</li>\n</ul>\n<ol start=\"3\">\n<li>Start ZynAddSubFX</li>\n</ol>\n<ul>\n<li>Load <code>inst.xmz</code></li>\n</ul>\n<ol start=\"4\">\n<li>\n<p>Make connections</p>\n</li>\n<li>\n<p>In the Opened Pure Data Project, click on the large <strong>Bang</strong> Object (looks like a button) at the top-left corner of the window, where there is a comment saying &quot;Start&quot;.</p>\n</li>\n</ol>\n<h1 id=\"use\">Use</h1>\n<p>By default, the system should be quiet, as the reverb is on full-blast, and the notes are very short. Place hands in front of the sensors, about 20 inches away, and move around, probably closer to the sensor, until the <code>L</code> LED on the Arduino illuminates. When this light is lit, you will know that your hand is within the range of the sensor, and a non-zero or 127 value will be sent to the computer.</p>\n<p>First, try moving your hands closer to the sensors and listen for the music to get louder. To change Chords, move your hands closely in front of the sensors, until the lights go out (from your hands being too close). After a few ticks, the chord should randomly change.</p>\n<h1 id=\"modification\">Modification</h1>\n<p>This program can be modified to accomodate different instruments, sensors, or chords. </p>\n",
           "permalink": "http://127.0.0.1:1111/projects/p4/",
           "slug": "p4",
           "ancestors": [
@@ -616,22 +696,22 @@
             "projects/_index.md"
           ],
           "title": "Project 4 - What if you can make music with just your hands?",
-          "description": "What if you could make music just by waving your hands in front of a sensor? <br> This system makes music based on the position of your hands in front of a pair of ultrasonic sensors using pentationic scales.",
+          "description": "This system makes music based on the position of your hands in front of a pair of ultrasonic sensors using pentationic scales.",
           "date": null,
           "year": null,
           "month": null,
           "day": null,
           "taxonomies": {
+            "categories": [
+              "projects",
+              "MART380",
+              "computer music"
+            ],
             "tags": [
               "arduino",
               "escape",
               "opensource",
               "test"
-            ],
-            "categories": [
-              "projects",
-              "MART380",
-              "computer music"
             ]
           },
           "extra": {
@@ -732,7 +812,7 @@
               "children": []
             }
           ],
-          "word_count": 666,
+          "word_count": 732,
           "reading_time": 4,
           "assets": [],
           "draft": false,
@@ -751,8 +831,80 @@
       "permalink": "http://127.0.0.1:1111/categories/projects/",
       "pages": [
         {
+          "relative_path": "projects/mandelbrotExplorer.md",
+          "content": "<p><a href=\"https://github.com/mboleary/fractals-canvas\">https://github.com/mboleary/fractals-canvas</a></p>\n<h1 id=\"mandelbrot-explorer\">Mandelbrot Explorer</h1>\n<p>This was a testing project for me to learn how the canvas works in Javascript, as well as how I can color the Mandelbrot set. This was written without the use of a Javascript Framework.</p>\n<p>There are additional Images in the repo linked above.</p>\n<h2 id=\"motivation\">Motivation</h2>\n<p>I built this demo as a way to learn Javascript, and how to specifically use the Canvas to draw things.</p>\n<h2 id=\"how-to-run-this-locally\">How to run this locally</h2>\n<p>Go to the repository above, and clone or download the code locally. In there, use <code>python3 -m http.server 8000 --bind 127.0.0.1</code> in a console, and then open a web browser and navigate to <code>localhost:8000</code>.</p>\n",
+          "permalink": "http://127.0.0.1:1111/projects/mandelbrotexplorer/",
+          "slug": "mandelbrotexplorer",
+          "ancestors": [
+            "_index.md",
+            "projects/_index.md"
+          ],
+          "title": "Mandelbrot Explorer",
+          "description": "This is a mandelbrot demo that I built in Javascript in order to learn how the canvas works",
+          "date": null,
+          "year": null,
+          "month": null,
+          "day": null,
+          "taxonomies": {
+            "tags": [
+              "code",
+              "js",
+              "mandelbrot",
+              "canvas"
+            ],
+            "categories": [
+              "projects",
+              "art"
+            ]
+          },
+          "extra": {
+            "titlecard": "img light",
+            "img": "/asset/mandelbrot.png"
+          },
+          "path": "projects/mandelbrotexplorer/",
+          "components": [
+            "projects",
+            "mandelbrotexplorer"
+          ],
+          "summary": null,
+          "toc": [
+            {
+              "level": 1,
+              "id": "mandelbrot-explorer",
+              "permalink": "http://127.0.0.1:1111/projects/mandelbrotexplorer/#mandelbrot-explorer",
+              "title": "Mandelbrot Explorer",
+              "children": [
+                {
+                  "level": 2,
+                  "id": "motivation",
+                  "permalink": "http://127.0.0.1:1111/projects/mandelbrotexplorer/#motivation",
+                  "title": "Motivation",
+                  "children": []
+                },
+                {
+                  "level": 2,
+                  "id": "how-to-run-this-locally",
+                  "permalink": "http://127.0.0.1:1111/projects/mandelbrotexplorer/#how-to-run-this-locally",
+                  "title": "How to run this locally",
+                  "children": []
+                }
+              ]
+            }
+          ],
+          "word_count": 117,
+          "reading_time": 1,
+          "assets": [],
+          "draft": false,
+          "lang": "en",
+          "lighter": null,
+          "heavier": null,
+          "earlier": null,
+          "later": null,
+          "translations": []
+        },
+        {
           "relative_path": "projects/p3.md",
-          "content": "<h1 id=\"link-to-the-game-on-itch-io\">Link to the Game on Itch.io</h1>\n<p><a href=\"https://mboleary-usc.itch.io/escape\">https://mboleary-usc.itch.io/escape</a></p>\n<p><a href=\"https://github.com/Nesdood007/escapegame\">Source Code on Github</a></p>\n<h1 id=\"project-information\">Project Information</h1>\n<p>A Unity game where you must escape from the world you are currently in.</p>\n<h2 id=\"introduction\">Introduction</h2>\n<p>This is a First-person styled game where you must figure out how to go from world to world.</p>\n<h2 id=\"directories\">Directories</h2>\n<p><code>/Assets</code> - The Assets Directory to include in a new Unity Project</p>\n<p><code>/Build</code> - Prebuilt binaries for Linux, MacOSX, Windows, and WebGL</p>\n<h2 id=\"controls\">Controls</h2>\n<p><strong>Mouse</strong> - Look Around</p>\n<p><strong>Left Mouse Button</strong> - Shoot a Projectile. The projectile will glow all colors that it can interact with</p>\n<p><strong>WASD</strong> - Move Around</p>\n<p><strong>SHIFT</strong> - Run</p>\n<h2 id=\"how-to-build\">How to build</h2>\n<p>In order to build this project, you should create a New Unity Project, and then import the assets from this assets directory into your project. It should contain all scripts and resources needed to test out the project.</p>\n<h2 id=\"motivation\">Motivation</h2>\n<p>Since this project used a lot of scripts, I felt that it would be good to have this project be open-source to help other students that may take this class in the future see how C# code is written, and how it can be used to make a cool game.</p>\n<p>There are scripts to spawn in enemies, keep track of colors, and change the music when the player collects a tessaract, among other things.</p>\n<hr />\n<h1 id=\"walkthrough\">Walkthrough</h1>\n<p>When this game was demoed in class, I think that the objective of hte game wasn't initially obvious enough, so I have made a walkthrough to help people play through it.</p>\n<h2 id=\"main-objective\">Main Objective</h2>\n<p>The entire world is governed by collecting colored cubes, giving the player the ability to interact with other objects that also are the same color.</p>\n<h2 id=\"objects\">Objects</h2>\n<figure>\n  <img src=\"/asset/p3_1.png\">\n  <figcaption> This is a Tessaract Piece. Your objective is to collect all four of these. They are all different colors. </figcaption>\n</figure>\n<figure>\n  <img src=\"/asset/p3_2.png\">\n  <figcaption> This is a Colored Switch. You touch this to make the miniature capsule rotate, which signifies that the state of the switch has changed. These can make walls disappear, or make other things happen. There is also a colorless variety.</figcaption>\n</figure>\n<figure>\n  <img src=\"/asset/p3_3.png\">\n  <figcaption> Surrounding the tree are Colored Enemies. You must have collected the cooresponding color of tessaract to make these disappear. Pro Tip, they are actually harmless and were placed simply to be a nuisance. (Perhaps you can modify them to be harmful to the player?) </figcaption>\n</figure>\n<h2 id=\"areas\">Areas</h2>\n<h3 id=\"light-world-first-scene\">Light World (First Scene)</h3>\n<p>You, the player are in a cube. You must touch the switch to escape this bow, but you aren't finished escaping yet! Go and investigate that suspicially large and dark tree in the middle of the area.</p>\n<figure>\n  <img src=\"/asset/p3_bg.png\">\n  <figcaption> This is the tree that you should go toward. </figcaption>\n</figure>\n<h3 id=\"darker-world-second-scene\">Darker World (Second Scene)</h3>\n<p>You have been teleported to a darker version of the world you were just in. Off in the distance, you should see colored Tessaract Cubes (as seen above) in each corner of the area. You can collect them in any order that you choose. When you collect all 4, you will be teleported to another area.</p>\n<h3 id=\"darkest-world-last-scene\">Darkest World (Last Scene)</h3>\n<p>You should see a lighter tree in the middle of the field, like the first one that you initially touched to get to the Dark World. Go touch that tree!</p>\n<figure>\n  <img src=\"/asset/p3_3.png\">\n  <figcaption> This is the tree that you should go toward. </figcaption>\n</figure>\n<p>After this you are teleported back to the Light World. You can go around again, if you want, or try to escape a different way in the Darkest World. <em>Hint: Then enemies don't always stay on the ground!</em>. Also this breaks the game, FYI.</p>\n",
+          "content": "<p><em>Editor's note: This was Project 3 for my New Media Arts Class</em> </p>\n<p>Original Title: Project 3 - What if there was an Alternate Universe?</p>\n<p>Original Description: What if, in a world devoid of color, there was an alternate universe with splashes of color? How would you escape to this world?</p>\n<h1 id=\"link-to-the-game-on-itch-io\">Link to the Game on Itch.io</h1>\n<p><a href=\"https://mboleary-usc.itch.io/escape\">https://mboleary-usc.itch.io/escape</a></p>\n<p><a href=\"https://github.com/Nesdood007/escapegame\">Source Code on Github</a></p>\n<h1 id=\"project-information\">Project Information</h1>\n<p>A Unity game where you must escape from the world you are currently in.</p>\n<h2 id=\"introduction\">Introduction</h2>\n<p>This is a First-person styled game where you must figure out how to go from world to world.</p>\n<h2 id=\"directories\">Directories</h2>\n<p><code>/Assets</code> - The Assets Directory to include in a new Unity Project</p>\n<p><code>/Build</code> - Prebuilt binaries for Linux, MacOSX, Windows, and WebGL</p>\n<h2 id=\"controls\">Controls</h2>\n<p><strong>Mouse</strong> - Look Around</p>\n<p><strong>Left Mouse Button</strong> - Shoot a Projectile. The projectile will glow all colors that it can interact with</p>\n<p><strong>WASD</strong> - Move Around</p>\n<p><strong>SHIFT</strong> - Run</p>\n<h2 id=\"how-to-build\">How to build</h2>\n<p>In order to build this project, you should create a New Unity Project, and then import the assets from this assets directory into your project. It should contain all scripts and resources needed to test out the project.</p>\n<h2 id=\"motivation\">Motivation</h2>\n<p>Since this project used a lot of scripts, I felt that it would be good to have this project be open-source to help other students that may take this class in the future see how C# code is written, and how it can be used to make a cool game.</p>\n<p>There are scripts to spawn in enemies, keep track of colors, and change the music when the player collects a tessaract, among other things.</p>\n<hr />\n<h1 id=\"walkthrough\">Walkthrough</h1>\n<p>When this game was demoed in class, I think that the objective of hte game wasn't initially obvious enough, so I have made a walkthrough to help people play through it.</p>\n<h2 id=\"main-objective\">Main Objective</h2>\n<p>The entire world is governed by collecting colored cubes, giving the player the ability to interact with other objects that also are the same color.</p>\n<h2 id=\"objects\">Objects</h2>\n<figure>\n  <img src=\"/asset/p3_1.png\">\n  <figcaption> This is a Tessaract Piece. Your objective is to collect all four of these. They are all different colors. </figcaption>\n</figure>\n<figure>\n  <img src=\"/asset/p3_2.png\">\n  <figcaption> This is a Colored Switch. You touch this to make the miniature capsule rotate, which signifies that the state of the switch has changed. These can make walls disappear, or make other things happen. There is also a colorless variety.</figcaption>\n</figure>\n<figure>\n  <img src=\"/asset/p3_3.png\">\n  <figcaption> Surrounding the tree are Colored Enemies. You must have collected the cooresponding color of tessaract to make these disappear. Pro Tip, they are actually harmless and were placed simply to be a nuisance. (Perhaps you can modify them to be harmful to the player?) </figcaption>\n</figure>\n<h2 id=\"areas\">Areas</h2>\n<h3 id=\"light-world-first-scene\">Light World (First Scene)</h3>\n<p>You, the player are in a cube. You must touch the switch to escape this bow, but you aren't finished escaping yet! Go and investigate that suspicially large and dark tree in the middle of the area.</p>\n<figure>\n  <img src=\"/asset/p3_bg.png\">\n  <figcaption> This is the tree that you should go toward. </figcaption>\n</figure>\n<h3 id=\"darker-world-second-scene\">Darker World (Second Scene)</h3>\n<p>You have been teleported to a darker version of the world you were just in. Off in the distance, you should see colored Tessaract Cubes (as seen above) in each corner of the area. You can collect them in any order that you choose. When you collect all 4, you will be teleported to another area.</p>\n<h3 id=\"darkest-world-last-scene\">Darkest World (Last Scene)</h3>\n<p>You should see a lighter tree in the middle of the field, like the first one that you initially touched to get to the Dark World. Go touch that tree!</p>\n<figure>\n  <img src=\"/asset/p3_3.png\">\n  <figcaption> This is the tree that you should go toward. </figcaption>\n</figure>\n<p>After this you are teleported back to the Light World. You can go around again, if you want, or try to escape a different way in the Darkest World. <em>Hint: Then enemies don't always stay on the ground!</em>. Also this breaks the game, FYI.</p>\n",
           "permalink": "http://127.0.0.1:1111/projects/p3/",
           "slug": "p3",
           "ancestors": [
@@ -889,144 +1041,7 @@
               ]
             }
           ],
-          "word_count": 627,
-          "reading_time": 4,
-          "assets": [],
-          "draft": false,
-          "lang": "en",
-          "lighter": null,
-          "heavier": null,
-          "earlier": null,
-          "later": null,
-          "translations": []
-        },
-        {
-          "relative_path": "projects/p4.md",
-          "content": "<h1 id=\"links\">Links</h1>\n<p><a href=\"https://github.com/Nesdood007/mart380_musigen\">Source Code</a></p>\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/XsCLcTWwn0g\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Tb5iDYDCC1g\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n<h1 id=\"the-device\">The Device</h1>\n<p>I created this device in a few hours using the base of an old keyboard I took apart a long time ago, and a lot of Sticky Putty.</p>\n<figure>\n  <img src=\"/asset/p4_1.jpg\">\n  <figcaption> Here is the device I made for the project. </figcaption>\n</figure>\n<figure>\n  <img src=\"/asset/p4_2.jpg\">\n  <figcaption> Full Device. </figcaption>\n</figure>\n<figure>\n  <img src=\"/asset/p4_3.jpg\">\n  <figcaption> Here is the device connected to my computer. </figcaption>\n</figure>\n<h1 id=\"project-information\">Project Information</h1>\n<p>This was the final project in my MART380 class.</p>\n<h2 id=\"motivation\">Motivation</h2>\n<p>I have recently been researching more about Computer Music, and decided that this would be a cool concept to peruse for my final project in this class. I had some experience in working with the Distance Sensor for an Arduino, so I decided to go with that.</p>\n<h2 id=\"music\">Music</h2>\n<p>I decided to go with using a Pentatonic Scale, as well as 7th chords with added 2nds to make my music. There are a few distinct parts of the music generation process: The Arpeggio, Chords, Melody, and Bass. The Melody is randomly generated by picking one of the 5 notes to play. Chords change on the user putting their hands close to the device, which causes a new Chord to be randomly selected.</p>\n<h1 id=\"system-requirements\">System Requirements</h1>\n<p>Currently I only support linux, but in theory this project can be modified to work on other platforms, such as Windows or MacOS.</p>\n<p>Software Required:</p>\n<ul>\n<li>\n<p>Pure Data (In particular the <strong>i2ork version</strong>, which can be <a href=\"https://puredata.info/downloads/Pd-L2Ork\">found here</a>)</p>\n<ul>\n<li>\n<p>The following Packages Must be installed:</p>\n<ul>\n<li>\n<p>Comport (serial communication module)</p>\n</li>\n<li>\n<p>Reverb</p>\n</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>\n<p>Jack Audio Connection Kit (for Linux users to route MIDI and Audio streams through software, <a href=\"http://jackaudio.org/\">link here</a>)</p>\n</li>\n<li>\n<p>ZynAddSubFX (Audio Synthesizer, makes the sound for the project. <a href=\"http://zynaddsubfx.sourceforge.net/download.html\">Download Here</a>. Please Download the <strong>Non-ZynFusion</strong> version.)</p>\n</li>\n<li>\n<p>USB 2.0 Connections, or otherwise able to communicate with an arduino through a serial interface.</p>\n</li>\n</ul>\n<h1 id=\"tools-needed\">Tools Needed</h1>\n<p>In order to setup this system, you will need:</p>\n<ul>\n<li>\n<p>2 Arduinos</p>\n</li>\n<li>\n<p>2 Arduino Ultrasonic Sensors</p>\n</li>\n<li>\n<p>Wires and USB cables as appropriate</p>\n</li>\n</ul>\n<h1 id=\"setup-procedure\">Setup Procedure</h1>\n<p>This is a brief guide to setting up the Arduino software and hardware, as well as Pure Data.</p>\n<h2 id=\"arduino\">Arduino</h2>\n<ol>\n<li>Connect the Arduino to the Distance Sensor.</li>\n</ol>\n<p><strong>NOTE: Be sure that the ultrasonic sensors point opposite of each other, otherwise interference may occur.</strong></p>\n<ol start=\"2\">\n<li>\n<p>Connect Arduinos to PC</p>\n</li>\n<li>\n<p>Write Program to both Arduinos</p>\n</li>\n</ol>\n<h2 id=\"pc\">PC</h2>\n<ol>\n<li>Start Jack</li>\n</ol>\n<p>a. Note that QJackCtl has a nice GUI to help with setup if you are into that type of thing</p>\n<ol start=\"2\">\n<li>Start Pure Data</li>\n</ol>\n<ul>\n<li>\n<p>Turn on the DSP</p>\n</li>\n<li>\n<p>Open up <code>mart380_final.pd</code></p>\n</li>\n</ul>\n<ol start=\"3\">\n<li>Start ZynAddSubFX</li>\n</ol>\n<ul>\n<li>Load <code>inst.xmz</code></li>\n</ul>\n<ol start=\"4\">\n<li>\n<p>Make connections</p>\n</li>\n<li>\n<p>In the Opened Pure Data Project, click on the large <strong>Bang</strong> Object (looks like a button) at the top-left corner of the window, where there is a comment saying &quot;Start&quot;.</p>\n</li>\n</ol>\n<h1 id=\"use\">Use</h1>\n<p>By default, the system should be quiet, as the reverb is on full-blast, and the notes are very short. Place hands in front of the sensors, about 20 inches away, and move around, probably closer to the sensor, until the <code>L</code> LED on the Arduino illuminates. When this light is lit, you will know that your hand is within the range of the sensor, and a non-zero or 127 value will be sent to the computer.</p>\n<p>First, try moving your hands closer to the sensors and listen for the music to get louder. To change Chords, move your hands closely in front of the sensors, until the lights go out (from your hands being too close). After a few ticks, the chord should randomly change.</p>\n<h1 id=\"modification\">Modification</h1>\n<p>This program can be modified to accomodate different instruments, sensors, or chords. </p>\n",
-          "permalink": "http://127.0.0.1:1111/projects/p4/",
-          "slug": "p4",
-          "ancestors": [
-            "_index.md",
-            "projects/_index.md"
-          ],
-          "title": "Project 4 - What if you can make music with just your hands?",
-          "description": "What if you could make music just by waving your hands in front of a sensor? <br> This system makes music based on the position of your hands in front of a pair of ultrasonic sensors using pentationic scales.",
-          "date": null,
-          "year": null,
-          "month": null,
-          "day": null,
-          "taxonomies": {
-            "tags": [
-              "arduino",
-              "escape",
-              "opensource",
-              "test"
-            ],
-            "categories": [
-              "projects",
-              "MART380",
-              "computer music"
-            ]
-          },
-          "extra": {
-            "titlecard": "img light",
-            "img": "/asset/p4_bg.jpg"
-          },
-          "path": "projects/p4/",
-          "components": [
-            "projects",
-            "p4"
-          ],
-          "summary": null,
-          "toc": [
-            {
-              "level": 1,
-              "id": "links",
-              "permalink": "http://127.0.0.1:1111/projects/p4/#links",
-              "title": "Links",
-              "children": []
-            },
-            {
-              "level": 1,
-              "id": "the-device",
-              "permalink": "http://127.0.0.1:1111/projects/p4/#the-device",
-              "title": "The Device",
-              "children": []
-            },
-            {
-              "level": 1,
-              "id": "project-information",
-              "permalink": "http://127.0.0.1:1111/projects/p4/#project-information",
-              "title": "Project Information",
-              "children": [
-                {
-                  "level": 2,
-                  "id": "motivation",
-                  "permalink": "http://127.0.0.1:1111/projects/p4/#motivation",
-                  "title": "Motivation",
-                  "children": []
-                },
-                {
-                  "level": 2,
-                  "id": "music",
-                  "permalink": "http://127.0.0.1:1111/projects/p4/#music",
-                  "title": "Music",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "level": 1,
-              "id": "system-requirements",
-              "permalink": "http://127.0.0.1:1111/projects/p4/#system-requirements",
-              "title": "System Requirements",
-              "children": []
-            },
-            {
-              "level": 1,
-              "id": "tools-needed",
-              "permalink": "http://127.0.0.1:1111/projects/p4/#tools-needed",
-              "title": "Tools Needed",
-              "children": []
-            },
-            {
-              "level": 1,
-              "id": "setup-procedure",
-              "permalink": "http://127.0.0.1:1111/projects/p4/#setup-procedure",
-              "title": "Setup Procedure",
-              "children": [
-                {
-                  "level": 2,
-                  "id": "arduino",
-                  "permalink": "http://127.0.0.1:1111/projects/p4/#arduino",
-                  "title": "Arduino",
-                  "children": []
-                },
-                {
-                  "level": 2,
-                  "id": "pc",
-                  "permalink": "http://127.0.0.1:1111/projects/p4/#pc",
-                  "title": "PC",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "level": 1,
-              "id": "use",
-              "permalink": "http://127.0.0.1:1111/projects/p4/#use",
-              "title": "Use",
-              "children": []
-            },
-            {
-              "level": 1,
-              "id": "modification",
-              "permalink": "http://127.0.0.1:1111/projects/p4/#modification",
-              "title": "Modification",
-              "children": []
-            }
-          ],
-          "word_count": 666,
+          "word_count": 676,
           "reading_time": 4,
           "assets": [],
           "draft": false,
@@ -1164,6 +1179,143 @@
           ],
           "word_count": 153,
           "reading_time": 1,
+          "assets": [],
+          "draft": false,
+          "lang": "en",
+          "lighter": null,
+          "heavier": null,
+          "earlier": null,
+          "later": null,
+          "translations": []
+        },
+        {
+          "relative_path": "projects/p4.md",
+          "content": "<p><em>Editor's Note: This was Project 4 of my New Media Arts Class</em></p>\n<p>Original Title: Project 4 - What if you can make music with just your hands?</p>\n<p>Original Description: What if you could make music just by waving your hands in front of a sensor? This system makes music based on the position of your hands in front of a pair of ultrasonic sensors using pentationic scales.</p>\n<h1 id=\"links\">Links</h1>\n<p><a href=\"https://github.com/Nesdood007/mart380_musigen\">Source Code</a></p>\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/XsCLcTWwn0g\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Tb5iDYDCC1g\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n<h1 id=\"the-device\">The Device</h1>\n<p>I created this device in a few hours using the base of an old keyboard I took apart a long time ago, and a lot of Sticky Putty.</p>\n<figure>\n  <img src=\"/asset/p4_1.jpg\">\n  <figcaption> Here is the device I made for the project. </figcaption>\n</figure>\n<figure>\n  <img src=\"/asset/p4_2.jpg\">\n  <figcaption> Full Device. </figcaption>\n</figure>\n<figure>\n  <img src=\"/asset/p4_3.jpg\">\n  <figcaption> Here is the device connected to my computer. </figcaption>\n</figure>\n<h1 id=\"project-information\">Project Information</h1>\n<p>This was the final project in my MART380 class.</p>\n<h2 id=\"motivation\">Motivation</h2>\n<p>I have recently been researching more about Computer Music, and decided that this would be a cool concept to peruse for my final project in this class. I had some experience in working with the Distance Sensor for an Arduino, so I decided to go with that.</p>\n<h2 id=\"music\">Music</h2>\n<p>I decided to go with using a Pentatonic Scale, as well as 7th chords with added 2nds to make my music. There are a few distinct parts of the music generation process: The Arpeggio, Chords, Melody, and Bass. The Melody is randomly generated by picking one of the 5 notes to play. Chords change on the user putting their hands close to the device, which causes a new Chord to be randomly selected.</p>\n<h1 id=\"system-requirements\">System Requirements</h1>\n<p>Currently I only support linux, but in theory this project can be modified to work on other platforms, such as Windows or MacOS.</p>\n<p>Software Required:</p>\n<ul>\n<li>\n<p>Pure Data (In particular the <strong>i2ork version</strong>, which can be <a href=\"https://puredata.info/downloads/Pd-L2Ork\">found here</a>)</p>\n<ul>\n<li>\n<p>The following Packages Must be installed:</p>\n<ul>\n<li>\n<p>Comport (serial communication module)</p>\n</li>\n<li>\n<p>Reverb</p>\n</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>\n<p>Jack Audio Connection Kit (for Linux users to route MIDI and Audio streams through software, <a href=\"http://jackaudio.org/\">link here</a>)</p>\n</li>\n<li>\n<p>ZynAddSubFX (Audio Synthesizer, makes the sound for the project. <a href=\"http://zynaddsubfx.sourceforge.net/download.html\">Download Here</a>. Please Download the <strong>Non-ZynFusion</strong> version.)</p>\n</li>\n<li>\n<p>USB 2.0 Connections, or otherwise able to communicate with an arduino through a serial interface.</p>\n</li>\n</ul>\n<h1 id=\"tools-needed\">Tools Needed</h1>\n<p>In order to setup this system, you will need:</p>\n<ul>\n<li>\n<p>2 Arduinos</p>\n</li>\n<li>\n<p>2 Arduino Ultrasonic Sensors</p>\n</li>\n<li>\n<p>Wires and USB cables as appropriate</p>\n</li>\n</ul>\n<h1 id=\"setup-procedure\">Setup Procedure</h1>\n<p>This is a brief guide to setting up the Arduino software and hardware, as well as Pure Data.</p>\n<h2 id=\"arduino\">Arduino</h2>\n<ol>\n<li>Connect the Arduino to the Distance Sensor.</li>\n</ol>\n<p><strong>NOTE: Be sure that the ultrasonic sensors point opposite of each other, otherwise interference may occur.</strong></p>\n<ol start=\"2\">\n<li>\n<p>Connect Arduinos to PC</p>\n</li>\n<li>\n<p>Write Program to both Arduinos</p>\n</li>\n</ol>\n<h2 id=\"pc\">PC</h2>\n<ol>\n<li>Start Jack</li>\n</ol>\n<p>a. Note that QJackCtl has a nice GUI to help with setup if you are into that type of thing</p>\n<ol start=\"2\">\n<li>Start Pure Data</li>\n</ol>\n<ul>\n<li>\n<p>Turn on the DSP</p>\n</li>\n<li>\n<p>Open up <code>mart380_final.pd</code></p>\n</li>\n</ul>\n<ol start=\"3\">\n<li>Start ZynAddSubFX</li>\n</ol>\n<ul>\n<li>Load <code>inst.xmz</code></li>\n</ul>\n<ol start=\"4\">\n<li>\n<p>Make connections</p>\n</li>\n<li>\n<p>In the Opened Pure Data Project, click on the large <strong>Bang</strong> Object (looks like a button) at the top-left corner of the window, where there is a comment saying &quot;Start&quot;.</p>\n</li>\n</ol>\n<h1 id=\"use\">Use</h1>\n<p>By default, the system should be quiet, as the reverb is on full-blast, and the notes are very short. Place hands in front of the sensors, about 20 inches away, and move around, probably closer to the sensor, until the <code>L</code> LED on the Arduino illuminates. When this light is lit, you will know that your hand is within the range of the sensor, and a non-zero or 127 value will be sent to the computer.</p>\n<p>First, try moving your hands closer to the sensors and listen for the music to get louder. To change Chords, move your hands closely in front of the sensors, until the lights go out (from your hands being too close). After a few ticks, the chord should randomly change.</p>\n<h1 id=\"modification\">Modification</h1>\n<p>This program can be modified to accomodate different instruments, sensors, or chords. </p>\n",
+          "permalink": "http://127.0.0.1:1111/projects/p4/",
+          "slug": "p4",
+          "ancestors": [
+            "_index.md",
+            "projects/_index.md"
+          ],
+          "title": "Project 4 - What if you can make music with just your hands?",
+          "description": "This system makes music based on the position of your hands in front of a pair of ultrasonic sensors using pentationic scales.",
+          "date": null,
+          "year": null,
+          "month": null,
+          "day": null,
+          "taxonomies": {
+            "categories": [
+              "projects",
+              "MART380",
+              "computer music"
+            ],
+            "tags": [
+              "arduino",
+              "escape",
+              "opensource",
+              "test"
+            ]
+          },
+          "extra": {
+            "titlecard": "img light",
+            "img": "/asset/p4_bg.jpg"
+          },
+          "path": "projects/p4/",
+          "components": [
+            "projects",
+            "p4"
+          ],
+          "summary": null,
+          "toc": [
+            {
+              "level": 1,
+              "id": "links",
+              "permalink": "http://127.0.0.1:1111/projects/p4/#links",
+              "title": "Links",
+              "children": []
+            },
+            {
+              "level": 1,
+              "id": "the-device",
+              "permalink": "http://127.0.0.1:1111/projects/p4/#the-device",
+              "title": "The Device",
+              "children": []
+            },
+            {
+              "level": 1,
+              "id": "project-information",
+              "permalink": "http://127.0.0.1:1111/projects/p4/#project-information",
+              "title": "Project Information",
+              "children": [
+                {
+                  "level": 2,
+                  "id": "motivation",
+                  "permalink": "http://127.0.0.1:1111/projects/p4/#motivation",
+                  "title": "Motivation",
+                  "children": []
+                },
+                {
+                  "level": 2,
+                  "id": "music",
+                  "permalink": "http://127.0.0.1:1111/projects/p4/#music",
+                  "title": "Music",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "level": 1,
+              "id": "system-requirements",
+              "permalink": "http://127.0.0.1:1111/projects/p4/#system-requirements",
+              "title": "System Requirements",
+              "children": []
+            },
+            {
+              "level": 1,
+              "id": "tools-needed",
+              "permalink": "http://127.0.0.1:1111/projects/p4/#tools-needed",
+              "title": "Tools Needed",
+              "children": []
+            },
+            {
+              "level": 1,
+              "id": "setup-procedure",
+              "permalink": "http://127.0.0.1:1111/projects/p4/#setup-procedure",
+              "title": "Setup Procedure",
+              "children": [
+                {
+                  "level": 2,
+                  "id": "arduino",
+                  "permalink": "http://127.0.0.1:1111/projects/p4/#arduino",
+                  "title": "Arduino",
+                  "children": []
+                },
+                {
+                  "level": 2,
+                  "id": "pc",
+                  "permalink": "http://127.0.0.1:1111/projects/p4/#pc",
+                  "title": "PC",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "level": 1,
+              "id": "use",
+              "permalink": "http://127.0.0.1:1111/projects/p4/#use",
+              "title": "Use",
+              "children": []
+            },
+            {
+              "level": 1,
+              "id": "modification",
+              "permalink": "http://127.0.0.1:1111/projects/p4/#modification",
+              "title": "Modification",
+              "children": []
+            }
+          ],
+          "word_count": 732,
+          "reading_time": 4,
           "assets": [],
           "draft": false,
           "lang": "en",
