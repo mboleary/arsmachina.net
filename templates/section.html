@@ -18,7 +18,7 @@
     <div class="container">
         <ul>
             <li>Section:</li>
-            {% for section in toc -%}
+            {% for section in section.toc -%}
             <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
             {% endfor -%}
             <li><a href="#section-pages">Pages</a></li>
