@@ -56,3 +56,40 @@
     </div>
 </div>
 {% endmacro %}
+
+<!-- This is for use in Sections -->
+{% macro flashcard_with_banner(title, subtitle, style=false, img=false, readMore=false, cats=false, tags=false, ctr=false) %}
+<div class="flashcard {% if style %}{{ style }}{% endif %} {% if img %}img{% endif %} flex-col" {% if img %}style="background-image: url('{{img}}');"{% endif %}>
+    <div class="container">
+        <h1> {{ title }}</h1>
+        {% if subtitle %}
+        <hr>
+        <p> {{ subtitle }} </p>
+        {% endif %}
+        {% if readMore %}
+            <a href="{{ readMore }}" class="button">Read More →</a>
+        {% endif %}
+    </div>
+    <div class="banner flex flex-row">
+        <div class="text-left no-margin">
+            Filed under {% if cats %}
+                {% for cat in cats %}
+                    {{ macros::category(name=cat)}}
+                {% endfor %}
+            {% endif %}
+        </div>
+        <div class="">
+            {% if ctr %}
+                {{ctr | safe}}
+            {% endif %}
+        </div>
+        <div class="text-right no-margin">
+            {% if tags %}
+                {% for tag in tags %}
+                    {{macros::tag(tag=tag)}}
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endmacro %}
