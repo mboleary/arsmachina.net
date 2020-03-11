@@ -261,16 +261,18 @@
 /* This is used to house things like tags, and other information in the context of an index page */
 .flashcard > .banner {
     font-size: unset;
-    height: 32px;
+    min-height: 32px;
     background-color: #00000088;
     margin: 0;
+    padding: 2 0;
     width: 100%;
 }
 
-/* .flashcard > .banner > div {
+.flashcard > .banner > * {
     font-size: unset;
     font-family: light;
-} */
+    color: white;
+}
 /* END Flashcard Banner */
 
 /**** New Card Styling ****/
