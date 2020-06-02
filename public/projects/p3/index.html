@@ -1,0 +1,230 @@
+<!Doctype html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/style/main.css">
+    <link rel="stylesheet" type="text/css" href="/style/header.css">
+    <link rel="stylesheet" type="text/css" href="/style/footer.css">
+    <link rel="stylesheet" type="text/css" href="/style/content.css">
+    <link rel="stylesheet" type="text/css" href="/style/cards.css">
+    <link rel="stylesheet" type="text/css" href="/style/article.css">
+    <link rel="stylesheet" type="text/css" href="/style/misc.css">
+    <link rel="stylesheet" type="text/css" href="/style/print.css">
+    <link rel="stylesheet" type="text/css" href="/style/navbar.css">
+    <link rel="stylesheet" type="text/css" href="/style/linkbuttons.css">
+    <link rel="stylesheet" type="text/css" href="/style/tag.css">
+    <link rel="stylesheet" type="text/css" href="/style/layout.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Index ">
+    <meta name="author" content="Webtemplate">
+    <meta name="generator" content="Zola">
+    <meta name="keywords" content="keywords, go, here">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#00121a"> <!-- Colored Chrome Mobile Tabs! -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    
+</head>
+<body>
+    
+        
+            <header class="page-header">
+                <div class="title">
+                    <h1><span class="accent-1">Ars</span><span class="accent-3">Machina</span></h1>
+                    <p> Art of the (Computer) Machine </p>
+                </div>
+                <div class="menu">
+                    <ul>
+                        
+                        
+                            <li >
+                                <!-- @TODO Add class="current" -->
+                                <a href="&#x2F;">Home</a>
+                                
+                            </li>
+                        
+                            <li >
+                                <!-- @TODO Add class="current" -->
+                                <a href="&#x2F;blog">Blog</a>
+                                
+                            </li>
+                        
+                            <li >
+                                <!-- @TODO Add class="current" -->
+                                <a href="&#x2F;projects">Projects</a>
+                                
+                            </li>
+                        
+                            <li >
+                                <!-- @TODO Add class="current" -->
+                                <a href="&#x2F;about">About</a>
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            </header>
+        
+        <main>
+            
+
+    
+    
+    
+        
+    
+    
+        
+    
+    
+<div class="titlecard img light img" style="background-image: url('&#x2F;asset&#x2F;p3_bg.png');">
+    <div class="container">
+        <h1> Project 3 - What if there was an Alternate Universe?</h1>
+        
+        <hr>
+        <p> What if, in a world devoid of color, there was an alternate universe with splashes of color? How would you escape to this world? </p>
+        
+    </div>
+</div>
+
+
+
+<nav class="pagenav">
+    <div class="container">
+        <ul>
+            <li>Section:</li>
+            
+            
+        </ul>
+    </div>
+</nav>
+<div class="container">
+<p><em>Editor's note: This was Project 3 for my New Media Arts Class</em> </p>
+<p>Original Title: Project 3 - What if there was an Alternate Universe?</p>
+<p>Original Description: What if, in a world devoid of color, there was an alternate universe with splashes of color? How would you escape to this world?</p>
+<h1 id="link-to-the-game-on-itch-io">Link to the Game on Itch.io</h1>
+<p><a href="https://mboleary-usc.itch.io/escape">https://mboleary-usc.itch.io/escape</a></p>
+<p><a href="https://github.com/Nesdood007/escapegame">Source Code on Github</a></p>
+<h1 id="project-information">Project Information</h1>
+<p>A Unity game where you must escape from the world you are currently in.</p>
+<h2 id="introduction">Introduction</h2>
+<p>This is a First-person styled game where you must figure out how to go from world to world.</p>
+<h2 id="directories">Directories</h2>
+<p><code>/Assets</code> - The Assets Directory to include in a new Unity Project</p>
+<p><code>/Build</code> - Prebuilt binaries for Linux, MacOSX, Windows, and WebGL</p>
+<h2 id="controls">Controls</h2>
+<p><strong>Mouse</strong> - Look Around</p>
+<p><strong>Left Mouse Button</strong> - Shoot a Projectile. The projectile will glow all colors that it can interact with</p>
+<p><strong>WASD</strong> - Move Around</p>
+<p><strong>SHIFT</strong> - Run</p>
+<h2 id="how-to-build">How to build</h2>
+<p>In order to build this project, you should create a New Unity Project, and then import the assets from this assets directory into your project. It should contain all scripts and resources needed to test out the project.</p>
+<h2 id="motivation">Motivation</h2>
+<p>Since this project used a lot of scripts, I felt that it would be good to have this project be open-source to help other students that may take this class in the future see how C# code is written, and how it can be used to make a cool game.</p>
+<p>There are scripts to spawn in enemies, keep track of colors, and change the music when the player collects a tessaract, among other things.</p>
+<hr />
+<h1 id="walkthrough">Walkthrough</h1>
+<p>When this game was demoed in class, I think that the objective of hte game wasn't initially obvious enough, so I have made a walkthrough to help people play through it.</p>
+<h2 id="main-objective">Main Objective</h2>
+<p>The entire world is governed by collecting colored cubes, giving the player the ability to interact with other objects that also are the same color.</p>
+<h2 id="objects">Objects</h2>
+<figure>
+  <img src="/asset/p3_1.png">
+  <figcaption> This is a Tessaract Piece. Your objective is to collect all four of these. They are all different colors. </figcaption>
+</figure>
+<figure>
+  <img src="/asset/p3_2.png">
+  <figcaption> This is a Colored Switch. You touch this to make the miniature capsule rotate, which signifies that the state of the switch has changed. These can make walls disappear, or make other things happen. There is also a colorless variety.</figcaption>
+</figure>
+<figure>
+  <img src="/asset/p3_3.png">
+  <figcaption> Surrounding the tree are Colored Enemies. You must have collected the cooresponding color of tessaract to make these disappear. Pro Tip, they are actually harmless and were placed simply to be a nuisance. (Perhaps you can modify them to be harmful to the player?) </figcaption>
+</figure>
+<h2 id="areas">Areas</h2>
+<h3 id="light-world-first-scene">Light World (First Scene)</h3>
+<p>You, the player are in a cube. You must touch the switch to escape this bow, but you aren't finished escaping yet! Go and investigate that suspicially large and dark tree in the middle of the area.</p>
+<figure>
+  <img src="/asset/p3_bg.png">
+  <figcaption> This is the tree that you should go toward. </figcaption>
+</figure>
+<h3 id="darker-world-second-scene">Darker World (Second Scene)</h3>
+<p>You have been teleported to a darker version of the world you were just in. Off in the distance, you should see colored Tessaract Cubes (as seen above) in each corner of the area. You can collect them in any order that you choose. When you collect all 4, you will be teleported to another area.</p>
+<h3 id="darkest-world-last-scene">Darkest World (Last Scene)</h3>
+<p>You should see a lighter tree in the middle of the field, like the first one that you initially touched to get to the Dark World. Go touch that tree!</p>
+<figure>
+  <img src="/asset/p3_3.png">
+  <figcaption> This is the tree that you should go toward. </figcaption>
+</figure>
+<p>After this you are teleported back to the Light World. You can go around again, if you want, or try to escape a different way in the Darkest World. <em>Hint: Then enemies don't always stay on the ground!</em>. Also this breaks the game, FYI.</p>
+
+</div>
+
+        </main>
+        
+        <footer>
+            <div id="footer-top">
+                
+                <div class="container">
+                    
+                        <dl>
+                            <dt class="green"> <a href="&#x2F;test&#x2F;"> Section Title </a> </dt>
+                            
+                                
+                                    <dd><a href="&#x2F;test&#x2F;post1">Post 1</a></dd>
+                                
+                                    <dd><a href="&#x2F;test&#x2F;post2">Post 2</a></dd>
+                                
+                                    <dd><a href="&#x2F;test&#x2F;post3">Post 3</a></dd>
+                                
+                            
+                        </dl>
+                    
+                        <dl>
+                            <dt class="red"> <a href="&#x2F;test&#x2F;"> Section Title </a> </dt>
+                            
+                                
+                                    <dd><a href="&#x2F;test&#x2F;post1">Post 1</a></dd>
+                                
+                                    <dd><a href="&#x2F;test&#x2F;post2">Post 2</a></dd>
+                                
+                                    <dd><a href="&#x2F;test&#x2F;post3">Post 3</a></dd>
+                                
+                            
+                        </dl>
+                    
+                        <dl>
+                            <dt class="blue"> <a href="&#x2F;test&#x2F;"> Section Title </a> </dt>
+                            
+                                
+                                    <dd><a href="&#x2F;test&#x2F;post1">Post 1</a></dd>
+                                
+                                    <dd><a href="&#x2F;test&#x2F;post2">Post 2</a></dd>
+                                
+                                    <dd><a href="&#x2F;test&#x2F;post3">Post 3</a></dd>
+                                
+                            
+                        </dl>
+                    
+                        <dl>
+                            <dt class="orange"> <a href="&#x2F;test&#x2F;"> Section Title </a> </dt>
+                            
+                                
+                                    <dd><a href="&#x2F;test&#x2F;post1">Post 1</a></dd>
+                                
+                                    <dd><a href="&#x2F;test&#x2F;post2">Post 2</a></dd>
+                                
+                                    <dd><a href="&#x2F;test&#x2F;post3">Post 3</a></dd>
+                                
+                            
+                        </dl>
+                    
+                </div>
+            </div>
+            <div id="footer-bottom">
+                <div class="left"> Icons Here </div>
+                <div> 2020 - Brady O'Leary </div>
+                <div class="right"> Links Here </div>
+            </div>
+        </footer>
+        
+    
+</body>
