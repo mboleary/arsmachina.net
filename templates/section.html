@@ -18,9 +18,9 @@
     <div class="container">
         <ul>
             <li>Section:</li>
-            {% for section in toc -%}
+            {#{% for section in section.toc -%}
             <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
-            {% endfor -%}
+            {% endfor -%}#}
             <li><a href="#section-pages">Pages</a></li>
         </ul>
     </div>
@@ -75,13 +75,21 @@
             {% if page.extra %}
                 {% set titlecardStyle = false %}
                 {% set titlecardImg = false %}
+                {% set titlecardBannerCats = false %}
+                {% set titlecardBannerTags = false %}
                 {% if page.extra.titlecard %}
                     {% set titlecardStyle = page.extra.titlecard %}
                 {% endif %}
                 {% if page.extra.img %}
                     {% set titlecardImg = page.extra.img %}
                 {% endif %}
-                {{ macros::flashcard(title=page.title, subtitle=page.description, style=titlecardStyle, img=titlecardImg, readMore="/"~page.path) }}
+                {% if page.taxonomies.categories %}
+                    {% set titlecardBannerCats = page.taxonomies.categories %}
+                {% endif %}
+                {% if page.taxonomies.tags %}
+                    {% set titlecardBannerTags = page.taxonomies.tags %}
+                {% endif %}
+                {{ macros::flashcard_with_banner(title=page.title, subtitle=page.description, style=titlecardStyle, img=titlecardImg, readMore="/"~page.path, cats=titlecardBannerCats, tags=titlecardBannerTags) }}
             {% else %}
                 {{ macros::flashcard(title=page.title, subtitle=page.description, readMore="/"~page.path) }}
             {% endif %}

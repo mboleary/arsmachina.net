@@ -19,11 +19,11 @@
     <div class="container">
         <ul>
             <li>Section:</li>
-            {% if toc | length > 0 %}
-                {% for section in toc -%}
+            {#{% if page.toc | length > 0 %}
+                {% for section in page.toc -%}
                 <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
                 {% endfor -%}
-            {% endif %}
+            {% endif %}#}
             {% if page.extra.toc %}
                 {% for section in page.extra.toc -%}
                 <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
