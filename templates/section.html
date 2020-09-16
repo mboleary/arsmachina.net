@@ -18,9 +18,9 @@
     <div class="container">
         <ul>
             <li>Section:</li>
-            {#{% for section in section.toc -%}
+            {% for section in section.toc -%}
             <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
-            {% endfor -%}#}
+            {% endfor -%}
             <li><a href="#section-pages">Pages</a></li>
         </ul>
     </div>
