@@ -7,7 +7,7 @@ titlecard = "grayscale-light"
 toc = [{"title"= "Website Status","id"= "website-status"}]
 +++
   
-<h1 class="accent-4 vbar" id="website-status"> Website Status</h1>
+<h1 class="accent-4 vbar"> Website Status</h1>
 
 This website is still very much a work in progress. I have a lot of work to finish in creating the template, and finishing the styling for (WebsiteTemplate)[https://github.com/Nesdood007/WebsiteTemplate], the CSS framework which this website is built from. You may notice some small styling issues throughout the website while I am finishing this.
 
