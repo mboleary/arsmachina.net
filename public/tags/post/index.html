@@ -86,7 +86,7 @@
         <article class="short">
             <div class="left">
                 <header class="article-header">
-                    <h1><a href="/blog&#x2F;firstpost&#x2F;"> First Post </a></h1>
+                    <h1><a href="/&#x2F;blog&#x2F;firstpost&#x2F;"> First Post </a></h1>
                     <p class="info"> 
                         2020-01-18 | 
                         
@@ -137,7 +137,7 @@
                 <div class="left">
                     This is the First Post on the blog
                 </div>
-                <a href="/blog&#x2F;firstpost&#x2F;" class="continue"> Continue Reading ... </a>
+                <a href="/&#x2F;blog&#x2F;firstpost&#x2F;" class="continue"> Continue Reading ... </a>
             
         </article>
     </div>
@@ -157,94 +157,50 @@
     "translations": {},
     "highlight_code": true,
     "highlight_theme": "base16-ocean-dark",
-    "generate_rss": false,
-    "rss_limit": null,
+    "generate_feed": false,
+    "feed_limit": null,
+    "feed_filename": "atom.xml",
     "hard_link_static": false,
     "taxonomies": [
       {
         "name": "tags",
         "paginate_by": null,
         "paginate_path": null,
-        "rss": true,
+        "feed": false,
         "lang": "en"
       },
       {
         "name": "categories",
         "paginate_by": null,
         "paginate_path": null,
-        "rss": true,
+        "feed": false,
         "lang": "en"
       }
     ],
-    "compile_sass": true,
+    "compile_sass": false,
+    "minify_html": false,
     "build_search_index": true,
     "ignored_content": [],
     "extra_syntaxes": [],
-    "extra": {},
-    "build_timestamp": 1591125731
+    "link_checker": {
+      "skip_prefixes": [],
+      "skip_anchor_prefixes": []
+    },
+    "slugify": {
+      "paths": "on",
+      "taxonomies": "on",
+      "anchors": "on"
+    },
+    "search": {
+      "include_title": true,
+      "include_content": true,
+      "truncate_content_length": null,
+      "include_description": false
+    },
+    "extra": {}
   },
-  "current_path": "/tags/post",
+  "current_path": "/tags/post/",
   "current_url": "https://arsmachina.net/tags/post/",
-  "lang": "en",
-  "taxonomy": {
-    "name": "tags",
-    "paginate_by": null,
-    "paginate_path": null,
-    "rss": true,
-    "lang": "en"
-  },
-  "term": {
-    "name": "post",
-    "slug": "post",
-    "permalink": "https://arsmachina.net/tags/post/",
-    "pages": [
-      {
-        "relative_path": "blog/2020-01-18_FirstPost.md",
-        "content": "<h1 id=\"hello-world\">Hello World</h1>\n<p>This is the first post in my new personal blog. Expect to see a lot of changes as the website design improves and matures. I still have a lot of things to implement, such as the rest of the CSS framework, and the rest of the Website layout.</p>\n<p>This website is still a <strong>work in progress</strong>. Things will be a mess at first.</p>\n",
-        "permalink": "https://arsmachina.net/blog/firstpost/",
-        "slug": "firstpost",
-        "ancestors": [
-          "_index.md",
-          "blog/_index.md"
-        ],
-        "title": "First Post",
-        "description": "This is the First Post on the blog",
-        "date": "2020-01-18",
-        "year": 2020,
-        "month": 1,
-        "day": 18,
-        "taxonomies": {
-          "categories": [
-            "blog"
-          ],
-          "tags": [
-            "first",
-            "post",
-            "test"
-          ]
-        },
-        "extra": {
-          "titlecard": "bg-black fg-a4"
-        },
-        "path": "blog/firstpost/",
-        "components": [
-          "blog",
-          "firstpost"
-        ],
-        "summary": null,
-        "word_count": 65,
-        "reading_time": 1,
-        "assets": [],
-        "draft": false,
-        "lang": "en",
-        "lighter": null,
-        "heavier": null,
-        "earlier": null,
-        "later": null,
-        "translations": []
-      }
-    ]
-  },
   "data": {
     "topMenu": [
       {
@@ -360,6 +316,76 @@
             "children": []
           }
         ]
+      }
+    ]
+  },
+  "lang": "en",
+  "taxonomy": {
+    "name": "tags",
+    "paginate_by": null,
+    "paginate_path": null,
+    "feed": false,
+    "lang": "en"
+  },
+  "term": {
+    "name": "post",
+    "slug": "post",
+    "permalink": "https://arsmachina.net/tags/post/",
+    "pages": [
+      {
+        "relative_path": "blog/2020-01-18_FirstPost.md",
+        "content": "<h1 id=\"hello-world\">Hello World</h1>\n<p>This is the first post in my new personal blog. Expect to see a lot of changes as the website design improves and matures. I still have a lot of things to implement, such as the rest of the CSS framework, and the rest of the Website layout.</p>\n<p>This website is still a <strong>work in progress</strong>. Things will be a mess at first.</p>\n",
+        "permalink": "https://arsmachina.net/blog/firstpost/",
+        "slug": "firstpost",
+        "ancestors": [
+          "_index.md",
+          "blog/_index.md"
+        ],
+        "title": "First Post",
+        "description": "This is the First Post on the blog",
+        "updated": null,
+        "date": "2020-01-18",
+        "year": 2020,
+        "month": 1,
+        "day": 18,
+        "taxonomies": {
+          "categories": [
+            "blog"
+          ],
+          "tags": [
+            "first",
+            "post",
+            "test"
+          ]
+        },
+        "extra": {
+          "titlecard": "bg-black fg-a4"
+        },
+        "path": "/blog/firstpost/",
+        "components": [
+          "blog",
+          "firstpost"
+        ],
+        "summary": null,
+        "toc": [
+          {
+            "level": 1,
+            "id": "hello-world",
+            "permalink": "https://arsmachina.net/blog/firstpost/#hello-world",
+            "title": "Hello World",
+            "children": []
+          }
+        ],
+        "word_count": 65,
+        "reading_time": 1,
+        "assets": [],
+        "draft": false,
+        "lang": "en",
+        "lighter": null,
+        "heavier": null,
+        "earlier": null,
+        "later": null,
+        "translations": []
       }
     ]
   }

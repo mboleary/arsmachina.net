@@ -86,7 +86,7 @@
         <article class="short">
             <div class="left">
                 <header class="article-header">
-                    <h1><a href="/projects&#x2F;mandelbrotexplorer&#x2F;"> Mandelbrot Explorer </a></h1>
+                    <h1><a href="/&#x2F;projects&#x2F;mandelbrotexplorer&#x2F;"> Mandelbrot Explorer </a></h1>
                     <p class="info"> 
                         
                         
@@ -151,7 +151,7 @@
                 <div class="left">
                     This is a mandelbrot demo that I built in Javascript in order to learn how the canvas works
                 </div>
-                <a href="/projects&#x2F;mandelbrotexplorer&#x2F;" class="continue"> Continue Reading ... </a>
+                <a href="/&#x2F;projects&#x2F;mandelbrotexplorer&#x2F;" class="continue"> Continue Reading ... </a>
             
         </article>
     </div>
@@ -171,97 +171,50 @@
     "translations": {},
     "highlight_code": true,
     "highlight_theme": "base16-ocean-dark",
-    "generate_rss": false,
-    "rss_limit": null,
+    "generate_feed": false,
+    "feed_limit": null,
+    "feed_filename": "atom.xml",
     "hard_link_static": false,
     "taxonomies": [
       {
         "name": "tags",
         "paginate_by": null,
         "paginate_path": null,
-        "rss": true,
+        "feed": false,
         "lang": "en"
       },
       {
         "name": "categories",
         "paginate_by": null,
         "paginate_path": null,
-        "rss": true,
+        "feed": false,
         "lang": "en"
       }
     ],
-    "compile_sass": true,
+    "compile_sass": false,
+    "minify_html": false,
     "build_search_index": true,
     "ignored_content": [],
     "extra_syntaxes": [],
-    "extra": {},
-    "build_timestamp": 1591125731
+    "link_checker": {
+      "skip_prefixes": [],
+      "skip_anchor_prefixes": []
+    },
+    "slugify": {
+      "paths": "on",
+      "taxonomies": "on",
+      "anchors": "on"
+    },
+    "search": {
+      "include_title": true,
+      "include_content": true,
+      "truncate_content_length": null,
+      "include_description": false
+    },
+    "extra": {}
   },
-  "current_path": "/tags/code",
+  "current_path": "/tags/code/",
   "current_url": "https://arsmachina.net/tags/code/",
-  "lang": "en",
-  "taxonomy": {
-    "name": "tags",
-    "paginate_by": null,
-    "paginate_path": null,
-    "rss": true,
-    "lang": "en"
-  },
-  "term": {
-    "name": "code",
-    "slug": "code",
-    "permalink": "https://arsmachina.net/tags/code/",
-    "pages": [
-      {
-        "relative_path": "projects/mandelbrotExplorer.md",
-        "content": "<p><a href=\"https://github.com/mboleary/fractals-canvas\">https://github.com/mboleary/fractals-canvas</a></p>\n<h1 id=\"mandelbrot-explorer\">Mandelbrot Explorer</h1>\n<p>This was a testing project for me to learn how the canvas works in Javascript, as well as how I can color the Mandelbrot set. This was written without the use of a Javascript Framework.</p>\n<p>There are additional Images in the repo linked above.</p>\n<h2 id=\"motivation\">Motivation</h2>\n<p>I built this demo as a way to learn Javascript, and how to specifically use the Canvas to draw things.</p>\n<h2 id=\"how-to-run-this-locally\">How to run this locally</h2>\n<p>Go to the repository above, and clone or download the code locally. In there, use <code>python3 -m http.server 8000 --bind 127.0.0.1</code> in a console, and then open a web browser and navigate to <code>localhost:8000</code>.</p>\n",
-        "permalink": "https://arsmachina.net/projects/mandelbrotexplorer/",
-        "slug": "mandelbrotexplorer",
-        "ancestors": [
-          "_index.md",
-          "projects/_index.md"
-        ],
-        "title": "Mandelbrot Explorer",
-        "description": "This is a mandelbrot demo that I built in Javascript in order to learn how the canvas works",
-        "date": null,
-        "year": null,
-        "month": null,
-        "day": null,
-        "taxonomies": {
-          "categories": [
-            "projects",
-            "art"
-          ],
-          "tags": [
-            "code",
-            "js",
-            "mandelbrot",
-            "canvas"
-          ]
-        },
-        "extra": {
-          "titlecard": "img light",
-          "img": "/asset/mandelbrot.png"
-        },
-        "path": "projects/mandelbrotexplorer/",
-        "components": [
-          "projects",
-          "mandelbrotexplorer"
-        ],
-        "summary": null,
-        "word_count": 117,
-        "reading_time": 1,
-        "assets": [],
-        "draft": false,
-        "lang": "en",
-        "lighter": null,
-        "heavier": null,
-        "earlier": null,
-        "later": null,
-        "translations": []
-      }
-    ]
-  },
   "data": {
     "topMenu": [
       {
@@ -377,6 +330,94 @@
             "children": []
           }
         ]
+      }
+    ]
+  },
+  "lang": "en",
+  "taxonomy": {
+    "name": "tags",
+    "paginate_by": null,
+    "paginate_path": null,
+    "feed": false,
+    "lang": "en"
+  },
+  "term": {
+    "name": "code",
+    "slug": "code",
+    "permalink": "https://arsmachina.net/tags/code/",
+    "pages": [
+      {
+        "relative_path": "projects/mandelbrotExplorer.md",
+        "content": "<p><a href=\"https://github.com/mboleary/fractals-canvas\">https://github.com/mboleary/fractals-canvas</a></p>\n<h1 id=\"mandelbrot-explorer\">Mandelbrot Explorer</h1>\n<p>This was a testing project for me to learn how the canvas works in Javascript, as well as how I can color the Mandelbrot set. This was written without the use of a Javascript Framework.</p>\n<p>There are additional Images in the repo linked above.</p>\n<h2 id=\"motivation\">Motivation</h2>\n<p>I built this demo as a way to learn Javascript, and how to specifically use the Canvas to draw things.</p>\n<h2 id=\"how-to-run-this-locally\">How to run this locally</h2>\n<p>Go to the repository above, and clone or download the code locally. In there, use <code>python3 -m http.server 8000 --bind 127.0.0.1</code> in a console, and then open a web browser and navigate to <code>localhost:8000</code>.</p>\n",
+        "permalink": "https://arsmachina.net/projects/mandelbrotexplorer/",
+        "slug": "mandelbrotexplorer",
+        "ancestors": [
+          "_index.md",
+          "projects/_index.md"
+        ],
+        "title": "Mandelbrot Explorer",
+        "description": "This is a mandelbrot demo that I built in Javascript in order to learn how the canvas works",
+        "updated": null,
+        "date": null,
+        "year": null,
+        "month": null,
+        "day": null,
+        "taxonomies": {
+          "categories": [
+            "projects",
+            "art"
+          ],
+          "tags": [
+            "code",
+            "js",
+            "mandelbrot",
+            "canvas"
+          ]
+        },
+        "extra": {
+          "titlecard": "img light",
+          "img": "/asset/mandelbrot.png"
+        },
+        "path": "/projects/mandelbrotexplorer/",
+        "components": [
+          "projects",
+          "mandelbrotexplorer"
+        ],
+        "summary": null,
+        "toc": [
+          {
+            "level": 1,
+            "id": "mandelbrot-explorer",
+            "permalink": "https://arsmachina.net/projects/mandelbrotexplorer/#mandelbrot-explorer",
+            "title": "Mandelbrot Explorer",
+            "children": [
+              {
+                "level": 2,
+                "id": "motivation",
+                "permalink": "https://arsmachina.net/projects/mandelbrotexplorer/#motivation",
+                "title": "Motivation",
+                "children": []
+              },
+              {
+                "level": 2,
+                "id": "how-to-run-this-locally",
+                "permalink": "https://arsmachina.net/projects/mandelbrotexplorer/#how-to-run-this-locally",
+                "title": "How to run this locally",
+                "children": []
+              }
+            ]
+          }
+        ],
+        "word_count": 117,
+        "reading_time": 1,
+        "assets": [],
+        "draft": false,
+        "lang": "en",
+        "lighter": null,
+        "heavier": null,
+        "earlier": null,
+        "later": null,
+        "translations": []
       }
     ]
   }

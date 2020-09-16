@@ -86,7 +86,7 @@
         <article class="short">
             <div class="left">
                 <header class="article-header">
-                    <h1><a href="/test&#x2F;post1&#x2F;"> This is a test </a></h1>
+                    <h1><a href="/&#x2F;test&#x2F;post1&#x2F;"> This is a test </a></h1>
                     <p class="info"> 
                         
                         
@@ -155,7 +155,7 @@
 <p>This is a test.</p>
 
                 </div>
-                <a href="/test&#x2F;post1&#x2F;#continue-reading" class="continue"> Continue Reading ... </a>
+                <a href="/&#x2F;test&#x2F;post1&#x2F;#continue-reading" class="continue"> Continue Reading ... </a>
             
         </article>
     </div>
@@ -175,95 +175,50 @@
     "translations": {},
     "highlight_code": true,
     "highlight_theme": "base16-ocean-dark",
-    "generate_rss": false,
-    "rss_limit": null,
+    "generate_feed": false,
+    "feed_limit": null,
+    "feed_filename": "atom.xml",
     "hard_link_static": false,
     "taxonomies": [
       {
         "name": "tags",
         "paginate_by": null,
         "paginate_path": null,
-        "rss": true,
+        "feed": false,
         "lang": "en"
       },
       {
         "name": "categories",
         "paginate_by": null,
         "paginate_path": null,
-        "rss": true,
+        "feed": false,
         "lang": "en"
       }
     ],
-    "compile_sass": true,
+    "compile_sass": false,
+    "minify_html": false,
     "build_search_index": true,
     "ignored_content": [],
     "extra_syntaxes": [],
-    "extra": {},
-    "build_timestamp": 1591125731
+    "link_checker": {
+      "skip_prefixes": [],
+      "skip_anchor_prefixes": []
+    },
+    "slugify": {
+      "paths": "on",
+      "taxonomies": "on",
+      "anchors": "on"
+    },
+    "search": {
+      "include_title": true,
+      "include_content": true,
+      "truncate_content_length": null,
+      "include_description": false
+    },
+    "extra": {}
   },
-  "current_path": "/tags/pizza",
+  "current_path": "/tags/pizza/",
   "current_url": "https://arsmachina.net/tags/pizza/",
-  "lang": "en",
-  "taxonomy": {
-    "name": "tags",
-    "paginate_by": null,
-    "paginate_path": null,
-    "rss": true,
-    "lang": "en"
-  },
-  "term": {
-    "name": "pizza",
-    "slug": "pizza",
-    "permalink": "https://arsmachina.net/tags/pizza/",
-    "pages": [
-      {
-        "relative_path": "test/post1.md",
-        "content": "<h1 id=\"hello-world\">Hello World</h1>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<h1 id=\"hello-world-2\">Hello World 2</h1>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p id=\"zola-continue-reading\"><a name=\"continue-reading\"></a></p>\n<h1 id=\"hello-world-3\">Hello World 3</h1>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n",
-        "permalink": "https://arsmachina.net/test/post1/",
-        "slug": "post1",
-        "ancestors": [
-          "_index.md",
-          "test/_index.md"
-        ],
-        "title": "This is a test",
-        "description": "Test",
-        "date": null,
-        "year": null,
-        "month": null,
-        "day": null,
-        "taxonomies": {
-          "categories": [
-            "projects"
-          ],
-          "tags": [
-            "test",
-            "tag",
-            "blue",
-            "pizza"
-          ]
-        },
-        "extra": {
-          "titlecard": "bg-a1-a3"
-        },
-        "path": "test/post1/",
-        "components": [
-          "test",
-          "post1"
-        ],
-        "summary": "<h1 id=\"hello-world\">Hello World</h1>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<h1 id=\"hello-world-2\">Hello World 2</h1>\n<p>This is a test.</p>\n<p>This is a test.</p>\n",
-        "word_count": 153,
-        "reading_time": 1,
-        "assets": [],
-        "draft": false,
-        "lang": "en",
-        "lighter": null,
-        "heavier": null,
-        "earlier": null,
-        "later": null,
-        "translations": []
-      }
-    ]
-  },
   "data": {
     "topMenu": [
       {
@@ -379,6 +334,91 @@
             "children": []
           }
         ]
+      }
+    ]
+  },
+  "lang": "en",
+  "taxonomy": {
+    "name": "tags",
+    "paginate_by": null,
+    "paginate_path": null,
+    "feed": false,
+    "lang": "en"
+  },
+  "term": {
+    "name": "pizza",
+    "slug": "pizza",
+    "permalink": "https://arsmachina.net/tags/pizza/",
+    "pages": [
+      {
+        "relative_path": "test/post1.md",
+        "content": "<h1 id=\"hello-world\">Hello World</h1>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<h1 id=\"hello-world-2\">Hello World 2</h1>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<span id=\"continue-reading\"></span><h1 id=\"hello-world-3\">Hello World 3</h1>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n",
+        "permalink": "https://arsmachina.net/test/post1/",
+        "slug": "post1",
+        "ancestors": [
+          "_index.md",
+          "test/_index.md"
+        ],
+        "title": "This is a test",
+        "description": "Test",
+        "updated": null,
+        "date": null,
+        "year": null,
+        "month": null,
+        "day": null,
+        "taxonomies": {
+          "categories": [
+            "projects"
+          ],
+          "tags": [
+            "test",
+            "tag",
+            "blue",
+            "pizza"
+          ]
+        },
+        "extra": {
+          "titlecard": "bg-a1-a3"
+        },
+        "path": "/test/post1/",
+        "components": [
+          "test",
+          "post1"
+        ],
+        "summary": "<h1 id=\"hello-world\">Hello World</h1>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<p>This is a test.</p>\n<h1 id=\"hello-world-2\">Hello World 2</h1>\n<p>This is a test.</p>\n<p>This is a test.</p>\n",
+        "toc": [
+          {
+            "level": 1,
+            "id": "hello-world",
+            "permalink": "https://arsmachina.net/test/post1/#hello-world",
+            "title": "Hello World",
+            "children": []
+          },
+          {
+            "level": 1,
+            "id": "hello-world-2",
+            "permalink": "https://arsmachina.net/test/post1/#hello-world-2",
+            "title": "Hello World 2",
+            "children": []
+          },
+          {
+            "level": 1,
+            "id": "hello-world-3",
+            "permalink": "https://arsmachina.net/test/post1/#hello-world-3",
+            "title": "Hello World 3",
+            "children": []
+          }
+        ],
+        "word_count": 153,
+        "reading_time": 1,
+        "assets": [],
+        "draft": false,
+        "lang": "en",
+        "lighter": null,
+        "heavier": null,
+        "earlier": null,
+        "later": null,
+        "translations": []
       }
     ]
   }
