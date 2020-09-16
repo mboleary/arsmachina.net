@@ -41,7 +41,7 @@
                 <article class="short">
                     <div class="left">
                         <header class="article-header">
-                            <h1><a href="/{{page.path}}"> {{page.title}} </a></h1>
+                            <h1><a href="{{page.path}}"> {{page.title}} </a></h1>
                             <p class="info"> 
                                 {% if page.date %}{{page.date}} | {% endif %}
                                 {% if page.taxonomies and page.taxonomies.categories %}
@@ -62,12 +62,12 @@
                         <div class="left">
                             {{page.summary | safe}}
                         </div>
-                        <a href="/{{page.path}}#continue-reading" class="continue"> Continue Reading ... </a>
+                        <a href="{{page.path}}#continue-reading" class="continue"> Continue Reading ... </a>
                     {% elif page.description %}
                         <div class="left">
                             {{page.description}}
                         </div>
-                        <a href="/{{page.path}}" class="continue"> Continue Reading ... </a>
+                        <a href="{{page.path}}" class="continue"> Continue Reading ... </a>
                     {% endif %}
                 </article>
             </div>
@@ -89,9 +89,9 @@
                 {% if page.taxonomies.tags %}
                     {% set titlecardBannerTags = page.taxonomies.tags %}
                 {% endif %}
-                {{ macros::flashcard_with_banner(title=page.title, subtitle=page.description, style=titlecardStyle, img=titlecardImg, readMore="/"~page.path, cats=titlecardBannerCats, tags=titlecardBannerTags) }}
+                {{ macros::flashcard_with_banner(title=page.title, subtitle=page.description, style=titlecardStyle, img=titlecardImg, readMore=page.path, cats=titlecardBannerCats, tags=titlecardBannerTags) }}
             {% else %}
-                {{ macros::flashcard(title=page.title, subtitle=page.description, readMore="/"~page.path) }}
+                {{ macros::flashcard(title=page.title, subtitle=page.description, readMore=page.path) }}
             {% endif %}
         {% endif %}
     {% endfor %}
