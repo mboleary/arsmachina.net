@@ -5,19 +5,7 @@
 <div class="flashcard bg-white dark" style="background-color: black;">
     <div class="container">
 
-        <div class="lr-container">
-            <div class="left">
-                <h1 class="left"><span class="accent-1">Ars</span><span class="accent-3">Machina</span></h1>
-                <code class="left">Art of the Computer Machine</code>
-            </div>
-            <div class="left flex">
-                <div class="flex-grow"></div>
-                <code class="left" style="color: white;">
-                    {% set cow = load_data(path="data/cow", format="plain") %}
-                    {{ cow | safe }}
-                </code>
-            </div>
-        </div>
+        {% block headerTitle %}{{ super() }}{% endblock headerTitle %}
 
         <hr>
 

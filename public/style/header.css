@@ -10,7 +10,7 @@
 header {
     /* box-shadow: 0px 5px 10px #555; */
     /* margin: 0px 0px 10px 0px; */
-    color: white;
+    /* color: white; */
 }
 
 /* Title Section */
@@ -20,7 +20,7 @@ header div.title {
     font-family: title;
     /*margin: 0px;*/
     padding: 5px 0px;
-    color: white;
+    /* color: white; */
     overflow: hidden;
 }
 
