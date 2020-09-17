@@ -32,40 +32,42 @@
             <header class="page-header">
                 <div class="container title">
                     {% block headerTitle %}
-                    <div class="lr-container">
-                        <div class="left">
-                            <h1 class="left"><span class="accent-1">Ars</span><span class="accent-3">Machina</span></h1>
-                            <p class="left">Art of the (Computer) Machine</p>
+                        <div class="lr-container">
+                            <div class="left">
+                                <h1 class="left"><span class="accent-1">Ars</span><span class="accent-3">Machina</span></h1>
+                                <p class="left">Art of the (Computer) Machine</p>
+                            </div>
+                            <div class="left flex">
+                                <div class="flex-grow"></div>
+                                <code class="left">
+                                    {% set cow = load_data(path="data/cow", format="plain") %}
+                                    {{ cow | safe }}
+                                </code>
+                            </div>
                         </div>
-                        <div class="left flex">
-                            <div class="flex-grow"></div>
-                            <code class="left">
-                                {% set cow = load_data(path="data/cow", format="plain") %}
-                                {{ cow | safe }}
-                            </code>
-                        </div>
-                    </div>
                     {% endblock headerTitle %}
                 </div>
 
-                <div class="menu">
-                    <ul>
-                        {% set data = load_data(path="content/menu.json") %}
-                        {% for entry in data.topMenu %}
-                            <li {% if entry.children %}class="dropdown"{% endif %}>
-                                <!-- @TODO Add class="current" -->
-                                <a href="{{entry.url}}" {% if entry.url != "/" and page and page.path is containing(entry.url) %}class="current"{% endif %} {% if entry.url != "/" and section and section.path is containing(entry.url) %}class="current"{% endif %}>{{entry.name}}</a>
-                                {% if entry.children %}
-                                    <div class="dropdownContent">
-                                        {% for subentry in entry.children %}
-                                            <a href="{{subentry.url}}">{{subentry.name}}</a>
-                                        {% endfor %}
-                                    </div>
-                                {% endif %}
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </div>
+                {% block headerMenu %}
+                    <div class="menu">
+                        <ul>
+                            {% set data = load_data(path="content/menu.json") %}
+                            {% for entry in data.topMenu %}
+                                <li {% if entry.children %}class="dropdown"{% endif %}>
+                                    <!-- @TODO Add class="current" -->
+                                    <a href="{{entry.url}}" {% if entry.url != "/" and page and page.path is containing(entry.url) %}class="current"{% endif %} {% if entry.url != "/" and section and section.path is containing(entry.url) %}class="current"{% endif %}>{{entry.name}}</a>
+                                    {% if entry.children %}
+                                        <div class="dropdownContent">
+                                            {% for subentry in entry.children %}
+                                                <a href="{{subentry.url}}">{{subentry.name}}</a>
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endblock headerMenu %}
                 
             </header>
         {% endblock header %}

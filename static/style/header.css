@@ -83,6 +83,10 @@ header div.menu {
     font-family: menu;
 }
 
+header div.menu * {
+    color: white;
+}
+
 /* Links in the Menu */
 header li > a {
     padding: 10px 0px;

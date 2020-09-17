@@ -812,3 +812,7 @@ label {
 }
 
 /* END Default Fieldset Format */
+
+.full-width {
+    width: 100%;
+}
