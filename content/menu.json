@@ -19,12 +19,6 @@
             "children": []
         },
         {
-            "name": "Code",
-            "url": "/code",
-            "class":"",
-            "children": []
-        },
-        {
             "name": "Music",
             "url": "/music",
             "class":"",
@@ -45,45 +39,40 @@
     ],
     "footerMenu": [
         {
-            "name": "Section Title",
-            "url": "/test/",
+            "name": "About",
+            "url": "/about",
             "class":"green",
             "children": [
                 {
-                    "name": "Post 1",
-                    "url": "/test/post1",
+                    "name": "About Me",
+                    "url": "/about/aboutme",
                     "children": []
                 },
                 {
-                    "name": "Post 2",
-                    "url": "/test/post2",
-                    "children": []
-                },
-                {
-                    "name": "Post 3",
-                    "url": "/test/post3",
+                    "name": "About Website",
+                    "url": "/about/aboutsite",
                     "children": []
                 }
             ]
         },
         {
-            "name": "Section Title",
-            "url": "/test/",
+            "name": "Code",
+            "url": "/about/aboutcode",
             "class":"red",
             "children": [
                 {
-                    "name": "Post 1",
-                    "url": "/test/post1",
+                    "name": "Main Github",
+                    "url": "https://github.com/mboleary",
                     "children": []
                 },
                 {
-                    "name": "Post 2",
-                    "url": "/test/post2",
+                    "name": "Old Github",
+                    "url": "https://github.com/nesdood007",
                     "children": []
                 },
                 {
-                    "name": "Post 3",
-                    "url": "/test/post3",
+                    "name": "Gitlab",
+                    "url": "https://gitlab.com/mboleary",
                     "children": []
                 }
             ]
