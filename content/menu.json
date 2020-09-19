@@ -19,6 +19,24 @@
             "children": []
         },
         {
+            "name": "Code",
+            "url": "/code",
+            "class":"",
+            "children": []
+        },
+        {
+            "name": "Music",
+            "url": "/music",
+            "class":"",
+            "children": []
+        },
+        {
+            "name": "Photography",
+            "url": "/pictures",
+            "class":"",
+            "children": []
+        },
+        {
             "name": "About",
             "url": "/about",
             "class":"",

@@ -378,11 +378,11 @@
 }
 
 .flashcard.bg-black, .titlecard.bg-black {
-    background: black;
+    background-color: black;
 }
 
 .flashcard.bg-white, .titlecard.bg-white {
-    background: white;
+    background-color: white;
 }
 
 .flashcard.bg-triangles-test, .titlecard.bg-triangles-test {
@@ -512,4 +512,14 @@
 .flashcard.fg-a4 *, .titlecard.fg-a4 * {
     color: var(--accent-4);
     border-color: var(--accent-4);
+}
+
+.flashcard.fg-light *, .titlecard.fg-light * {
+    color: var(--cards-default-text-light);
+    border-color: var(--cards-default-text-light);
+}
+
+.flashcard.fg-dark *, .titlecard.fg-dark * {
+    color: var(--cards-default-text-dark);
+    border-color: var(--cards-default-text-dark);
 }
