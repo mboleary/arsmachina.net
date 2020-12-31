@@ -1,6 +1,19 @@
 {% import "macros.html" as macros %}
 
 <!Doctype html>
+{% set data = load_data(path="content/menu.json") %}
+
+{% set cow = load_data(path="data/cow", format="plain") %}
+{% set compile_date = load_data(path="data/compile_date", format="plain") %}
+{% set git_branch = load_data(path="data/git_branch", format="plain") %}
+{% set git_hash = load_data(path="data/git_hash", format="plain") %}
+<!--
+    Compile Information
+    ===================
+    {{git_hash}}
+    {{git_branch}}
+    {{compile_date}}
+-->
 <head>
     <title>{% block title %}{{config.title}}{% endblock title %}</title>
     <link rel="stylesheet" type="text/css" href="/style/main.css">
@@ -41,7 +54,6 @@
                             <div class="left flex">
                                 <div class="flex-grow"></div>
                                 <code class="left">
-                                    {% set cow = load_data(path="data/cow", format="plain") %}
                                     {{ cow | safe }}
                                 </code>
                             </div>
@@ -52,7 +64,6 @@
                 {% block headerMenu %}
                     <div class="menu">
                         <ul>
-                            {% set data = load_data(path="content/menu.json") %}
                             {% for entry in data.topMenu %}
                                 <li {% if entry.children %}class="dropdown"{% endif %}>
                                     <!-- @TODO Add class="current" -->
