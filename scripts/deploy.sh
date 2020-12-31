@@ -6,17 +6,11 @@ DATA_DATE=$(cat "../data/compile_date")
 DATA_HASH=$(cat "../data/git_hash")
 DATA_BRANCH=$(cat "../data/git_branch")
 
-cd ../temp
+cd ../.temp
 
 ## Clear out the Directory
 
-# rm -rf deploy
-
-# git clone git@gitlab.com:mboleary/mboleary.gitlab.io.git deploy
-
 cd deploy
-
-mv -f -u -t public/ ../../public/*
 
 echo "# Compile Information" > README.md
 echo "Commit hash: \`" $DATA_HASH "\`" >> README.md
