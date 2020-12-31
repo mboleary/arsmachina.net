@@ -25,6 +25,8 @@ git pull
 
 cd ../../
 
+pwd
+
 ## Build website with Zola
 
 # Set output dir https://www.getzola.org/documentation/getting-started/cli-usage/

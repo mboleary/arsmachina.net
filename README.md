@@ -6,7 +6,12 @@ This is the public repository where the majority of my content lives.
 
 ## Data
 
-`cow` - This is the cow that is displayed on all pages
-`compile_date` - This is the date and time that the website was last compiled
-`git_hash` - This is the hash from the arsmachina.net repo that the website was built with
-`git_branch` - This is the branch that the website was built with
+The Data directory is how I include some build information into the webpage itself
+
+- `cow` - This is the cow that is displayed on all pages
+
+- `compile_date` - This is the date and time that the website was last compiled
+
+- `git_hash` - This is the hash from the arsmachina.net repo that the website was built with
+
+- `git_branch` - This is the branch that the website was built with
