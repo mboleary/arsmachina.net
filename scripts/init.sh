@@ -4,6 +4,12 @@
 
 cd ..
 
+# Create symlinks
+
+cd static
+
+ln -s ../node_modules
+
 # Remove Existing temp directory
 rm -rf .temp
 
