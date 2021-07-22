@@ -1,0 +1,26 @@
+{
+  "name": "ars-css-next",
+  "version": "1.0.0",
+  "description": "A style package for web applications",
+  "main": "runDemos.sh",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mboleary/ars-css-next.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mboleary/ars-css-next/issues"
+  },
+  "homepage": "https://github.com/mboleary/ars-css-next#readme",
+  "dependencies": {
+    "feather-icons": "^4.28.0",
+    "pattern.css": "^1.0.0"
+  }
+}

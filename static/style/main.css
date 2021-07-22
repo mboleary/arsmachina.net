@@ -1,818 +1,1279 @@
-/*
-    Main Stylesheet for WebTemplate 2
-   
-    This Stylesheet has no dependencies on other stylesheets
-
-    Contains the following:
-        - Fonts
-        - Colors
-        - Boilerplate
-            - H1-6, P, A, etc.
-            - Table
-            - Form Elements
- */
-
-/* Fonts */
-
-@font-face {
-    font-family: title;
-    src: url('/font/LeagueMono-ExtraBold.woff2');
+@charset "UTF-8";
+.accent-1 {
+  color: #BBE524;
 }
 
-@font-face {
-    font-family: menu;
-    src: url('/font/LeagueMono-Regular.woff2');
+.bg-accent-1 {
+  background-color: #BBE524;
 }
 
-@font-face {
-    font-family: bold;
-    src: url('/font/LeagueMono-Bold.woff2');
+.accent-2 {
+  color: #2682A6;
 }
 
-@font-face {
-    font-family: light;
-    src: url('/font/LeagueMono-Light.woff2');
+.bg-accent-2 {
+  background-color: #2682A6;
 }
 
-@font-face {
-    font-family: medium;
-    src: url('/font/LeagueMono-Medium.woff2');
+.accent-3 {
+  color: #FF230F;
 }
 
-@font-face {
-    font-family: semibold;
-    src: url('/font/LeagueMono-SemiBold.woff2');
+.bg-accent-3 {
+  background-color: #FF230F;
 }
 
-@font-face {
-    font-family: thin;
-    src: url('/font/LeagueMono-Thin.woff2');
+.accent-4 {
+  color: #FB9902;
 }
 
-@font-face {
-    font-family: ultralight;
-    src: url('/font/LeagueMono-UltraLight.woff2');
+.bg-accent-4 {
+  background-color: #FB9902;
 }
 
-/* Color Variables */
-
-:root {
-    /* ===Default Color Vars=== */
-    /* These are the Default Colors Provided and used in the Template. They are here for backwards compatibility */
-    --off-white: #F0F7D4;
-    --green: #BBE524;
-    --red: #FF230F;
-    --blue: #2682A6;
-    --orange: #fb9902;
-    --dark-blue: #002C3D;
-    --light-blue: #004966;
-    /* For Warning Boxes */
-    --warn-yellow: #ffc30f;
-    --warn-bright-yellow: #fff9e6;
-    --warn-red: #ffd0cc;
-    /* For Tags */
-    --faint-green: #dcf28d;
-    --faint-red: #ff8a80;
-    --faint-blue: #97d1e7;
-    --faint-orange: #fecc81;
-    /* For Link Selection */
-    --lighter-blue: #82c7e3;
-    --lighter-green: #ceec5f;
-    /* Other Colors, not in scheme */
-    --usc-garnet: #73000a;
-    --acm-blue: #0492d2;
-    /* Greys */
-    --grey-1: #111;
-    --grey-2: #222;
-    --grey-3: #333;
-    --grey-5: #555;
-    --grey-80: #808080;
-    /* ===General Color Vars=== */
-    /* These Color Vars will determine the other Functional Colors Below */
-    /* Accent Colors */
-    /* These include spots for HSL Colors, which are also used for generating gradients and shades of these colors. HTML Color Codes are also provided. */
-    --accent-1: #BBE524;
-    --accent-1-h: 73;
-    --accent-1-s: 79%;
-    --accent-1-l: 52%;
-    --accent-1: hsl(var(--accent-1-h), var(--accent-1-s), var(--accent-1-l));
-    --accent-2: #FF230F;
-    --accent-2-h: 5;
-    --accent-2-s: 100%;
-    --accent-2-l: 53%;
-    --accent-2: hsl(var(--accent-2-h), var(--accent-2-s), var(--accent-2-l));
-    --accent-3: #2682A6;
-    --accent-3-h: 197;
-    --accent-3-s: 63%;
-    --accent-3-l: 40%;
-    --accent-3: hsl(var(--accent-3-h), var(--accent-3-s), var(--accent-3-l));
-    --accent-4: #fb9902;
-    --accent-4-h: 36;
-    --accent-4-s: 98%;
-    --accent-4-l: 50%;
-    --accent-4: hsl(var(--accent-4-h), var(--accent-4-s), var(--accent-4-l));
-    --dark-color: #002C3D;
-    --dark-color-h: 197;
-    --dark-color-s: 100%;
-    --dark-color-l: 12%;
-    --dark-color: hsl(var(--dark-color-h), var(--dark-color-s), var(--dark-color-l));
-    --light-color: #F0F7D4;
-    --light-color-h: 72;
-    --light-color-s: 69%;
-    --light-color-l: 90%;
-    --light-color: hsl(var(--light-color-h), var(--light-color-s), var(--light-color-l));
-    /* ===Functional Colors===*/
-    /* These Colors are generated feom the HSL Values given above. They may optionally be changed with a static color too if needed */
-    /* Background Colors (Can change depending on user Light/Dark Mode Preference) */
-    --light-background: white;
-    --dark-background: var(--dark-color);
-    /* Link Colors */
-    --link-normal: hsl(var(--accent-1-h), var(--accent-1-s), 35%);
-    /* #81a013 */
-    --link-highlight: var(--accent-1);
-    /* Text Decoration Colors */
-    --highlight: #ffff00;
-    --hightlight-text-color: black;
-    --light-text-color: black;
-    /* Light Color Scheme */
-    --dark-text-color: white;
-    /* Dark Color Scheme */
-    --light-header-color: black;
-    /* Light Color Scheme */
-    --light-header-bar-color: #333;
-    --dark-header-color: white;
-    /* Dark Color Scheme */
-    --dark-header-bar-color: #aaa;
-    --hr-color: #999;
-    /* Table Colors */
-    --table-caption-bg: #999;
-    --table-caption-text: white;
-    --table-head-bg: var(--dark-color);
-    --table-head-text: white;
-    --table-n0-row-bg: #eee;
-    --table-n1-row-bg: white;
-    --table-row-hightlight: var(--light-color);
-    --table-row-text: black;
-    --table-footer-bg: white;
-    --table-footer-text: var(--accent-3);
-    /* Other Tags */
-    --blockquote-bar-color: #555;
-    --blockquote-bg-color: #eee;
-    --blockquote-text-color: black;
-
-    --figure-bg-color: var(--dark-color);
-    --figure-fg-color: white;
-    --figure-figure-color: #ccc;
-
-    --form-legend-bg-color: black;
-    --form-legend-text-color: white;
-    --form-border-color: #aaa;
-    --form-error-color: #ff0000;
-    --form-submit-color: var(--accent-1);
-    --form-submit-text-color: white;
-    --form-button-color: #333;
-    --form-button-hover-color: #aaa;
-    --form-button-text-color: white;
-    --form-text-input-border-color: #ccc;
-    --form-text-input-focused-border-glow-color: var(--accent-1);
-    --form-text-input-color: white;
-    --form-text-input-text-color: black;
-    --form-disabled: #999;
-    --form-label-color-light: #333;
-    --form-label-color-dark: #ccc;
-
+.bg-color {
+  background-color: white;
+  color: black;
 }
 
-/* HTML Tags */
+.fg-color {
+  color: black;
+}
 
 body {
-    margin: 0px;
-    background-color: var(--light-background);
-    color: var(--light-text-color);
-    font-family: light;
+  background-color: white;
+  color: black;
 }
 
-@media only screen and (prefers-color-scheme: dark) {
-    body {
-        background-color: var(--dark-background);
-        color: var(--dark-text-color);
-    }
-}
-
-/* Content Block */
-
-main {
-    min-height: 80vh;
-    /* Note: 1vh ~= 1% viewport Height */
-    margin: 0px 0px;
-    font-family: light;
-}
-
-main.sidebar {
-    margin-left: 20%;
-}
-
-/* Use this to Center Items */
-
-.container {
-    margin: 0% 20%;
-    overflow: auto;
-    width: 60%;
-}
-
-/* Makes Margins Smaller for Mobile Screens */
-
-@media only screen and (max-width: 767px) {
-    .container {
-        margin: 0% 1%;
-        width: 98%;
-    }
-}
-
-/* Specific Printing Rules */
-
-@media only print {
-    .container {
-        margin: 0;
-        width: 100%;
-        overflow: hidden;
-    }
-    hr {
-        background-color: #aaa;
-    }
-    .hide-for-print {
-        display: none !important;
-    }
-}
-
-/* Header Decorations */
-
-h1 {
-    margin: 10px 0px;
-    font-family: semibold;
-    color: var(--light-header-color);
-    /* border-left: 5px solid #333333; */
-    /* padding: 1px 1px 1px 10px; */
-}
-
-h2 {
-    margin: 5px 0px;
-    font-family: semibold;
-    color: var(--light-header-color);
-    /* border-left: 5px solid #444444; */
-    /* padding: 1px 1px 1px 10px; */
-}
-
-h3 {
-    margin: 5px 0px;
-    font-family: semibold;
-    color: var(--light-header-color);
-    /* border-left: 5px solid #555555; */
-    /* padding: 1px 1px 1px 10px; */
-}
-
-h4 {
-    margin: 5px 0px;
-    font-family: semibold;
-    color: var(--light-header-color);
-    /* border-left: 5px solid #666666; */
-    /* padding: 1px 1px 1px 10px; */
-}
-
-h5 {
-    margin: 5px 0px;
-    font-family: semibold;
-    color: var(--light-header-color);
-    /* border-left: 5px solid #777777; */
-    /* padding: 1px 1px 1px 10px; */
-}
-
-h6 {
-    margin: 5px 0px;
-    font-family: semibold;
-    color: var(--light-header-color);
-    /* border-left: 5px solid #888888; */
-    /* padding: 1px 1px 1px 10px; */
-}
-
-h1.vbar, h2.vbar, h3.vbar, h4.vbar, h5.vbar, h6.vbar {
-    border-left: 5px solid var(--light-header-bar-color);
-    padding-left: 5px;
-}
-
-h1.hbar, h2.hbar, h3.hbar, h4.hbar, h5.hbar, h6.hbar {
-    border-bottom: 1px solid var(--light-header-bar-color);
-}
-
-.invert {
-    padding-left: 5px;
-}
-
-/* Don't Invert Colors when Printing */
-
-@media only screen {
-    .invert {
-        background-color: var(--light-header-color);
-        color: var(--light-background);
-    }
-}
-
-@media only screen and (prefers-color-scheme: dark) {
-    h1, h2, h3, h4, h5, h6 {
-        color: var(--dark-header-color);
-    }
-    h1.vbar, h2.vbar, h3.vbar, h4.vbar, h5.vbar, h6.vbar {
-        border-left: 5px solid var(--dark-header-bar-color);
-        padding-left: 5px;
-    }
-    h1.hbar, h2.hbar, h3.hbar, h4.hbar, h5.hbar, h6.hbar {
-        border-bottom: 1px solid var(--dark-header-bar-color);
-    }
-    .invert {
-        background-color: var(--dark-header-color);
-        color: var(--dark-background);
-    }
-}
-
-/* END Header Decorations */
-
-p {
-    margin: 10px 0px;
-}
-
-a:link, a:visited {
-    color: var(--link-normal);
-    text-decoration: none;
-}
-
-a:hover, a:active {
-    color: var(--link-highlight);
-    text-decoration: none;
-}
-
-img {
-    width: 100%;
-    height: auto;
-    margin: 0px;
-    padding: 0px;
-    display: block;
-}
-
-img.blur {
-    filter: blur(25px);
-    -webkit-filter: blur(25px);
-}
-
-img.noresize {
-    width: auto;
-    height: auto;
-    margin: auto;
-    text-align: center;
-}
-
-/* @TODO is this used? */
-
-img.noresize.right {
-    margin-left: auto;
-    margin-right: 0;
+.backdrop-small {
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px white;
 }
 
 hr {
-    border-style: solid;
-    border-color: var(--hr-color);
-    margin: 10px 0px;
+  border-color: black;
 }
 
-hr.white {
-    border-color: white;
-}
-
-/* Table Styling */
-
-table {
-    border-collapse: collapse;
-    text-align: left;
-    width: 100%;
-    margin: 10px 0px;
-    color: var(--table-row-text);
-}
-
-table caption {
-    text-align: left;
-    background-color: var(--table-caption-bg);
-    color: var(--table-caption-text);
-    font-family: light;
-    padding: 5px;
-    /* border-left: 5px solid #333; */
-}
-
-table tfoot {
-    background-color: var(--table-footer-bg);
-    color: var(--table-footer-text);
-}
-
-table tr:nth-child(even) {
-    background-color: var(--table-n0-row-bg);
-}
-
-table tr:nth-child(odd) {
-    background-color: var(--table-n1-row-bg);
-}
-
-table th {
-    background-color: var(--table-head-bg);
-    color: var(--table-head-text);
-    padding: 5px;
-    font-family: menu;
-    font-size: 17.5px;
-}
-
-table td {
-    font-family: light;
-    padding: 5px;
-}
-
-table tr:hover {
-    background-color: var(--table-row-hightlight);
-}
-
-/* END Table Styling */
-
-code {
-    font-family: light;
-}
-
-/* @TODO Assign Color Variables for Everything */
-
-blockquote {
-    border-left: 5px solid var(--blockquote-bar-color);
-    background-color: var(--blockquote-bg-color);
-    color: var(--blockquote-text-color);
-    margin: 0px;
-    padding: 1em 1em 1em 1em;
-    font-family: light;
-    font-style: italic;
-}
-
-blockquote * {
-    color: var(--blockquote-text-color);
-}
-
-kbd {
-    border-radius: 5px;
-    border: 1px solid black;
-    padding: 2.5px;
-    color: black;
-    background-color: white;
-    font-family: light;
-    min-width: 10000em;
-    min-height: 3em;
-}
-
-kbd.dark {
+@media only screen and (prefers-color-scheme: dark) {
+  body {
     background-color: #111;
     color: white;
-    font-family: light;
+  }
+
+  .bg-color {
+    background-color: #111;
+    color: white;
+  }
+
+  .fg-color {
+    color: white;
+  }
+
+  .backdrop-small {
+    background-color: rgba(17, 17, 17, 0.5);
+    box-shadow: 0 0 10px #111;
+  }
+
+  hr {
+    border-color: white;
+  }
+}
+body[dark] {
+  background-color: #111;
+  color: white;
+}
+body[dark] .bg-color {
+  background-color: #111;
+  color: white;
+}
+body[dark] .fg-color {
+  color: white;
+}
+body[dark] .backdrop-small {
+  background-color: rgba(17, 17, 17, 0.5);
+  box-shadow: 0 0 10px #111;
+}
+body[dark] hr {
+  border-color: white;
+}
+
+.fg-light-color {
+  color: black;
+}
+.fg-light-color hr {
+  border-color: black;
+}
+
+.fg-dark-color {
+  color: white;
+}
+.fg-dark-color hr {
+  border-color: white;
+}
+
+.bg-light-color {
+  background-color: white;
+}
+
+.bg-dark-color {
+  background-color: #111;
+}
+
+.error-color-fg {
+  color: #FF230F;
+}
+
+.error-color-bg {
+  background-color: #FF230F;
+}
+
+.warn-color-fg {
+  color: #FFC30F;
+}
+
+.warn-color-bg {
+  background-color: #FFC30F;
+}
+
+.bg-gradient-a1 {
+  background: linear-gradient(103deg, #637b0f 0%, #BBE524 100%);
+}
+
+.bg-gradient-a1-a2 {
+  background: linear-gradient(45deg, #BBE524 0%, #2682A6 100%);
+}
+
+.bg-gradient-a1-a3 {
+  background: linear-gradient(45deg, #BBE524 0%, #FF230F 100%);
+}
+
+.bg-gradient-a1-a4 {
+  background: linear-gradient(45deg, #BBE524 0%, #FB9902 100%);
+}
+
+.bg-gradient-a2 {
+  background: linear-gradient(103deg, #0e313e 0%, #2682A6 100%);
+}
+
+.bg-gradient-a2-a1 {
+  background: linear-gradient(45deg, #2682A6 0%, #BBE524 100%);
+}
+
+.bg-gradient-a2-a3 {
+  background: linear-gradient(45deg, #2682A6 0%, #FF230F 100%);
+}
+
+.bg-gradient-a2-a4 {
+  background: linear-gradient(45deg, #2682A6 0%, #FB9902 100%);
+}
+
+.bg-gradient-a3 {
+  background: linear-gradient(103deg, #8f0c00 0%, #FF230F 100%);
+}
+
+.bg-gradient-a3-a1 {
+  background: linear-gradient(45deg, #FF230F 0%, #BBE524 100%);
+}
+
+.bg-gradient-a3-a2 {
+  background: linear-gradient(45deg, #FF230F 0%, #2682A6 100%);
+}
+
+.bg-gradient-a3-a4 {
+  background: linear-gradient(45deg, #FF230F 0%, #FB9902 100%);
+}
+
+.bg-gradient-a4 {
+  background: linear-gradient(103deg, #7d4c01 0%, #FB9902 100%);
+}
+
+.bg-gradient-a4-a1 {
+  background: linear-gradient(45deg, #FB9902 0%, #BBE524 100%);
+}
+
+.bg-gradient-a4-a2 {
+  background: linear-gradient(45deg, #FB9902 0%, #2682A6 100%);
+}
+
+.bg-gradient-a4-a3 {
+  background: linear-gradient(45deg, #FB9902 0%, #FF230F 100%);
+}
+
+.box-shadow {
+  box-shadow: 0 1px 5px #aaa;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  .box-shadow {
+    box-shadow: 0 1px 5px #333;
+  }
+}
+body[dark] .box-shadow {
+  box-shadow: 0 1px 5px #333;
+}
+
+.box-shadow-dark {
+  box-shadow: 0 1px 5px #333;
+}
+
+.box-shadow-light {
+  box-shadow: 0 1px 5px #aaa;
+}
+
+.text-shadow {
+  text-shadow: 0 1px 5px #aaa;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  .text-shadow {
+    text-shadow: 0 1px 5px #333;
+  }
+}
+body[dark] .text-shadow {
+  text-shadow: 0 1px 5px #333;
+}
+
+.text-shadow-dark {
+  text-shadow: 0 1px 5px #333;
+}
+
+.text-shadow-light {
+  text-shadow: 0 1px 5px #aaa;
+}
+
+@font-face {
+  font-family: extrabold;
+  src: url("/font/LeagueMono-ExtraBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: bold;
+  src: url("/font/LeagueMono-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: semibold;
+  src: url("/font/LeagueMono-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: medium;
+  src: url("/font/LeagueMono-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: regular;
+  src: url("/font/LeagueMono-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: thin;
+  src: url("/font/LeagueMono-Thin.woff2") format("woff2");
+}
+@font-face {
+  font-family: light;
+  src: url("/font/LeagueMono-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: ultralight;
+  src: url("/font/LeagueMono-UltraLight.woff2") format("woff2");
+}
+body {
+  font-family: light;
+}
+
+h1, h2, h3 {
+  font-family: extrabold;
+}
+
+h4, h5, h6 {
+  font-family: semibold;
 }
 
 samp {
-    font-family: thin;
+  font-family: thin;
 }
 
 dl dt {
-    font-family: semibold;
+  font-family: semibold;
 }
 
-/* BEGIN Text Alignment */
-
-.left {
-    text-align: left !important;
+pre {
+  font-family: light;
 }
 
-.right {
-    text-align: right !important;
+.container {
+  margin: 0% auto;
+  overflow: auto;
+  max-width: 1024px;
 }
 
-/* END Text Alignment */
-
-/* BEGIN Content Indentation */
-
-.indent {
-    margin-left: 3em;
+@media only screen and (max-width: 768px) {
+  .container {
+    margin: 0% 5px;
+    overflow: auto;
+    max-width: unset;
+  }
+}
+@media only screen and (max-width: 960px) and (min-width: 769px) {
+  .container {
+    margin: 0% auto;
+    overflow: auto;
+    max-width: 758px;
+  }
+}
+@media only screen and (max-width: 1080px) and (min-width: 961px) {
+  .container {
+    margin: 0% auto;
+    overflow: auto;
+    max-width: 950px;
+  }
+}
+.full-height {
+  height: 100%;
 }
 
-/* END Content Indentation */
-
-/* BEGIN Explicit Color Assignment Classes */
-
-.accent-1:not(.invert) {
-    color: var(--accent-1) !important;
-    border-color: hsl(var(--accent-1-h), var(--accent-1-s), 30%) !important;
+.full-width {
+  width: 100%;
 }
 
-.accent-2:not(.invert) {
-    color: var(--accent-2) !important;
-    border-color: hsl(var(--accent-2-h), var(--accent-2-s), 30%) !important;
+.full-vh {
+  height: 100vh;
 }
 
-.accent-3:not(.invert) {
-    color: var(--accent-3) !important;
-    border-color: hsl(var(--accent-3-h), var(--accent-3-s), 30%) !important;
+.full-vw {
+  width: 100vw;
 }
 
-.accent-4:not(.invert) {
-    color: var(--accent-4) !important;
-    border-color: hsl(var(--accent-4-h), var(--accent-4-s), 30%) !important;
+.text-center {
+  text-align: center;
 }
 
-/* Don't invert colors when printing */
-
-@media only screen {
-    .accent-1.invert {
-        background-color: var(--accent-1);
-        color: var(--light-background);
-        border-color: hsl(var(--accent-1-h), var(--accent-1-s), 30%);
-    }
-    .accent-2.invert {
-        background-color: var(--accent-2);
-        color: var(--light-background);
-        border-color: hsl(var(--accent-2-h), var(--accent-2-s), 30%);
-    }
-    .accent-3.invert {
-        background-color: var(--accent-3);
-        color: var(--light-background);
-        border-color: hsl(var(--accent-3-h), var(--accent-3-s), 30%);
-    }
-    .accent-4.invert {
-        background-color: var(--accent-4);
-        color: var(--light-background);
-        border-color: hsl(var(--accent-4-h), var(--accent-4-s), 30%);
-    }
+.margin {
+  margin: 0 5px;
 }
 
-/* Dark Color Scheme Inversions */
+.margin-2x {
+  margin: 0 10px;
+}
 
+.margin-auto {
+  margin: 0 auto;
+}
+
+.margin-top-bottom {
+  margin: 5px 0;
+}
+
+.margin-top-bottom-2x {
+  margin: 10px 0;
+}
+
+.margin-top-bottom-auto {
+  margin: auto 0;
+}
+
+.flex-layout {
+  display: flex;
+}
+.flex-layout.vertical {
+  flex-direction: column;
+}
+.flex-layout.vertical .reverse {
+  flex-direction: column-reverse;
+}
+.flex-layout.horizontal {
+  flex-direction: row;
+}
+.flex-layout.horizontal .reverse {
+  flex-direction: row-reverse;
+}
+.flex-layout.wrap {
+  flex-wrap: wrap;
+}
+.flex-layout.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex {
+  flex: 1 1 auto;
+}
+
+.flex-grow {
+  flex: 1 0 auto;
+}
+
+.flex-shrink {
+  flex: 0 1 auto;
+}
+
+.height-10 {
+  height: 10px;
+}
+
+.height-20 {
+  height: 20px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  margin: 10px 0;
+}
+
+h4, h5, h6 {
+  margin: 5px 0;
+}
+
+p {
+  margin: 10px 0;
+}
+
+img.cover {
+  object-fit: cover;
+}
+
+img.contain {
+  object-fit: contain;
+}
+
+.grid-layout {
+  display: grid;
+  grid-auto-rows: auto;
+  margin: 0 10px;
+  align-items: stretch;
+  grid-auto-flow: row dense;
+}
+@media only screen and (max-width: 640px) {
+  .grid-layout {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 641px) {
+  .grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 1280px) and (min-width: 1025px) {
+  .grid-layout {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 1650px) and (min-width: 1281px) {
+  .grid-layout {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media only screen and (max-width: 1920px) and (min-width: 1651px) {
+  .grid-layout {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .grid-layout {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.grid-colspan-2 {
+  grid-column: span 2;
+}
+@media only screen and (max-width: 640px) {
+  .grid-colspan-2 {
+    grid-column: span 1;
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 641px) {
+  .grid-colspan-2 {
+    grid-column: span 2;
+  }
+}
+
+.grid-colspan-3 {
+  grid-column: span 3;
+}
+@media only screen and (max-width: 640px) {
+  .grid-colspan-3 {
+    grid-column: span 1;
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 641px) {
+  .grid-colspan-3 {
+    grid-column: span 2;
+  }
+}
+@media only screen and (max-width: 1280px) and (min-width: 1025px) {
+  .grid-colspan-3 {
+    grid-column: span 3;
+  }
+}
+
+.grid-rowspan-2 {
+  grid-row: span 2;
+}
+
+.grid-rowspan-3 {
+  grid-row: span 3;
+}
+
+.grid-gap {
+  gap: 10px;
+}
+
+.title-banner, .banner {
+  background-attachment: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.img.title-banner, .img.banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.title-banner:not(.no-title-resize) h1, .banner:not(.no-title-resize) h1 {
+  font-size: 3em;
+}
+.title-banner:not(.no-title-resize) p, .banner:not(.no-title-resize) p {
+  font-size: 1.5em;
+}
+
+.banner {
+  height: 100vh;
+}
+.title-banner {
+  height: min(50vh, 680px);
+}
+.banner-footer {
+  font-size: unset;
+  min-height: 32px;
+  margin: 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.content-card, .content-square {
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 10px;
+  min-width: 240px;
+  margin: 5px 10px 5px 0;
+}
 @media only screen and (prefers-color-scheme: dark) {
-    .accent-1.invert {
-        background-color: var(--accent-1);
-        color: var(--dark-background);
-    }
-    .accent-2.invert {
-        background-color: var(--accent-2);
-        color: var(--dark-background);
-    }
-    .accent-3.invert {
-        background-color: var(--accent-3);
-        color: var(--dark-background);
-    }
-    .accent-4.invert {
-        background-color: var(--accent-4);
-        color: var(--dark-background);
-    }
+  .content-card, .content-square {
+    border-color: #333;
+  }
+}
+body[dark] .content-card, body[dark] .content-square {
+  border-color: #333;
+}
+.content-card.set-width, .set-width.content-square {
+  width: 240px;
+}
+.content-card.set-min-width, .set-min-width.content-square {
+  min-width: 240px;
+}
+.content-card.no-border, .no-border.content-square {
+  border: 0;
+}
+.content-card.no-rounded-corners, .no-rounded-corners.content-square {
+  border-radius: 0;
+}
+.content-card.no-padding, .no-padding.content-square {
+  padding: 0;
+}
+.content-card.no-margin, .no-margin.content-square {
+  margin: 0;
+}
+.content-card.shadow, .shadow.content-square {
+  box-shadow: 0 1px 5px #aaa;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.content-card .round-top-corners, .content-square .round-top-corners {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.content-card .round-right-corners, .content-square .round-right-corners {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.content-card .round-bottom-corners, .content-square .round-bottom-corners {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.content-card .round-left-corners, .content-square .round-left-corners {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
-/* END Explicit Color Assignment Classes */
-
-details {
-    background-color: rgba(0, 0, 0, 1);
-    font-family: semibold;
+.content-square {
+  border-radius: 0;
+  width: 240px;
+  height: 240px;
 }
 
-summary {
-    background-color: #eee;
-    color: black;
+.text-section {
+  background-color: #eee;
+  border-left: 5px solid #333;
+  padding: 10px 10px 10px 5px;
+  color: #333;
+}
+.text-section:not(.no-margin) {
+  margin: 5px 0;
+}
+.text-section p {
+  margin: 0px;
+}
+.text-section h1, .text-section h2, .text-section h3, .text-section h4, .text-section h5, .text-section h6 {
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+.text-section.accent-1 {
+  background-color: white;
+  border-color: #BBE524;
+  color: #BBE524;
+}
+.text-section.accent-2 {
+  background-color: #d6edf6;
+  border-color: #2682A6;
+  color: #2682A6;
+}
+.text-section.accent-3 {
+  background-color: white;
+  border-color: #FF230F;
+  color: #FF230F;
+}
+.text-section.accent-4 {
+  background-color: #fffefd;
+  border-color: #FB9902;
+  color: #FB9902;
+}
+.text-section.error {
+  background-color: white;
+  border-color: #FF230F;
+  color: #FF230F;
+}
+.text-section.warn {
+  background-color: white;
+  border-color: #FFC30F;
+  color: #FFC30F;
 }
 
-details[open] {
-    background-color: #eee;
-    color: black;
+.app-bar {
+  height: 32px;
+  margin: 0;
+  border: 0;
+  padding: 10px;
+}
+.app-bar:not([class*=bg-accent]) {
+  background-color: black;
+  color: white;
 }
 
-details[open]>*:not(summary) {
-    font-family: light;
+.app-bar h1, .app-bar h2, .app-bar h3, .app-bar h4, .app-bar h5, .app-bar h6, .app-bar p {
+  margin: 0;
 }
 
-details[open] summary {
-    background-color: black;
-    color: white;
+form:not(.no-margin) {
+  margin: 10px 0;
 }
 
-figure {
-    margin: 5px 0px;
-    padding: 0px;
-    background-color: var(--figure-bg-color);
-    color: var(--figure-fg-color);
+form .body {
+  border-left: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+  border-top: 0px;
+  padding: 10px;
 }
-
-figure .figure {
-    color: var(--figure-figure-color);
-    font-family: ultralight;
+@media only screen and (prefers-color-scheme: dark) {
+  form .body {
+    border-color: #333;
+  }
 }
-
-figure figcaption {
-    margin: 0px;
-    padding: 5px 5px 5px 20px;
-    font-family: bold;
-    text-align: center;
+body[dark] form .body {
+  border-color: #333;
 }
-
-figure.white {
-    background-color: white;
-    color: #333;
-    font-family: bold;
-    padding: 5px;
-    margin: 0;
-}
-
-figure.white figcaption {
-    color: #333;
-    font-family: bold;
-    border-left: 0;
-    text-align: center;
-    padding: 0;
-}
-
-/* Default Form Styling */
-
-/* Default Fieldset Format */
 
 fieldset {
-    border: 1px solid  var(--form-border-color);
-    margin: 0px;
-    padding: 1em;
+  border: 0;
+  padding: 0;
+  margin: 10px 0;
+}
+
+fieldset.required label::after {
+  content: "•";
+  font-size: 1.5em;
+  color: #FF230F;
+  vertical-align: middle;
+}
+
+fieldset.error .errorText {
+  color: #FF230F;
+}
+
+fieldset.error label {
+  color: #FF230F;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+label:not(.option) {
+  font-family: semibold;
 }
 
 legend {
-    background-color: var(--form-legend-bg-color);
-    color: var(--form-legend-text-color);
-    font-family: title;
-    font-size: 25px;
-    padding: 0.5rem;
-    text-align: center;
-    margin: 0px;
-    width: auto;
-    /*display: contents;*/
+  font-family: bold;
+  text-align: center;
 }
 
-/* This looks weird when styling the border */
+input:not([type=image]), textarea, select {
+  font-family: light;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input:not([type=image]), textarea, select {
+    border-color: #333;
+  }
+}
+body[dark] input:not([type=image]), body[dark] textarea, body[dark] select {
+  border-color: #333;
+}
+input[disabled]:not([type=image]), textarea[disabled], select[disabled] {
+  background-color: #999;
+}
+
+textarea, select[multiple] {
+  min-height: 16px;
+  resize: vertical;
+}
 
 select {
-    font-family: light;
-    font-size: 16px;
+  background-color: white;
+}
+select[multiple] {
+  min-height: 56px;
 }
 
 textarea {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 2.5px;
-    border-radius: 5px 5px 0px 5px;
-    border: 1px solid var(--form-text-input-border-color);
-    font-family: light;
-    max-width: 100%;
-    box-sizing: border-box;
+  border-radius: 5px 5px 0px 5px;
 }
 
-/* 2 Different ways to get a button */
-
-button, input[type="button"] {
-    border: 0px;
-    padding: 5px;
-    font-family: medium;
-    font-size: 16px;
-    border-radius: 5px;
-    color: var(--form-button-text-color);
-    background-color: var(--form-button-color);
+input[type=image] {
+  width: 100%;
 }
 
-/* 2 Different ways to get a button */
-
-button:hover, input[type=button]:hover {
-    border: 0px;
-    padding: 5px;
-    font-family: medium;
-    font-size: 16px;
-    border-radius: 5px;
-    color: var(--form-button-color);
-    background-color: var(--form-button-text-color);
+table tfoot td, table td, table {
+  border-color: #aaa;
 }
-
-/* Reset Styling */
-
-input[type="reset"] {
-    border: 0px;
-    padding: 5px;
-    font-family: medium;
-    font-size: 16px;
-    border-radius: 5px;
-    color: var(--form-button-text-color);
-    background-color: var(--form-error-color);
-}
-
-/* Reset Styling */
-
-input[type="reset"]:hover {
-    border: 0px;
-    padding: 5px;
-    font-family: medium;
-    font-size: 16px;
-    border-radius: 5px;
-    color: var(--form-error-color);
-    background-color: var(--form-button-text-color);
-}
-
-/* Submit Styling */
-
-input[type="submit"] {
-    border: 0px;
-    padding: 5px;
-    font-family: medium;
-    font-size: 16px;
-    border-radius: 5px;
-    color: var(--form-submit-text-color);
-    background-color: var(--form-submit-color);
-}
-
-/* Submit Styling */
-
-input[type="submit"]:hover {
-    border: 0px;
-    padding: 5px;
-    font-family: medium;
-    font-size: 16px;
-    border-radius: 5px;
-    color: var(--form-submit-color);
-    background-color: var(--form-submit-text-color);
-}
-
-/* 2 Different ways to get a button, alternate style */
-
-button.hollow, input[type=button].hollow {
-    border: 2px solid var(--form-button-color);
-    padding: 5px;
-    font-family: medium;
-    font-size: 16px;
-    border-radius: 5px;
-    color: var(--form-button-color);
-    background-color: var(--form-button-text-color);
-}
-
-button.hollow:hover, input[type=button].hollow:hover {
-    box-shadow: inset 0px 0px 10px var(--form-button-hover-color);
-}
-
-/* General Element Styling */
-
-input {
-    /*width: 100%;*/
-    border-radius: 5px;
-    border: 1px solid var(--form-text-input-border-color);
-    background-color: var(--form-text-input-color);
-    padding: 5px;
-    font-family: light;
-    font-size: 16px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-input:focus, textarea:focus {
-    outline: var(--form-text-input-focused-border-glow-color) auto 1px;
-}
-
-input[type="text"] {
-    background-color: var(--form-text-input-color);
-    border: 1px solid var(--form-text-input-border-color);
-    border-radius: 3px;
-    padding: 5px;
-    font-family: light;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-input[type="color"] {
-    border: 0px;
-    padding: 0px;
-    width: 16px;
-    height: 16px;
-}
-
-input[disabled] {
-    background-color: var(--form-disabled);
-}
-
-
-label {
-    font-family: semibold;
-    color: var(--form-label-color-light);
-}
-
 @media only screen and (prefers-color-scheme: dark) {
-    label {
-        color: var(--form-label-color-dark);
-    }
+  table tfoot td, table td, table {
+    border-color: #333;
+  }
+}
+body[dark] table td, table body[dark] td, body[dark] table {
+  border-color: #333;
 }
 
-/* END Default Fieldset Format */
-
-.full-width {
-    width: 100%;
+table {
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%;
+  margin: 10px 0;
+  border: 1px solid #aaa;
 }
+
+table caption {
+  text-align: center;
+  font-family: bold;
+  padding: 10px;
+}
+
+table thead {
+  background-color: #002C3D;
+  color: white;
+}
+
+table tbody {
+  font-family: light;
+}
+
+table tfoot {
+  font-family: medium;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #ffffff11;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #00000011;
+}
+
+table th {
+  padding: 10px;
+  font-family: semibold;
+}
+
+table tr.active {
+  font-weight: bold;
+}
+
+table tbody tr:hover td {
+  color: #555;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  table tbody tr:hover td {
+    color: #aaa;
+  }
+}
+body[dark] table tbody tr:hover td {
+  color: #aaa;
+}
+
+table td {
+  padding: 10px;
+  border: 1px solid #aaa;
+}
+
+table tfoot td {
+  border: 1px solid #aaa;
+}
+
+.chip-lg.outline:not([class*=accent]), .chip-md.outline:not([class*=accent]), .chip-sm.outline:not([class*=accent]) {
+  border-color: #aaa;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  .chip-lg.outline:not([class*=accent]), .chip-md.outline:not([class*=accent]), .chip-sm.outline:not([class*=accent]) {
+    border-color: #333;
+  }
+}
+body[dark] .chip-lg.outline:not([class*=accent]), body[dark] .chip-md.outline:not([class*=accent]), body[dark] .chip-sm.outline:not([class*=accent]) {
+  border-color: #333;
+}
+
+.chip-lg:not([class*=bg-accent]):not(.outline), .chip-md:not([class*=bg-accent]):not(.outline), .chip-sm:not([class*=bg-accent]):not(.outline) {
+  background-color: #aaa;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  .chip-lg:not([class*=bg-accent]):not(.outline), .chip-md:not([class*=bg-accent]):not(.outline), .chip-sm:not([class*=bg-accent]):not(.outline) {
+    background-color: #333;
+  }
+}
+body[dark] .chip-lg:not([class*=bg-accent]):not(.outline), body[dark] .chip-md:not([class*=bg-accent]):not(.outline), body[dark] .chip-sm:not([class*=bg-accent]):not(.outline) {
+  background-color: #333;
+}
+
+.chip-lg, .chip-md, .chip-sm {
+  font-family: semibold;
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+}
+
+.chip-lg.outline, .chip-md.outline, .chip-sm.outline {
+  border: 2px solid black;
+}
+[class*=accent].chip-lg.outline, [class*=accent].chip-md.outline, [class*=accent].chip-sm.outline {
+  border-color: currentColor;
+}
+
+.chip-sm {
+  border-radius: 16px;
+  height: 16px;
+}
+.chip-md {
+  border-radius: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+.chip-lg {
+  border-radius: 56px;
+  height: 56px;
+  line-height: 56px;
+  padding: 10px;
+}
+.backdrop[open] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #00000088;
+  width: 100vw;
+  height: 100vh;
+}
+
+.backdrop:not([open]) {
+  display: none;
+}
+
+.disable-scroll {
+  overflow: hidden;
+}
+
+.dialog {
+  border: 2px solid black;
+  padding: 0;
+}
+
+.icon {
+  margin: auto 5px;
+  width: 24px;
+  height: 24px;
+}
+.icon.left {
+  margin-left: 0;
+}
+.icon.right {
+  margin-right: 0;
+}
+.icon.center {
+  padding: auto;
+}
+
+.icon-btn {
+  padding: 4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+.icon-btn:hover {
+  background-color: #00000044;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  .icon-btn:hover:not(.dark-backdrop):not(.light-backdrop) {
+    background-color: #ffffff88;
+  }
+}
+body[dark] .icon-btn:hover:not(.light-backdrop), .icon-btn:hover.dark-backdrop {
+  background-color: #ffffff88;
+}
+.icon-btn:hover.light-backdrop {
+  background-color: #00000044;
+}
+
+.badge {
+  width: 8px;
+  height: 8px;
+  background-color: currentColor;
+  border-radius: 4px;
+}
+.badge.bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.badge.bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.badge.top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.badge.top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.badge-container {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+/*
+    There are 2 variations:
+    - The default, where the background color is opaque
+    - (.no-bg-color) Blurred, so that it looks neat on top of other content
+*/
+.menu-bar {
+  font-size: 20px;
+}
+.menu-bar:not(.no-bg-color) {
+  background-color: #002C3D;
+}
+
+ul.menu-bar {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+.menu-bar .menu-item {
+  display: block;
+}
+.menu-bar .menu-item :first-child {
+  padding: 10px 10px 5px 10px;
+  display: block;
+}
+.menu-bar .menu-item :first-child:link, .menu-bar .menu-item :first-child:visited {
+  color: white;
+}
+.menu-bar .menu-item.selected {
+  border-bottom: 5px solid #BBE524;
+  background-color: #005170;
+}
+.menu-bar .menu-item:hover {
+  border-bottom: 5px solid #d7f07f;
+  background-color: #0076a3;
+}
+.menu-bar .menu-item:not(.selected):not(:hover) {
+  padding-bottom: 5px;
+}
+
+.footer .footer-top {
+  background-color: #001a24;
+  padding: 5px 0;
+}
+.footer .footer-top ul.link-list {
+  margin: 0;
+  list-style-type: none;
+}
+.footer .footer-top .link-list {
+  text-align: center;
+  padding: 0;
+}
+.footer .footer-top .link-list:not(:last-child) {
+  padding: 0 5px 0 0;
+}
+.footer .footer-top .link-list > * {
+  font-family: semibold;
+  display: block;
+  margin: 0 0 2px 0;
+}
+.footer .footer-top .link-list > * a:link, .footer .footer-top .link-list > * a:visited, .footer .footer-top .link-list > * {
+  color: white;
+  display: block;
+}
+.footer .footer-top .link-list > * a:hover, .footer .footer-top .link-list > *:hover {
+  color: #001a24;
+  background-color: white;
+}
+.footer .footer-top .link-list:nth-child(4n+1) > .title a:link, .footer .footer-top .link-list:nth-child(4n+1) > .title a:visited, .footer .footer-top .link-list:nth-child(4n+1) > .title {
+  color: #BBE524;
+}
+.footer .footer-top .link-list:nth-child(4n+1) > .title a:hover, .footer .footer-top .link-list:nth-child(4n+1) > .title:hover {
+  background-color: #BBE524;
+  color: #001a24;
+}
+.footer .footer-top .link-list:nth-child(4n+2) > .title a:link, .footer .footer-top .link-list:nth-child(4n+2) > .title a:visited, .footer .footer-top .link-list:nth-child(4n+2) > .title {
+  color: #2682A6;
+}
+.footer .footer-top .link-list:nth-child(4n+2) > .title a:hover, .footer .footer-top .link-list:nth-child(4n+2) > .title:hover {
+  background-color: #2682A6;
+  color: #001a24;
+}
+.footer .footer-top .link-list:nth-child(4n+3) > .title a:link, .footer .footer-top .link-list:nth-child(4n+3) > .title a:visited, .footer .footer-top .link-list:nth-child(4n+3) > .title {
+  color: #FF230F;
+}
+.footer .footer-top .link-list:nth-child(4n+3) > .title a:hover, .footer .footer-top .link-list:nth-child(4n+3) > .title:hover {
+  background-color: #FF230F;
+  color: #001a24;
+}
+.footer .footer-top .link-list:nth-child(4n+4) > .title a:link, .footer .footer-top .link-list:nth-child(4n+4) > .title a:visited, .footer .footer-top .link-list:nth-child(4n+4) > .title {
+  color: #FB9902;
+}
+.footer .footer-top .link-list:nth-child(4n+4) > .title a:hover, .footer .footer-top .link-list:nth-child(4n+4) > .title:hover {
+  background-color: #FB9902;
+  color: #001a24;
+}
+.footer .footer-top .link-list > *.title {
+  font-family: bold;
+  margin-bottom: 5px;
+}
+.footer .footer-bottom {
+  background-color: #002C3D;
+  color: white;
+  padding: 5px 0;
+}
+
+.article-brief .title {
+  color: #2682A6;
+}
+.article-brief .title > * {
+  color: #2682A6;
+}
+.article-brief .title > *:hover {
+  color: #44acd4;
+}
+.article-brief .info {
+  color: #333;
+  font-family: ultralight;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  .article-brief .info {
+    color: #ccc;
+  }
+}
+body[dark] .article-brief .info {
+  color: #ccc;
+}
+.article-brief .continue {
+  width: 100%;
+  text-align: center;
+  background-color: #ccc;
+  color: black;
+}
+.article-brief .continue:hover {
+  background-color: #eee;
+}
+
+.navbar {
+  transition: height 1s;
+  padding: 10px 0;
+  background-color: #222;
+  color: #808080;
+  font-family: semibold;
+}
+.navbar .items > *:not(.title):not(.action) {
+  margin-right: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.navbar .items .title, .navbar .items .action:hover {
+  color: white;
+}
+.navbar .toc .title, .navbar .toc .action:hover {
+  color: white;
+}
+
+.share-item {
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: auto 5px;
+}
+
+.vbar {
+  border-left: 5px solid currentColor;
+  padding-left: 5px;
+}
+
+.hbar {
+  border-bottom: 1px solid currentColor;
+}
+
+a:link, a:visited {
+  color: #769211;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: #BBE524;
+  text-decoration: none;
+}
+
+hr {
+  border-style: solid;
+  margin: 10px 0;
+}
+
+kbd {
+  border-radius: 2px;
+  border: 1px solid black;
+  padding: 2.5px;
+  color: black;
+  background-color: white;
+  font-family: light;
+}
+
+kbd.dark {
+  background-color: #111;
+  border-color: white;
+  color: white;
+}
+
+button, input[type=button], input[type=submit], input[type=reset] {
+  padding: 10px;
+  font-family: medium;
+  border-radius: 2px;
+  border: 1px solid currentColor;
+  color: currentColor;
+  background-color: transparent;
+}
+button:hover, input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
+  border-color: transparent;
+  color: white;
+  background-color: black;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  button:hover, input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
+    color: #111;
+    background-color: white;
+  }
+}
+body[dark] button:hover, body[dark] input[type=button]:hover, body[dark] input[type=submit]:hover, body[dark] input[type=reset]:hover {
+  color: #111;
+  background-color: white;
+}
+button .accent-1, input[type=button] .accent-1, input[type=submit] .accent-1, input[type=reset] .accent-1 {
+  border-color: #BBE524;
+  color: #BBE524;
+}
+button:hover.accent-1, input[type=button]:hover.accent-1, input[type=submit]:hover.accent-1, input[type=reset]:hover.accent-1 {
+  border-color: transparent;
+  background-color: #BBE524;
+  color: black;
+}
+button .accent-2, input[type=button] .accent-2, input[type=submit] .accent-2, input[type=reset] .accent-2 {
+  border-color: #2682A6;
+  color: #2682A6;
+}
+button:hover.accent-2, input[type=button]:hover.accent-2, input[type=submit]:hover.accent-2, input[type=reset]:hover.accent-2 {
+  border-color: transparent;
+  background-color: #2682A6;
+  color: black;
+}
+button .accent-3, input[type=button] .accent-3, input[type=submit] .accent-3, input[type=reset] .accent-3 {
+  border-color: #FF230F;
+  color: #FF230F;
+}
+button:hover.accent-3, input[type=button]:hover.accent-3, input[type=submit]:hover.accent-3, input[type=reset]:hover.accent-3 {
+  border-color: transparent;
+  background-color: #FF230F;
+  color: white;
+}
+button .accent-4, input[type=button] .accent-4, input[type=submit] .accent-4, input[type=reset] .accent-4 {
+  border-color: #FB9902;
+  color: #FB9902;
+}
+button:hover.accent-4, input[type=button]:hover.accent-4, input[type=submit]:hover.accent-4, input[type=reset]:hover.accent-4 {
+  border-color: transparent;
+  background-color: #FB9902;
+  color: white;
+}
+
+.bg-blur {
+  backdrop-filter: blur(10px);
+}
+
+.bg-darken {
+  background-color: #00000077;
+}
+
+.bg-lighten {
+  background-color: #FFFFFF77;
+}
+
+.bg-img {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/*# sourceMappingURL=main.css.map */
