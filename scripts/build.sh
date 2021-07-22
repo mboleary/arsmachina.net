@@ -8,7 +8,7 @@ DATA_HASH="../data/git_hash"
 DATA_BRANCH="../data/git_branch"
 
 ## Generate the Cow
-. motd.sh "Hello World" > $DATA_COW_PATH
+. motd.sh "I mount my soul at /dev/null" > $DATA_COW_PATH
 
 ## Add compile information
 date > $DATA_DATE

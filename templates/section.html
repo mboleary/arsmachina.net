@@ -1,8 +1,31 @@
 {% extends "index.html" %}
 
+{% block head %}
+<script>
+
+    var toggleLong = () => {}
+
+    window.addEventListener('load', () => {
+
+        const tocShort = document.body.querySelector("nav [toc-short]");
+        const tocLong = document.body.querySelector("nav [toc-long]");
+        
+        toggleLong = function(state) {
+            if (state) {
+                tocShort.setAttribute("hidden", "");
+                tocLong.removeAttribute("hidden");
+            } else {
+                tocShort.removeAttribute("hidden");
+                tocLong.setAttribute("hidden", "");
+            }
+        }
+    });
+</script>
+{% endblock head %}
+
 {% block content %}
 
-<div class="titlecard {% if section.extra.titlecard %}{{ section.extra.titlecard }}{% endif %}">
+<div class="title-banner {% if section.extra.titlecard %}{{ section.extra.titlecard }}{% endif %}">
     <div class="container">
         {% if section.title %}
         <h1>{{section.title}}</h1>
@@ -14,15 +37,30 @@
     </div>
 </div>
 {% if section.content %}
-<nav class="pagenav">
-    <div class="container">
-        <ul>
-            <li>Section:</li>
+<nav class="navbar">
+    <div toc-short class="container">
+        <div class="flex-layout horizontal flex items">
+            <div class="title">Section:</div>
+            {% for section in section.toc -%}
+            <a href="#{{ section.id }}">{{ section.title }}</a>
+            {% endfor -%}
+            <a href="#section-pages">Pages</a>
+            <div class="flex"></div>
+            <a class="action" onclick="toggleLong(true)" action title="Show Table of Contents">[show]</a>
+        </div>
+    </div>
+    <div toc-long class="container toc" hidden>
+        <div class="flex-layout horizontal hbar">
+            <div class="title">Table of Contents:</div>
+            <div class="flex"></div>
+            <a class="action" onclick="toggleLong(false)" action title="Hide Table of Contents">[hide]</a>
+        </div>
+        <ol>
             {% for section in section.toc -%}
             <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
             {% endfor -%}
             <li><a href="#section-pages">Pages</a></li>
-        </ul>
+        </ol>
     </div>
 </nav>
 <div class="container">
@@ -32,17 +70,14 @@
 {% endif %}
 <div id="section-pages"></div>
 {% if section.pages %}
-    
-
     {% for page in section.pages %}
         {% if not section.extra.type or section.extra.type == "article" %}
             <div class="container">
-                <!-- @TODO Be sure to re-implement this when Articles get changed! -->
-                <article class="short">
-                    <div class="left">
-                        <header class="article-header">
-                            <h1><a href="{{page.path}}"> {{page.title}} </a></h1>
-                            <p class="info"> 
+                <article class="article-brief content-card">
+                    <header class="hbar">
+                        <h1 class="title"><a href="{{page.path}}"> {{page.title}} </a></h1>
+                        <div>
+                            <span class="info">
                                 {% if page.date %}{{page.date}} | {% endif %}
                                 {% if page.taxonomies and page.taxonomies.categories %}
                                     Filed under
@@ -50,24 +85,26 @@
                                         {{ macros::category(name=cat)}}
                                     {% endfor %} |
                                 {% endif %}
-                                {% if page.taxonomies.tags %}
-                                    {% for tag in page.taxonomies.tags %}
-                                        {{macros::tag(tag=tag)}}
-                                    {% endfor %}
-                                {% endif %}
-                            </p>
-                        </header>
-                    </div>
+                            </span>
+                            {% if page.taxonomies.tags %}
+                                {% for tag in page.taxonomies.tags %}
+                                    {{macros::tag(tag=tag)}}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </header>
                     {% if page.summary %}
-                        <div class="left">
+                        <div>
                             {{page.summary | safe}}
                         </div>
-                        <a href="{{page.path}}#continue-reading" class="continue"> Continue Reading ... </a>
+                        <div class="height-10"></div>
+                        <a href="{{page.path}}#continue-reading"><div class="continue"> Continue Reading ... </div></a>
                     {% elif page.description %}
-                        <div class="left">
+                        <div>
                             {{page.description}}
                         </div>
-                        <a href="{{page.path}}" class="continue"> Continue Reading ... </a>
+                        <div class="height-10"></div>
+                        <a href="{{page.path}}#continue-reading"><div class="continue"> Continue Reading ... </div></a>
                     {% endif %}
                 </article>
             </div>

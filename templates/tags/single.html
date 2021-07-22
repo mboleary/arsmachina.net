@@ -2,21 +2,20 @@
 
 {% block content %}
 
-<div class="titlecard">
-    <div class="container">
-        <h1> Search Results for: </h1>
-        {{macros::bigTag(tag=term.name)}}
+<div class="title-banner">
+    <div class="container text-center full-width">
+        <h1> Tag Results for: </h1>
+        <div class="flex-layout horizontal">{{macros::bigTag(tag=term.name)}}</div>
     </div>
 </div>
 
 {% for page in term.pages %}
     <div class="container">
-        <!-- @TODO Be sure to re-implement this when Articles get changed! -->
-        <article class="short">
-            <div class="left">
-                <header class="article-header">
-                    <h1><a href="/{{page.path}}"> {{page.title}} </a></h1>
-                    <p class="info"> 
+        <article class="article-brief content-card">
+            <header class="hbar">
+                <h1 class="title"><a href="{{page.path}}"> {{page.title}} </a></h1>
+                <div class="info">
+                    <span class="info">
                         {% if page.date %}{{page.date}} | {% endif %}
                         {% if page.taxonomies and page.taxonomies.categories %}
                             Filed under
@@ -24,32 +23,33 @@
                                 {{ macros::category(name=cat)}}
                             {% endfor %} |
                         {% endif %}
-                        {% if page.taxonomies.tags %}
-                            {% for tag in page.taxonomies.tags %}
-                                {{macros::tag(tag=tag)}}
-                            {% endfor %}
-                        {% endif %}
-                    </p>
-                </header>
-            </div>
+                    </span>
+                    {% if page.taxonomies.tags %}
+                        {% for tag in page.taxonomies.tags %}
+                            {{macros::tag(tag=tag)}}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </header>
             {% if page.summary %}
-                <div class="left">
+                <div>
                     {{page.summary | safe}}
                 </div>
-                <a href="/{{page.path}}#continue-reading" class="continue"> Continue Reading ... </a>
+                <div class="height-10"></div>
+                <a href="{{page.path}}#continue-reading">
+                    <div class="continue">Continue Reading ... </div>
+                </a>
             {% elif page.description %}
-                <div class="left">
+                <div>
                     {{page.description}}
                 </div>
-                <a href="/{{page.path}}" class="continue"> Continue Reading ... </a>
+                <div class="height-10"></div>
+                <a href="{{page.path}}#continue-reading">
+                    <div class="continue">Continue Reading ... </div>
+                </a>
             {% endif %}
         </article>
     </div>
 {% endfor %}
-
-
-<hr>
-
-{{ __tera_context }}
 
 {% endblock content %}

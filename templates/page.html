@@ -1,5 +1,28 @@
 {% extends "index.html" %}
 
+{% block head %}
+<script>
+
+    var toggleLong = () => {}
+
+    window.addEventListener('load', () => {
+
+        const tocShort = document.body.querySelector("nav [toc-short]");
+        const tocLong = document.body.querySelector("nav [toc-long]");
+        
+        toggleLong = function(state) {
+            if (state) {
+                tocShort.setAttribute("hidden", "");
+                tocLong.removeAttribute("hidden");
+            } else {
+                tocShort.removeAttribute("hidden");
+                tocLong.setAttribute("hidden", "");
+            }
+        }
+    });
+</script>
+{% endblock head %}
+
 {% block content %}
 {% if page.extra %}
     {% set titlecardStyle = false %}
@@ -15,21 +38,40 @@
     {{ macros::titlecard(title=page.title, subtitle=page.description) }}
 {% endif %}
 
-<nav class="pagenav">
-    <div class="container">
-        <ul>
-            <li>Section:</li>
+<nav class="navbar">
+    <div toc-short class="container">
+        <div class="flex-layout horizontal flex items">
+            <div class="title">Section:</div>
             {% if page.toc | length > 0 %}
                 {% for section in page.toc -%}
-                <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
+                <a href="#{{ section.id }}">{{ section.title }}</a>
                 {% endfor -%}
             {% endif %}
+            {% if page.extra.toc %}
+                {% for section in page.extra.toc -%}
+                <a href="#{{ section.id }}">{{ section.title }}</a>
+                {% endfor -%}
+            {% endif %}
+            <div class="flex"></div>
+            <a class="action" onclick="toggleLong(true)" action title="Show Table of Contents">[show]</a>
+        </div>
+    </div>
+    <div toc-long class="container toc" hidden>
+        <div class="flex-layout horizontal hbar">
+            <div class="title">Table of Contents:</div>
+            <div class="flex"></div>
+            <a class="action" onclick="toggleLong(false)" action title="Hide Table of Contents">[hide]</a>
+        </div>
+        <ol>
+            {% for section in page.toc -%}
+            <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
+            {% endfor -%}
             {% if page.extra.toc %}
                 {% for section in page.extra.toc -%}
                 <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
                 {% endfor -%}
             {% endif %}
-        </ul>
+        </ol>
     </div>
 </nav>
 <div class="container">

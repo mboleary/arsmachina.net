@@ -291,7 +291,7 @@ dl dt {
   font-family: semibold;
 }
 
-pre {
+pre, code {
   font-family: light;
 }
 

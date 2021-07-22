@@ -2,20 +2,30 @@
 
 {% block body %}
 
-<div class="flashcard bg-white dark">
-    <div class="container">
+<div class="banner">
+    <div class="container full-width">
 
-        {% block headerTitle %}{{ super() }}{% endblock headerTitle %}
+        <div class="flex-layout horizontal wrap">
+            <div class="flex">
+                <h1><span class="accent-1">Ars</span><span class="accent-2">Machina</span></h1>
+                <p>Art of the (Computer) Machine</p>
+            </div>
+            <div>
+                <code class="left">
+                    {{ cow | safe }}
+                </code>
+            </div>
+        </div>
 
-        <hr>
-
-        <div class="left">
+        <ul class="menu-bar flex-layout horizontal wrap">
             {% set data = load_data(path="content/menu.json") %}
             {% for entry in data.topMenu %}
-            {% set childLen = entry.children | length %}
-            <a href="{{ entry.url }}" class="button {% if entry.class %}{{entry.class}}{% endif %}">{{ entry.name }}</a>
+                {% set childLen = entry.children | length %}
+                <li class="flex menu-item {% if entry.class %}{{entry.class}}{% endif %}">
+                    <a href="{{ entry.url }}" class="button">{{ entry.name }}</a>
+                </li>
             {% endfor %}
-        </div>
+        </ul>
     </div>
 </div>
 {% endblock body %}

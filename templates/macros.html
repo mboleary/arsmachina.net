@@ -4,13 +4,13 @@
     {% set tagData = load_data(path="tags.json") %}
     {% if tagData[tag] %}
         {% set localTag = tagData[tag] %}
-        <a href="/tags/{{tag}}">
-            <span class="tag {% if localTag.class %}{{localTag.class}}{% endif %}" {% if localTag.fgColor or localTag.bgColor %}style="{% if localTag.fgColor %}color:{{localTag.fgColor}};{% endif %}{% if localTag.bgColor %}background-color:{{localTag.bgColor}};{% endif %}"{% endif %} {% if localTag.tooltip %}title="{{localTag.tooltip}}"{% endif %}>{% if localTag.pretext %}{{localTag.pretext}}{% endif %}{% if localTag.text %}{{localTag.text}}{% else %}{{tag}}{% endif %}{% if localTag.posttext %}{{localTag.posttext}}{% endif %}</span>
+        <a href="/tags/{{tag}}" class="fg-color">
+            <div class="chip-sm {% if localTag.class %}{{localTag.class}}{% endif %}" {% if localTag.fgColor or localTag.bgColor %}style="{% if localTag.fgColor %}color:{{localTag.fgColor}};{% endif %}{% if localTag.bgColor %}background-color:{{localTag.bgColor}};{% endif %}"{% endif %} {% if localTag.tooltip %}title="{{localTag.tooltip}}"{% endif %}>{% if localTag.pretext %}{{localTag.pretext}}{% endif %}{% if localTag.text %}{{localTag.text}}{% else %}{{tag}}{% endif %}{% if localTag.posttext %}{{localTag.posttext}}{% endif %}</div>
         </a>
     {% else %}
         <!-- This tag isn't in tags.json! -->
-        <a href="/tags/{{tag}}">
-            <span class="tag">{{tag}}</span>
+        <a href="/tags/{{tag}}" class="fg-color">
+            <span class="chip-sm">{{tag}}</span>
         </a>
     {% endif %}
 {% endmacro tag %}
@@ -19,10 +19,10 @@
     {% set tagData = load_data(path="tags.json") %}
     {% if tagData[tag] %}
         {% set localTag = tagData[tag] %}
-        <span class="big-tag {% if localTag.class %}{{localTag.class}}{% endif %}" {% if localTag.fgColor or localTag.bgColor %}style="{% if localTag.fgColor %}color:{{localTag.fgColor}};{% endif %}{% if localTag.bgColor %}background-color:{{localTag.bgColor}};{% endif %}"{% endif %} {% if localTag.tooltip %}title="{{localTag.tooltip}}"{% endif %}>{% if localTag.pretext %}{{localTag.pretext}}{% endif %}{% if localTag.text %}{{localTag.text}}{% else %}{{tag}}{% endif %}{% if localTag.posttext %}{{localTag.posttext}}{% endif %}</span>
+        <div class="chip-lg full-width text-center {% if localTag.class %}{{localTag.class}}{% endif %}" {% if localTag.fgColor or localTag.bgColor %}style="{% if localTag.fgColor %}color:{{localTag.fgColor}};{% endif %}{% if localTag.bgColor %}background-color:{{localTag.bgColor}};{% endif %}"{% endif %} {% if localTag.tooltip %}title="{{localTag.tooltip}}"{% endif %}>{% if localTag.pretext %}{{localTag.pretext}}{% endif %}{% if localTag.text %}{{localTag.text}}{% else %}{{tag}}{% endif %}{% if localTag.posttext %}{{localTag.posttext}}{% endif %}</div>
     {% else %}
         <!-- This tag isn't in tags.json! -->
-        <span class="big-tag">{{tag}}</span>
+        <span class="chip-lg full-width text-center">{{tag}}</span>
     {% endif %}
 {% endmacro bigTag %}
 
@@ -31,7 +31,7 @@
 {% endmacro %}
 
 {% macro titlecard(title, subtitle, style=false, img=false) %}
-<div class="titlecard {% if style %}{{ style }}{% endif %} {% if img %}img{% endif %}" {% if img %}style="background-image: url('{{img}}');"{% endif %}>
+<div class="title-banner {% if style %}{{ style }}{% endif %} {% if img %}img{% endif %}" {% if img %}style="background-image: url('{{img}}');"{% endif %}>
     <div class="container">
         <h1> {{ title }}</h1>
         {% if subtitle %}
@@ -43,15 +43,15 @@
 {% endmacro %}
 
 {% macro flashcard(title, subtitle, style=false, img=false, readMore=false) %}
-<div class="flashcard {% if style %}{{ style }}{% endif %} {% if img %}img{% endif %}" {% if img %}style="background-image: url('{{img}}');"{% endif %}>
-    <div class="container">
+<div class="banner {% if style %}{{ style }}{% endif %} {% if img %}img{% endif %}" {% if img %}style="background-image: url('{{img}}');"{% endif %}>
+    <div class="container text-center">
         <h1> {{ title }}</h1>
         {% if subtitle %}
         <hr>
         <p> {{ subtitle }} </p>
         {% endif %}
         {% if readMore %}
-            <a href="{{ readMore }}" class="button">Read More →</a>
+            <a href="{{ readMore }}">Read More →</a>
         {% endif %}
     </div>
 </div>
@@ -59,35 +59,38 @@
 
 <!-- This is for use in Sections -->
 {% macro flashcard_with_banner(title, subtitle, style=false, img=false, readMore=false, cats=false, tags=false, ctr=false) %}
-<div class="flashcard {% if style %}{{ style }}{% endif %} {% if img %}img{% endif %} flex-col" {% if img %}style="background-image: url('{{img}}');"{% endif %}>
-    <div class="container">
+<div class="banner {% if style %}{{ style }}{% endif %} {% if img %}img{% endif %}" {% if img %}style="background-image: url('{{img}}');"{% endif %}>
+    <div class="container full-width">
         <h1> {{ title }}</h1>
         {% if subtitle %}
         <hr>
         <p> {{ subtitle }} </p>
         {% endif %}
-        {% if readMore %}
-            <a href="{{ readMore }}" class="button">Read More →</a>
-        {% endif %}
+        
     </div>
-    <div class="banner flex flex-row">
-        <div class="text-left no-margin">
+    <div class="banner-footer flex-layout horizontal bg-darken bg-blur fg-dark-color">
+        <div class="flex">
             Filed under {% if cats %}
                 {% for cat in cats %}
                     {{ macros::category(name=cat)}}
                 {% endfor %}
             {% endif %}
         </div>
-        <div class="">
+        <div class="flex">
             {% if ctr %}
                 {{ctr | safe}}
             {% endif %}
         </div>
-        <div class="text-right no-margin">
+        <div class="flex">
             {% if tags %}
                 {% for tag in tags %}
                     {{macros::tag(tag=tag)}}
                 {% endfor %}
+            {% endif %}
+        </div>
+        <div>
+            {% if readMore %}
+                <a href="{{ readMore }}" class="button">Read More →</a>
             {% endif %}
         </div>
     </div>

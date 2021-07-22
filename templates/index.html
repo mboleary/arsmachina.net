@@ -17,18 +17,6 @@
 <head>
     <title>{% block title %}{{config.title}}{% endblock title %}</title>
     <link rel="stylesheet" type="text/css" href="/style/main.css">
-    <link rel="stylesheet" type="text/css" href="/style/header.css">
-    <link rel="stylesheet" type="text/css" href="/style/footer.css">
-    <link rel="stylesheet" type="text/css" href="/style/content.css">
-    <link rel="stylesheet" type="text/css" href="/style/cards.css">
-    <link rel="stylesheet" type="text/css" href="/style/article.css">
-    <link rel="stylesheet" type="text/css" href="/style/misc.css">
-    <link rel="stylesheet" type="text/css" href="/style/print.css">
-    <link rel="stylesheet" type="text/css" href="/style/navbar.css">
-    <link rel="stylesheet" type="text/css" href="/style/linkbuttons.css">
-    <link rel="stylesheet" type="text/css" href="/style/tag.css">
-    <link rel="stylesheet" type="text/css" href="/style/layout.css">
-    <link rel="stylesheet" type="text/css" href="/style/extern/pattern.css">
     <meta charset="UTF-8">
     <meta name="description" content="{% block description %}Index {% endblock description %}">
     <meta name="author" content="Webtemplate">
@@ -37,53 +25,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#00121a"> <!-- Colored Chrome Mobile Tabs! -->
     <link rel="icon" type="image/png" href="/favicon.png">
+    <script>
+        function toggleDark() {
+            const elem = document.body;
+            let state = elem.getAttribute("dark");
+            if (state === null) {
+                elem.setAttribute("dark", "");
+            } else {
+                elem.removeAttribute("dark");
+            }
+        }
+    </script>
     {% block head %}
     {% endblock head %}
 </head>
-<body>
+<body dark class="flex-layout vertical">
     {% block body %}
         {% block header %}
-            <header class="page-header">
-                <div class="container title">
+            <header>
+                <div class="container flex-layout horizontal wrap">
                     {% block headerTitle %}
-                        <div class="lr-container">
-                            <div class="left">
-                                <h1 class="left"><span class="accent-1">Ars</span><span class="accent-3">Machina</span></h1>
-                                <p class="left">Art of the (Computer) Machine</p>
-                            </div>
-                            <div class="left flex">
-                                <div class="flex-grow"></div>
-                                <code class="left">
-                                    {{ cow | safe }}
-                                </code>
+                        <div class="flex-layout horizontal wrap">
+                            <div class="flex">
+                                <h1><span class="accent-1">Ars</span><span class="accent-2">Machina</span>.net</h1>
                             </div>
                         </div>
                     {% endblock headerTitle %}
                 </div>
 
-                {% block headerMenu %}
-                    <div class="menu">
-                        <ul>
-                            {% for entry in data.topMenu %}
-                                <li {% if entry.children %}class="dropdown"{% endif %}>
-                                    <!-- @TODO Add class="current" -->
-                                    <a href="{{entry.url}}" {% if entry.url != "/" and page and page.path is containing(entry.url) %}class="current"{% endif %} {% if entry.url != "/" and section and section.path is containing(entry.url) %}class="current"{% endif %}>{{entry.name}}</a>
-                                    {% if entry.children %}
-                                        <div class="dropdownContent">
-                                            {% for subentry in entry.children %}
-                                                <a href="{{subentry.url}}">{{subentry.name}}</a>
-                                            {% endfor %}
-                                        </div>
-                                    {% endif %}
-                                </li>
-                            {% endfor %}
-                        </ul>
+                <div class="menu-bar">
+                    <div class="container">
+                        {% block headerMenu %}
+                            <ul class="flex menu-bar flex-layout horizontal wrap">
+                                {% for entry in data.topMenu %}
+                                    <!-- @TODO Re-add support for dropdown menus -->
+                                    <li class="flex menu-item {% if entry.children %}dropdown{% endif %} {% if entry.url != "/" and page and page.path is containing(entry.url) %}class="current"{% endif %} {% if entry.url != "/" and section and section.path is containing(entry.url) %}class="current"{% endif %}">
+                                        <a href="{{entry.url}}">{{entry.name}}</a>
+                                        {% if entry.children %}
+                                            <div class="dropdownContent">
+                                                {% for subentry in entry.children %}
+                                                    <a href="{{subentry.url}}">{{subentry.name}}</a>
+                                                {% endfor %}
+                                            </div>
+                                        {% endif %}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% endblock headerMenu %}
                     </div>
-                {% endblock headerMenu %}
+                </div>
                 
             </header>
         {% endblock header %}
-        <main>
+        <main class="flex full-width">
             {% block content %}
                 {% if page.content %}
                 {{ page.content | safe }}
@@ -94,26 +88,35 @@
             {% endblock content %}
         </main>
         {% block footer %}
-        <footer>
-            <div id="footer-top">
-                
-                <div class="container">
+        <div class="container full-width">
+            <hr>
+            <button onclick="toggleDark()">Toggle Dark mode</button>
+            <div class="flex-layout horizontal center">
+                <code>{{cow | safe }}</code>
+            </div>
+        </div>
+        <div class="height-20"></div>
+        <footer class="footer box-shadow">
+            <div class="footer-top">
+                <div class="container flex-layout horizontal wrap">
                     {% for entry in data.footerMenu %}
-                        <dl>
-                            <dt class="{{entry.class}}"> <a href="{{entry.url}}"> {{entry.name}} </a> </dt>
+                        <ul class="flex link-list">
+                            <li class="title {{entry.class}}"><a href="{{entry.url}}">{{entry.name}}</a></li>
                             {% if entry.children %}
                                 {% for subentry in entry.children %}
-                                    <dd><a href="{{subentry.url}}">{{subentry.name}}</a></dd>
+                                    <li><a href="{{subentry.url}}">{{subentry.name}}</a></li>
                                 {% endfor %}
                             {% endif %}
-                        </dl>
+                        </ul>
                     {% endfor %}
                 </div>
             </div>
-            <div id="footer-bottom">
-                <div class="left"> Icons Here </div>
-                <div> 2020 - Brady O'Leary </div>
-                <div class="right"> Links Here </div>
+            <div class="footer-bottom">
+                <div class="flex-layout horizontal wrap">
+                    <div class="flex"> Icons Here </div>
+                    <div class="flex"> 2021 - Brady O'Leary </div>
+                    <div> Links Here </div>
+                </div>
             </div>
         </footer>
         {% endblock footer %}
