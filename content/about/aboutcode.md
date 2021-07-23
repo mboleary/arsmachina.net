@@ -3,7 +3,7 @@ title = "About my code"
 description = "Information about code I've written."
 
 [extra]
-titlecard = "bg-a3-gradient"
+titlecard = "bg-gradient-a2"
 +++
   
 # Written Code

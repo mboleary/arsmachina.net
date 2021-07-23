@@ -8,7 +8,7 @@ tags = ["test", "tag", "blue", "pizza"]
 categories = ["projects"]
 
 [extra]
-titlecard="bg-a1-a3"
+titlecard="bg-gradient-a1-a2"
 +++
 
 # Hello World

@@ -3,7 +3,7 @@ title="test"
 description="This is a test"
 
 [extra]
-titlecard="bg-stripes"
+titlecard="bg-gradient-a4"
 type="article"
 +++
 

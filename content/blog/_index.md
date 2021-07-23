@@ -3,7 +3,7 @@ title="Blog of the Brady"
 description="Personal Blog"
 
 [extra]
-titlecard="bg-stripes"
+titlecard="bg-gradient-a1-a3"
 type="article"
 +++
 

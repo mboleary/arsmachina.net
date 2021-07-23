@@ -3,7 +3,7 @@ title = "About Me"
 description="Information about me"
 
 [extra]
-titlecard = "blue-green"
+titlecard = "bg-gradient-a1-a2"
 +++
 
 I am Brady O’Leary. 

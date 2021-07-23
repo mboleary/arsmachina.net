@@ -3,7 +3,7 @@ title="Photo Album"
 description="Pictures I've taken"
 
 [extra]
-titlecard="bg-stripes"
+titlecard="bg-gradient-a3-a4"
 type="bg-a2-a4"
 +++
 

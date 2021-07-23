@@ -2,7 +2,7 @@
 title="Projects"
 
 [extra]
-titlecard="bg-black fg-a2-gradient"
+titlecard="bg-black fg-gradient-a2"
 type="flashcard"
 +++
 
