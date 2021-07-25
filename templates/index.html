@@ -80,7 +80,7 @@
                             <ul class="flex menu-bar flex-layout horizontal wrap">
                                 {% for entry in data.topMenu %}
                                     <!-- @TODO Re-add support for dropdown menus -->
-                                    <li class="flex menu-item {% if entry.children %}dropdown{% endif %} {% if entry.url != "/" and page and page.path is containing(entry.url) %}class="current"{% endif %} {% if entry.url != "/" and section and section.path is containing(entry.url) %}class="current"{% endif %}">
+                                    <li class="flex menu-item {% if entry.children %}dropdown{% endif %} {% if entry.url != "/" and page and page.path is containing(entry.url) %}selected{% endif %} {% if entry.url != "/" and section and section.path is containing(entry.url) %}selected{% endif %}">
                                         <a href="{{entry.url}}">{{entry.name}}</a>
                                         {% if entry.children %}
                                             <div class="dropdownContent">

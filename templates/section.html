@@ -1,27 +1,11 @@
 {% extends "index.html" %}
 
-{% block head %}
-<script>
+{% block title %}
+{{ section.title }}
+{% endblock %}
 
-    var toggleLong = () => {}
-
-    window.addEventListener('load', () => {
-
-        const tocShort = document.body.querySelector("nav [toc-short]");
-        const tocLong = document.body.querySelector("nav [toc-long]");
-        
-        toggleLong = function(state) {
-            if (state) {
-                tocShort.setAttribute("hidden", "");
-                tocLong.removeAttribute("hidden");
-            } else {
-                tocShort.removeAttribute("hidden");
-                tocLong.setAttribute("hidden", "");
-            }
-        }
-    });
-</script>
-{% endblock head %}
+{% block description %}
+{% endblock %}
 
 {% block content %}
 
