@@ -25,44 +25,28 @@
 
 {% block content %}
 
-<div class="title-banner {% if section.extra.titlecard %}{{ section.extra.titlecard }}{% endif %}">
-    <div class="container">
-        {% if section.title %}
-        <h1>{{section.title}}</h1>
-        {% endif %}
-        {% if section.description %}
-        <hr>
-        <p>{{section.description}}</p>
-        {% endif %}
-    </div>
-</div>
+{% if section.extra %}
+    {% set titlecardStyle = false %}
+    {% set titlecardImg = false %}
+    {% if section.extra.titlecard %}
+        {% set titlecardStyle = section.extra.titlecard %}
+    {% endif %}
+    {% if section.extra.img %}
+        {% set titlecardImg = section.extra.img %}
+    {% endif %}
+    {{ macros::titlecard(title=section.title, subtitle=section.description, style=titlecardStyle, img=titlecardImg) }}
+{% else %}
+    {{ macros::titlecard(title=section.title, subtitle=section.description) }}
+{% endif %}
+
 {% if section.content %}
-<nav class="navbar">
-    <div toc-short class="container">
-        <div class="flex-layout horizontal flex items">
-            <div class="title">Section:</div>
-            {% for section in section.toc -%}
-            <a href="#{{ section.id }}">{{ section.title }}</a>
-            {% endfor -%}
-            <a href="#section-pages">Pages</a>
-            <div class="flex"></div>
-            <a class="action" onclick="toggleLong(true)" action title="Show Table of Contents">[show]</a>
-        </div>
-    </div>
-    <div toc-long class="container toc" hidden>
-        <div class="flex-layout horizontal hbar">
-            <div class="title">Table of Contents:</div>
-            <div class="flex"></div>
-            <a class="action" onclick="toggleLong(false)" action title="Hide Table of Contents">[hide]</a>
-        </div>
-        <ol>
-            {% for section in section.toc -%}
-            <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
-            {% endfor -%}
-            <li><a href="#section-pages">Pages</a></li>
-        </ol>
-    </div>
-</nav>
+{% if section.toc | length > 0 %}
+    {% set sectiontoc = section.toc %}
+    {% if section.extra.toc %}
+        {% set sectiontoc = sectiontoc | concat(with=section.extra.toc) %}
+    {% endif %}
+    {{ macros::navbar(toc=sectiontoc, isSection=true) }}
+{% endif %}
 <div class="container">
     {{ section.content | safe }}
     <hr>

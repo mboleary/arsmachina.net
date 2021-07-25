@@ -26,6 +26,7 @@
     <meta name="theme-color" content="#00121a"> <!-- Colored Chrome Mobile Tabs! -->
     <link rel="icon" type="image/png" href="/favicon.png">
     <script>
+        // For toggling dark and light modes
         function toggleDark() {
             const elem = document.body;
             let state = elem.getAttribute("dark");
@@ -35,6 +36,26 @@
                 elem.removeAttribute("dark");
             }
         }
+    </script>
+    <script>
+        // For opening and closing TOCs
+        var toggleLong = () => {}
+    
+        window.addEventListener('load', () => {
+    
+            const tocShort = document.body.querySelector("nav [toc-short]");
+            const tocLong = document.body.querySelector("nav [toc-long]");
+            
+            toggleLong = function(state) {
+                if (state) {
+                    tocShort.setAttribute("hidden", "");
+                    tocLong.removeAttribute("hidden");
+                } else {
+                    tocShort.removeAttribute("hidden");
+                    tocLong.setAttribute("hidden", "");
+                }
+            }
+        });
     </script>
     {% block head %}
     {% endblock head %}
