@@ -32,4 +32,10 @@ pwd
 # Set output dir https://www.getzola.org/documentation/getting-started/cli-usage/
 zola build --output-dir .temp/deploy/public
 
+# Fix the node modules
+cd .temp/deploy
+
+rm -rf node_modules
+cp ../../node_modules ./node_modules
+
 echo "Website is ready for deployment"

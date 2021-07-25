@@ -30,9 +30,9 @@
     <a href="/categories/{{name}}">{{name}}</a>
 {% endmacro %}
 
-{% macro titlecard(title, subtitle, style=false, img=false) %}
+{% macro titlecard(title, subtitle, style=false, textStyle=false, img=false) %}
 <div class="title-banner {% if style %}{{ style }}{% endif %} {% if img %}img{% endif %}" {% if img %}style="background-image: url('{{img}}');"{% endif %}>
-    <div class="container text-center">
+    <div class="container text-center {% if textStyle %}{{ textStyle }}{% endif %}">
         <h1> {{ title }}</h1>
         {% if subtitle %}
         <hr>
@@ -42,9 +42,9 @@
 </div>
 {% endmacro %}
 
-{% macro flashcard(title, subtitle, style=false, img=false, readMore=false) %}
+{% macro flashcard(title, subtitle, style=false, textStyle=false, img=false, readMore=false) %}
 <div class="banner {% if style %}{{ style }}{% endif %} {% if img %}img{% endif %}" {% if img %}style="background-image: url('{{img}}');"{% endif %}>
-    <div class="container text-center">
+    <div class="container text-center {% if textStyle %}{{ textStyle }}{% endif %}">
         <h1> {{ title }}</h1>
         {% if subtitle %}
         <hr>
@@ -58,9 +58,9 @@
 {% endmacro %}
 
 <!-- This is for use in Sections -->
-{% macro flashcard_with_banner(title, subtitle, style=false, img=false, readMore=false, cats=false, tags=false, ctr=false) %}
+{% macro flashcard_with_banner(title, subtitle, style=false, textStyle=false, img=false, readMore=false, cats=false, tags=false, ctr=false) %}
 <div class="banner {% if style %}{{ style }}{% endif %} {% if img %}img{% endif %}" {% if img %}style="background-image: url('{{img}}');"{% endif %}>
-    <div class="container text-center">
+    <div class="container text-center {% if textStyle %}{{ textStyle }}{% endif %}">
         <h1> {{ title }}</h1>
         {% if subtitle %}
         <hr>

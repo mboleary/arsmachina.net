@@ -17,6 +17,7 @@
 <head>
     <title>{% block title %}{{config.title}}{% endblock title %}</title>
     <link rel="stylesheet" type="text/css" href="/style/main.css">
+    <link rel="stylesheet" type="text/css" href="/node_modules/pattern.css/dist/pattern.min.css">
     <meta charset="UTF-8">
     <meta name="description" content="{% block description %}Index {% endblock description %}">
     <meta name="author" content="Webtemplate">
@@ -25,6 +26,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#00121a"> <!-- Colored Chrome Mobile Tabs! -->
     <link rel="icon" type="image/png" href="/favicon.png">
+    <script src="/node_modules/feather-icons/dist/feather.min.js"></script>
+    <script>
+        window.addEventListener('load', (e) => {
+            feather.replace();
+        });
+    </script>
     <script>
         // For toggling dark and light modes
         function toggleDark() {

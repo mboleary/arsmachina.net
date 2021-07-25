@@ -3,7 +3,8 @@ title="Music"
 description="A Collection of Music that I've made"
 
 [extra]
-titlecard="bg-white accent-3 pattern-vertical-stripes-xl fg-dark"
+titlecard="accent-3 pattern-vertical-stripes-xl"
+titlecard_text="fg-color-dark"
 type="article"
 +++
 

@@ -3,14 +3,18 @@
 {% block content %}
 {% if page.extra %}
     {% set titlecardStyle = false %}
+    {% set titlecardTextStyle = false %}
     {% set titlecardImg = false %}
     {% if page.extra.titlecard %}
         {% set titlecardStyle = page.extra.titlecard %}
     {% endif %}
+    {% if page.extra.titlecard_text %}
+        {% set titlecardTextStyle = page.extra.titlecard_text %}
+    {% endif %}
     {% if page.extra.img %}
         {% set titlecardImg = page.extra.img %}
     {% endif %}
-    {{ macros::titlecard(title=page.title, subtitle=page.description, style=titlecardStyle, img=titlecardImg) }}
+    {{ macros::titlecard(title=page.title, subtitle=page.description, style=titlecardStyle, textStyle=titlecardTextStyle, img=titlecardImg) }}
 {% else %}
     {{ macros::titlecard(title=page.title, subtitle=page.description) }}
 {% endif %}
