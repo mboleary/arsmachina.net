@@ -14,3 +14,7 @@ mkdir .temp
 cd .temp
 
 git clone git@gitlab.com:mboleary/mboleary.gitlab.io.git deploy
+
+
+# extern is used for external content that is brought into the final build
+mkdir -p extern
