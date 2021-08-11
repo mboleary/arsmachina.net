@@ -78,45 +78,40 @@
             ]
         },
         {
-            "name": "Section Title",
-            "url": "/test/",
+            "name": "Tags",
+            "url": "/tags/",
             "class":"blue",
             "children": [
                 {
-                    "name": "Post 1",
-                    "url": "/test/post1",
+                    "name": "Arduino",
+                    "url": "/tags/arduino",
                     "children": []
                 },
                 {
-                    "name": "Post 2",
-                    "url": "/test/post2",
+                    "name": "Unity",
+                    "url": "/tags/unity",
                     "children": []
                 },
                 {
-                    "name": "Post 3",
-                    "url": "/test/post3",
+                    "name": "JS",
+                    "url": "/tags/js",
                     "children": []
                 }
             ]
         },
         {
-            "name": "Section Title",
-            "url": "/test/",
+            "name": "Categories",
+            "url": "/categories/",
             "class":"orange",
             "children": [
                 {
-                    "name": "Post 1",
-                    "url": "/test/post1",
+                    "name": "Projects",
+                    "url": "/categories/projects",
                     "children": []
                 },
                 {
-                    "name": "Post 2",
-                    "url": "/test/post2",
-                    "children": []
-                },
-                {
-                    "name": "Post 3",
-                    "url": "/test/post3",
+                    "name": "MART 380",
+                    "url": "/categories/mart380",
                     "children": []
                 }
             ]
