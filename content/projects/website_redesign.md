@@ -51,56 +51,56 @@ There are some bugs I need to work out before I can deploy these new stylesheets
 ## Screenshots
 
 <figure>
-  <img src="/asset/ars_css_next_imgs/0.jpg">
+  <img src="/asset/ars_css_next_imgs/0.png">
   <figcaption> First look at the new dark mode. </figcaption>
 </figure>
 
 <figure>
-  <img src="/asset/ars_css_next_imgs/1.jpg">
+  <img src="/asset/ars_css_next_imgs/1.png">
   <figcaption> Some different types of cards. </figcaption>
 </figure>
 
 <figure>
-  <img src="/asset/ars_css_next_imgs/2.jpg">
+  <img src="/asset/ars_css_next_imgs/2.png">
   <figcaption> Demonstration forms. </figcaption>
 </figure>
 
 <figure>
-  <img src="/asset/ars_css_next_imgs/3.jpg">
+  <img src="/asset/ars_css_next_imgs/3.png">
   <figcaption> Different types of tables </figcaption>
 </figure>
 
 <figure>
-  <img src="/asset/ars_css_next_imgs/4.jpg">
+  <img src="/asset/ars_css_next_imgs/4.png">
   <figcaption> Chips, which are going to be used as tags </figcaption>
 </figure>
 
 <figure>
-  <img src="/asset/ars_css_next_imgs/5.jpg">
+  <img src="/asset/ars_css_next_imgs/5.png">
   <figcaption> Modal popup demonstration </figcaption>
 </figure>
 
 <figure>
-  <img src="/asset/ars_css_next_imgs/6.jpg">
+  <img src="/asset/ars_css_next_imgs/6.png">
   <figcaption> Demonstration of translucent cards on top of a picture </figcaption>
 </figure>
 
 <figure>
-  <img src="/asset/ars_css_next_imgs/7.jpg">
+  <img src="/asset/ars_css_next_imgs/7.png">
   <figcaption> New list of articles </figcaption>
 </figure>
 
 <figure>
-  <img src="/asset/ars_css_next_imgs/8.jpg">
+  <img src="/asset/ars_css_next_imgs/8.png">
   <figcaption> New Table of Contents demo </figcaption>
 </figure>
 
 <figure>
-  <img src="/asset/ars_css_next_imgs/9.jpg">
+  <img src="/asset/ars_css_next_imgs/9.png">
   <figcaption> Demo of icons on an article </figcaption>
 </figure>
 
 <figure>
-  <img src="/asset/ars_css_next_imgs/10.jpg">
+  <img src="/asset/ars_css_next_imgs/10.png">
   <figcaption> Shows the footer, the new cow placement, and a share bar </figcaption>
 </figure>
