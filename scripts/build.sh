@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # This script builds the website
 
 DATA_COW_PATH="../data/cow"
@@ -14,6 +16,16 @@ DATA_BRANCH="../data/git_branch"
 date > $DATA_DATE
 git branch --no-color | grep "*" | sed 's/* //g' > $DATA_BRANCH
 git rev-parse HEAD > $DATA_HASH
+
+cd ../
+
+## Copy in external data
+
+cd static/
+
+
+cp -r ../.temp/extern extern
+pwd
 
 cd ../
 
@@ -36,6 +48,10 @@ zola build --output-dir .temp/deploy/public
 cd .temp/deploy
 
 rm -rf node_modules
-cp ../../node_modules ./node_modules
+cp -r ../../node_modules ./node_modules
+
+## Clean up
+
+rm -rf static/extern
 
 echo "Website is ready for deployment"

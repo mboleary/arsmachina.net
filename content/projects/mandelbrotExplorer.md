@@ -12,7 +12,9 @@ titlecard_text="fg-dark-color text-shadow-dark"
 img = "/asset/mandelbrot.png"
 +++
 
+[Go here to see it in action](/extern/fractals-canvas)
 [https://github.com/mboleary/fractals-canvas](https://github.com/mboleary/fractals-canvas)
+
 
 # Mandelbrot Explorer
 

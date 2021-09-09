@@ -2,8 +2,8 @@
 title="Projects"
 
 [extra]
-titlecard="bg-black fg-gradient-a2"
-titlecard_text="fg-dark-color"
+titlecard="bg-dark-color"
+titlecard_text="fg-gradient-a2"
 type="flashcard"
 +++
 
