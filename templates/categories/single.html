@@ -2,12 +2,55 @@
 
 {% block content %}
 
-<h1> Tags Single Template </h1>
+<div class="title-banner">
+    <div class="container text-center full-width">
+        <h1> Category Results for: </h1>
+        <hr>
+        <p>{{term.name}}</p>
+    </div>
+</div>
 
-<p> This is still in progress </p>
-
-<hr>
-
-{{ __tera_context }}
+{% for page in term.pages %}
+    <div class="container">
+        <article class="article-brief content-card">
+            <header class="hbar">
+                <h1 class="title"><a href="{{page.path}}"> {{page.title}} </a></h1>
+                <div class="info">
+                    <span class="info">
+                        {% if page.date %}{{page.date}} | {% endif %}
+                        {% if page.taxonomies and page.taxonomies.categories %}
+                            Filed under
+                            {% for cat in page.taxonomies.categories %}
+                                {{ macros::category(name=cat)}}
+                            {% endfor %} |
+                        {% endif %}
+                    </span>
+                    {% if page.taxonomies.categories %}
+                        {% for tag in page.taxonomies.categories %}
+                            {{macros::tag(tag=tag)}}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </header>
+            {% if page.summary %}
+                <div>
+                    {{page.summary | safe}}
+                </div>
+                <div class="height-10"></div>
+                <a href="{{page.path}}#continue-reading">
+                    <div class="continue">Continue Reading ... </div>
+                </a>
+            {% elif page.description %}
+                <div>
+                    {{page.description}}
+                </div>
+                <div class="height-10"></div>
+                <a href="{{page.path}}#continue-reading">
+                    <div class="continue">Continue Reading ... </div>
+                </a>
+            {% endif %}
+        </article>
+    </div>
+{% endfor %}
 
 {% endblock content %}

@@ -9,6 +9,7 @@ categories = ["projects"]
 
 [extra]
 titlecard="bg-gradient-a1-a2"
+titlecard_text="fg-dark-color"
 +++
 
 # Hello World

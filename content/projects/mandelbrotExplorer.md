@@ -7,7 +7,8 @@ categories=["projects", "art"]
 tags=["code", "js", "mandelbrot", "canvas"]
 
 [extra]
-titlecard = "img light"
+titlecard = "img"
+titlecard_text="fg-dark-color text-shadow-dark"
 img = "/asset/mandelbrot.png"
 +++
 

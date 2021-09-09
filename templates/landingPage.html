@@ -22,7 +22,7 @@
             {% for entry in data.topMenu %}
                 {% set childLen = entry.children | length %}
                 <li class="flex menu-item {% if entry.class %}{{entry.class}}{% endif %} {% if entry.url == "/" and section and section.path == entry.url %}selected{% endif %}">
-                    <a href="{{ entry.url }}" class="button">{{ entry.name }}</a>
+                    <a href="{{ entry.url }}">{{ entry.name }}</a>
                 </li>
             {% endfor %}
         </ul>

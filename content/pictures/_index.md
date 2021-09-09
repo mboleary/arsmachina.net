@@ -4,6 +4,7 @@ description="Pictures I've taken"
 
 [extra]
 titlecard="bg-gradient-a3-a4"
+titlecard_text="fg-dark-color"
 type="bg-a2-a4"
 +++
 

@@ -2,12 +2,18 @@
 
 {% block content %}
 
-<h1> Tags List Template </h1>
+<div class="title-banner">
+    <div class="container text-center full-width">
+        <h1> All Categories </h1>
+    </div>
+</div>
 
-<p> This is still in progress </p>
-
-<hr>
-
-{{ __tera_context }}
+<div class="container">
+    {% for tax in terms %}
+        <a href="{{tax.path}}" class="fg-color">
+            <div class="flex-layout horizontal">{{macros::bigTag(tag=tax.name)}}</div>
+        </a>
+    {% endfor %}
+</div>
 
 {% endblock content %}

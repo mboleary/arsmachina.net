@@ -4,6 +4,7 @@ description="This is a test"
 
 [extra]
 titlecard="bg-gradient-a4"
+titlecard_text="fg-dark-color"
 type="article"
 +++
 

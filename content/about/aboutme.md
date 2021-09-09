@@ -4,6 +4,7 @@ description="Information about me"
 
 [extra]
 titlecard = "bg-gradient-a1-a2"
+titlecard_text="fg-dark-color"
 +++
 
 I am Brady O’Leary. 

@@ -59,39 +59,42 @@
 
 <!-- This is for use in Sections -->
 {% macro flashcard_with_banner(title, subtitle, style=false, textStyle=false, img=false, readMore=false, cats=false, tags=false, ctr=false) %}
-<div class="banner {% if style %}{{ style }}{% endif %} {% if img %}img{% endif %}" {% if img %}style="background-image: url('{{img}}');"{% endif %}>
+<div class="banner {% if style %}{{ style }}{% endif %} {% if img %}img{% endif %} banner-footer-wrapper" {% if img %}style="background-image: url('{{img}}');"{% endif %}>
     <div class="container text-center {% if textStyle %}{{ textStyle }}{% endif %}">
         <h1> {{ title }}</h1>
         {% if subtitle %}
         <hr>
         <p> {{ subtitle }} </p>
         {% endif %}
+        {% if readMore %}
+        <div class="full-width margin-top-bottom-2x">
+            <a href="{{ readMore }}" class="button">Read More 🢂</a>
+        </div>
+        {% endif %}
         
     </div>
-    <div class="banner-footer flex-layout horizontal bg-darken bg-blur fg-dark-color">
-        <div class="flex">
-            Filed under {% if cats %}
-                {% for cat in cats %}
-                    {{ macros::category(name=cat)}}
-                {% endfor %}
-            {% endif %}
-        </div>
-        <div class="flex">
-            {% if ctr %}
-                {{ctr | safe}}
-            {% endif %}
-        </div>
-        <div class="flex">
-            {% if tags %}
-                {% for tag in tags %}
-                    {{macros::tag(tag=tag)}}
-                {% endfor %}
-            {% endif %}
-        </div>
-        <div>
-            {% if readMore %}
-                <a href="{{ readMore }}" class="button">Read More →</a>
-            {% endif %}
+    <div class="banner-footer bg-darken bg-blur fg-dark-color">
+        <div class="container flex-layout horizontal full-height">
+            <div class="flex margin-top-bottom-auto text-shadow-dark">
+                 {% if cats %} Filed under
+                    {% for cat in cats %}
+                        {{ macros::category(name=cat)}}
+                    {% endfor %}
+                {% endif %}
+            </div>
+            <div class="flex margin-top-bottom-auto">
+                {% if ctr %}
+                    {{ctr | safe}}
+                {% endif %}
+            </div>
+            <div class="margin-top-bottom-auto">
+                {% if tags %}
+                    {% for tag in tags %}
+                        {{macros::tag(tag=tag)}}
+                    {% endfor %}
+                {% endif %}
+            </div>
+            
         </div>
     </div>
 </div>

@@ -7,7 +7,8 @@ tags = ["first", "post", "test"]
 categories = ["blog"]
 
 [extra]
-titlecard="bg-black fg-a4"
+titlecard="bg-dark-color"
+titlecard_text="accent-4"
 +++
 
 # Hello World
