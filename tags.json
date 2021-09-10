@@ -23,5 +23,53 @@
     },
     "tag": {
         "tooltip": "Just a regular ole' tag."
+    },
+    "arduino": {
+        "tooltip": "Involves using Arduinos",
+        "bgColor": "#00979c",
+        "fgColor": "white",
+        "text": "Arduino"
+    },
+    "unity": {
+        "tooltip": "The Unity Game Engine",
+        "bgColor": "black",
+        "fgColor": "white",
+        "text": "Unity Game Engine"
+    },
+    "raspberry-pi": {
+        "tooltip": "Raspberry Pi Single Board Computers",
+        "bgColor": "#c51d4a",
+        "fgColor": "white",
+        "text": "Raspberry Pi"
+    },
+    "html": {
+        "tooltip": "HyperText Markup Language",
+        "bgColor": "#e44d26",
+        "fgColor": "white",
+        "text": "HTML"
+    },
+    "css": {
+        "tooltip": "Cascading StyleSheets",
+        "bgColor": "#264de4",
+        "fgColor": "white",
+        "text": "CSS"
+    },
+    "js": {
+        "tooltip": "Javascript",
+        "bgColor": "#f7df1e",
+        "fgColor": "black",
+        "text": "JS"
+    },
+    "linux": {
+        "tooltip": "Related to the Linux Operating System",
+        "bgColor": "white",
+        "fgColor": "black",
+        "pretext": "🐧"
+    },
+    "opensource": {
+        "tooltip": "Open Source Software and Hardware",
+        "bgColor": "#1E531D",
+        "fgColor": "white",
+        "text": "Open Source"
     }
 }

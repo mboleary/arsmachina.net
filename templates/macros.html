@@ -4,13 +4,13 @@
     {% set tagData = load_data(path="tags.json") %}
     {% if tagData[tag] %}
         {% set localTag = tagData[tag] %}
-        <a href="/tags/{{tag}}" class="fg-color">
-            <div class="chip-sm {% if localTag.class %}{{localTag.class}}{% endif %}" {% if localTag.fgColor or localTag.bgColor %}style="{% if localTag.fgColor %}color:{{localTag.fgColor}};{% endif %}{% if localTag.bgColor %}background-color:{{localTag.bgColor}};{% endif %}"{% endif %} {% if localTag.tooltip %}title="{{localTag.tooltip}}"{% endif %}>{% if localTag.pretext %}{{localTag.pretext}}{% endif %}{% if localTag.text %}{{localTag.text}}{% else %}{{tag}}{% endif %}{% if localTag.posttext %}{{localTag.posttext}}{% endif %}</div>
+        <a href="/tags/{{tag}}">
+            <div class="chip-sm fg-color {% if localTag.class %}{{localTag.class}}{% endif %}" {% if localTag.fgColor or localTag.bgColor %}style="{% if localTag.fgColor %}color:{{localTag.fgColor}};{% endif %}{% if localTag.bgColor %}background-color:{{localTag.bgColor}};{% endif %}"{% endif %} {% if localTag.tooltip %}title="{{localTag.tooltip}}"{% endif %}>{% if localTag.pretext %}{{localTag.pretext}}{% endif %}{% if localTag.text %}{{localTag.text}}{% else %}{{tag}}{% endif %}{% if localTag.posttext %}{{localTag.posttext}}{% endif %}</div>
         </a>
     {% else %}
         <!-- This tag isn't in tags.json! -->
-        <a href="/tags/{{tag}}" class="fg-color">
-            <span class="chip-sm">{{tag}}</span>
+        <a href="/tags/{{tag}}">
+            <span class="chip-sm fg-color">{{tag}}</span>
         </a>
     {% endif %}
 {% endmacro tag %}

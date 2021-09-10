@@ -10,8 +10,8 @@
 
 <div class="container">
     {% for tax in terms %}
-        <a href="{{tax.path}}" class="fg-color">
-            <div class="flex-layout horizontal">{{macros::bigTag(tag=tax.name)}}</div>
+        <a href="{{tax.path}}">
+            <div class="flex-layout horizontal fg-color">{{macros::bigTag(tag=tax.name)}}</div>
         </a>
     {% endfor %}
 </div>
