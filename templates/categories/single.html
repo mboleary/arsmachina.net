@@ -25,8 +25,8 @@
                             {% endfor %} |
                         {% endif %}
                     </span>
-                    {% if page.taxonomies.categories %}
-                        {% for tag in page.taxonomies.categories %}
+                    {% if page.taxonomies.tags %}
+                        {% for tag in page.taxonomies.tags %}
                             {{macros::tag(tag=tag)}}
                         {% endfor %}
                     {% endif %}

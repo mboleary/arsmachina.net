@@ -71,5 +71,11 @@
         "bgColor": "#1E531D",
         "fgColor": "white",
         "text": "Open Source"
+    },
+    "videogame": {
+        "tooltip": "Relates to Videogames",
+        "class": "outline",
+        "pretext": "🕹️",
+        "text": "Videogames"
     }
 }

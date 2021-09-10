@@ -7,7 +7,7 @@ categories=["projects", "css", "web"]
 tags=["html", "css", "styling", "ui/ux", "design", "library"]
 
 [extra]
-titlecard = "bg-a1-a3"
+titlecard = "bg-gradient-a1-a2"
 +++
 
 # Ars Materia

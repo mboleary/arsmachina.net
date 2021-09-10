@@ -2,6 +2,8 @@
 title="How to use a Raspberry Pi 3 with a Raspad 3"
 description="When life gives you lemons, give it back a bodge wire."
 
+draft = true
+
 [taxonomies]
 tags=["hack", "mod", "raspberry-pi", "raspad", "linux"]
 categories=["blog"]

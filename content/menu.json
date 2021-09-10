@@ -52,6 +52,11 @@
                     "name": "About Website",
                     "url": "/about/aboutsite",
                     "children": []
+                },
+                {
+                    "name": "Links",
+                    "url": "/about/links",
+                    "children": []
                 }
             ]
         },
