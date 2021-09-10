@@ -2,6 +2,8 @@
 title = "Ars Materia"
 description = "The new stylesheets for my website and a number of other projects"
 
+date=2021-07-15
+
 [taxonomies]
 categories=["projects", "css", "web"]
 tags=["html", "css", "styling", "ui/ux", "design", "library"]

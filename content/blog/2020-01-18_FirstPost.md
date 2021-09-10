@@ -2,6 +2,8 @@
 title="First Post"
 description="This is the First Post on the blog"
 
+date=2020-01-18
+
 [taxonomies]
 tags = ["first", "post", "test"]
 categories = ["blog"]

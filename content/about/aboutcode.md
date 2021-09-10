@@ -2,6 +2,8 @@
 title = "About my code"
 description = "Information about code I've written."
 
+weight = 2
+
 [extra]
 titlecard = "bg-gradient-a2"
 titlecard_text="fg-dark-color"

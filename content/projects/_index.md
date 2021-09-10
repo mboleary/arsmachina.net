@@ -1,6 +1,8 @@
 +++
 title="Projects"
 
+sort_by="date"
+
 [extra]
 titlecard="bg-dark-color"
 titlecard_text="fg-gradient-a2"

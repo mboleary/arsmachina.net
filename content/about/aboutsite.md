@@ -2,6 +2,8 @@
 title = "About This Website"
 description = "Information about this website."
 
+weight = 1
+
 [extra]
 titlecard = "grayscale-light"
 toc = [{"title"= "Website Status","id"= "website-status"}]

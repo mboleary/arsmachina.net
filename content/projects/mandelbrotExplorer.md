@@ -2,6 +2,8 @@
 title = "Mandelbrot Explorer"
 description = "This is a mandelbrot demo that I built in Javascript in order to learn how the canvas works"
 
+date=2019-10-31
+
 [taxonomies]
 categories=["projects", "art"]
 tags=["code", "js", "mandelbrot", "canvas"]

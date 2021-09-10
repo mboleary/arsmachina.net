@@ -2,6 +2,8 @@
 title = "Link Tree"
 description = "Links to other websites"
 
+weight = 3
+
 [extra]
 titlecard = "bg-gradient-a4-a1"
 titlecard_text="fg-dark-color"

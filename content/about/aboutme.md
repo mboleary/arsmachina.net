@@ -2,6 +2,8 @@
 title = "About Me"
 description="Information about me"
 
+weight = 0
+
 [extra]
 titlecard = "bg-gradient-a1-a2"
 titlecard_text="fg-dark-color"

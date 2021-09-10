@@ -2,6 +2,8 @@
 title="Blog of the Brady"
 description="Personal Blog"
 
+sort_by="date"
+
 [extra]
 titlecard="bg-gradient-a1-a3"
 titlecard_text="fg-dark-color"

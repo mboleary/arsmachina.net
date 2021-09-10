@@ -2,6 +2,8 @@
 title="How to use a Raspberry Pi 3 with a Raspad 3"
 description="When life gives you lemons, give it back a bodge wire."
 
+date=2021-08-15
+
 draft = true
 
 [taxonomies]
