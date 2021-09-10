@@ -23,8 +23,10 @@ cd ../
 
 cd static/
 
+rm -rf extern
 
 cp -r ../.temp/extern extern
+
 pwd
 
 cd ../
