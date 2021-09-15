@@ -1,0 +1,134 @@
+{% extends "index.html" %}
+
+{% block head %}
+<script src="./elasticlunr.min.js"></script>
+<script src="./search_index.en.js"></script>
+
+<script>
+
+    const OPTIONS = {
+        bool: "AND",
+        fields: {
+            title: {
+                boost: 2
+            },
+            body: {
+                boost: 1
+            }
+        }
+    };
+
+    function init() {
+        const index = elasticlunr.Index.load(window.searchIndex);
+
+        const $form = document.querySelector("#search-form");
+        const $searchResults = document.querySelector("#search-results");
+        const $template = document.querySelector("#result-item");
+
+        const handleSearch = (searchText) => {
+            const results = index.search(String(searchText).trim());
+
+            console.log("Results:", results);
+            
+            // Clear out old results (if any)
+
+            while ($searchResults.hasChildNodes()) {
+                $searchResults.removeChild($searchResults.firstChild);
+            }
+
+            // Render new results
+
+            const frag = document.createDocumentFragment();
+
+            for (const item of results) {
+                const temp = $template.content.cloneNode(true);
+
+                const fields = temp.querySelectorAll("[field]");
+
+                for (const field of fields) {
+                    const data = {
+                        title: item.doc.title,
+                        path: item.ref,
+                        summary: item.doc.body
+                    }
+                    const f = field.getAttribute("field");
+                    const ft = field.getAttribute("field-target");
+                    if (f && data[f]) {
+                        if (ft) {
+                            field.setAttribute(ft, data[f]);
+                        } else {
+                            field.textContent = data[f];
+                        }
+                    }
+                }
+
+                frag.appendChild(temp);
+            }
+
+            $searchResults.appendChild(frag);
+        }
+
+        $form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            for (const elem of e.target.elements) {
+                if (elem.name === "q" && elem.value) {
+                    handleSearch(elem.value);
+                }
+            }
+        });
+
+        // Check the query Parameters for a search query value
+        const usp = new URLSearchParams(window.location.search);
+        const q = usp.get("q");
+
+        console.log(q);
+
+        if (q) {
+            handleSearch(q);
+        }
+
+    }
+
+    window.addEventListener("DOMContentLoaded", (e) => {
+        init();
+    });
+</script>
+
+{% endblock head %}
+
+{% block content %}
+
+<div class="container">
+
+    <form id="search-form">
+        <div class="app-bar flex-layout horizontal">
+            <div class="flex-layout vertical center">
+                <h2 class="accent-1"> Search this website </h2>
+            </div>
+        </div>
+        <div class="body">
+            <p> This form lets you search the contents of this website. </p>
+            <fieldset class="flex-layout vertical ">
+                <label> Search </label>
+                <input type="search" name="q">
+                <p><small>Hitting <kbd>Enter</kbd> will cause this form to submit</small></p>
+            </fieldset>
+        </div>
+    </form>
+
+    <div id="search-results"></div>
+
+    <template id="result-item">
+        <article class="article-brief content-card no-margin-right">
+            <header class="hbar">
+                <h1 class="title"><a href="" field="path" field-target="href"><span field="title"></span></a></h1>
+            </header>
+            <p field="summary">
+            </p>
+        </article>
+    </template>
+
+</div>
+
+{% endblock content %}

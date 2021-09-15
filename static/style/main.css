@@ -727,6 +727,9 @@ body[dark] .content-card, body[dark] .content-square {
 .content-card.no-margin, .no-margin.content-square {
   margin: 0;
 }
+.content-card.no-margin-right, .no-margin-right.content-square {
+  margin-right: 0;
+}
 .content-card.shadow, .shadow.content-square {
   box-shadow: 0 1px 5px #aaa;
   margin-left: 5px;
