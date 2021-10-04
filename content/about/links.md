@@ -31,6 +31,8 @@ These are links to some friends' websites
 
 [Justin Baum's Personal Website](https://justinba1010.github.io/) - Justin Baum
 
+[Chariot Chaser](https://chariot-chaser.net/) - Philip Conrad's website
+
 ## Related to Computing
 
 [Hacker News](https://news.ycombinator.com/) - News for Hackers
