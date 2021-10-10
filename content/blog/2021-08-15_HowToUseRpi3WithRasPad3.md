@@ -45,7 +45,7 @@ The mod is actually quite simple. though the forum states that there's another m
 
 [Diagram from forum post](https://misterfpga.org/viewtopic.php?p=15666&sid=8d465656511b4f14c685df2fd9fc6dd0#p15666)
 
-![Picture of my raspad](/static/asset/0.jpg)
+{{ figure(src="/asset/rpi3_raspad/0.jpg", caption="Picture of the modified mainboard", num="fig. 1") }}
 
 Be careful not to bridge the gap between the 2 capacitors (?)
 

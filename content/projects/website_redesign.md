@@ -52,57 +52,24 @@ There are some bugs I need to work out before I can deploy these new stylesheets
 
 ## Screenshots
 
-<figure>
-  <img src="/asset/ars_css_next_imgs/0.png">
-  <figcaption> First look at the new dark mode. </figcaption>
-</figure>
+{{ figure(src="/asset/ars_css_next_imgs/0.png", caption="First look at the new dark mode.") }}
 
-<figure>
-  <img src="/asset/ars_css_next_imgs/1.png">
-  <figcaption> Some different types of cards. </figcaption>
-</figure>
+{{ figure(src="/asset/ars_css_next_imgs/1.png", caption="Some different types of cards.") }}
 
-<figure>
-  <img src="/asset/ars_css_next_imgs/2.png">
-  <figcaption> Demonstration forms. </figcaption>
-</figure>
+{{ figure(src="/asset/ars_css_next_imgs/2.png", caption="Demonstration forms.") }}
 
-<figure>
-  <img src="/asset/ars_css_next_imgs/3.png">
-  <figcaption> Different types of tables </figcaption>
-</figure>
+{{ figure(src="/asset/ars_css_next_imgs/3.png", caption="Different types of tables") }}
 
-<figure>
-  <img src="/asset/ars_css_next_imgs/4.png">
-  <figcaption> Chips, which are going to be used as tags </figcaption>
-</figure>
+{{ figure(src="/asset/ars_css_next_imgs/4.png", caption="Chips, which are going to be used as tags") }}
 
-<figure>
-  <img src="/asset/ars_css_next_imgs/5.png">
-  <figcaption> Modal popup demonstration </figcaption>
-</figure>
+{{ figure(src="/asset/ars_css_next_imgs/5.png", caption="Modal popup demonstration") }}
 
-<figure>
-  <img src="/asset/ars_css_next_imgs/6.png">
-  <figcaption> Demonstration of translucent cards on top of a picture </figcaption>
-</figure>
+{{ figure(src="/asset/ars_css_next_imgs/6.png", caption="Demonstration of translucent cards on top of a picture") }}
 
-<figure>
-  <img src="/asset/ars_css_next_imgs/7.png">
-  <figcaption> New list of articles </figcaption>
-</figure>
+{{ figure(src="/asset/ars_css_next_imgs/7.png", caption="New list of articles") }}
 
-<figure>
-  <img src="/asset/ars_css_next_imgs/8.png">
-  <figcaption> New Table of Contents demo </figcaption>
-</figure>
+{{ figure(src="/asset/ars_css_next_imgs/8.png", caption="New Table of Contents demo") }}
 
-<figure>
-  <img src="/asset/ars_css_next_imgs/9.png">
-  <figcaption> Demo of icons on an article </figcaption>
-</figure>
+{{ figure(src="/asset/ars_css_next_imgs/9.png", caption="Demo of icons on an article") }}
 
-<figure>
-  <img src="/asset/ars_css_next_imgs/10.png">
-  <figcaption> Shows the footer, the new cow placement, and a share bar </figcaption>
-</figure>
+{{ figure(src="/asset/ars_css_next_imgs/10.png", caption="Shows the footer, the new cow placement, and a share bar") }}
