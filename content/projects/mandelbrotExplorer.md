@@ -14,9 +14,9 @@ titlecard_text="fg-dark-color text-shadow-dark"
 img = "/asset/mandelbrot.png"
 +++
 
-[Go here to see it in action](/extern/fractals-canvas)
-[https://github.com/mboleary/fractals-canvas](https://github.com/mboleary/fractals-canvas)
+{{ iconleft(icon="git-branch", class="", content="<b>Source Code on Github: <a href='https://github.com/mboleary/fractals-canvas'>https://github.com/mboleary/fractals-canvas</a></b>")}}
 
+{{ iconleft(icon="link", class="", content="<b><a href='/extern/fractals-canvas'>Go here to see it in action</a></b>")}}
 
 # Mandelbrot Explorer
 

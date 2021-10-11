@@ -7,6 +7,7 @@ weight = 0
 [extra]
 titlecard = "bg-gradient-a1-a2"
 titlecard_text="fg-dark-color"
+hide_icons = true
 +++
 
 I am Brady O’Leary. 

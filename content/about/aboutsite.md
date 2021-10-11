@@ -7,6 +7,7 @@ weight = 1
 [extra]
 titlecard = "grayscale-light"
 toc = [{"title"= "Website Status","id"= "website-status"}]
+hide_icons = true
 +++
   
 <h1 class="accent-4 vbar"> Website Status</h1>

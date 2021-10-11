@@ -28,6 +28,31 @@
 {% endif %}
 
 <div class="container">
+    {% if not page.extra.hide_icons %}
+        {% if page.date %}
+        <div class="margin-top-bottom-2x flex-layout horizontal wrap">
+            <div class="icon left"><i data-feather="calendar"></i></div>
+            <b class="margin-top-bottom-auto">Posted: {{page.date}}</b>
+        </div>
+        {% endif %}
+        <div class="margin-top-bottom-2x flex-layout horizontal wrap">
+            <div class="icon left"><i data-feather="clock"></i></div>
+            <b class="margin-top-bottom-auto">Est. Reading Time: {{page.reading_time}} {% if page.reading_time == 1 %}minute{% else %}minutes{% endif %}</b>
+        </div>
+        <div class="margin-top-bottom-2x flex-layout horizontal wrap">
+            <div class="icon left"><i data-feather="user"></i></div>
+            <b class="margin-top-bottom-auto">Author: {% if page.extra.author %}{{page.extra.author}}{% else %}{{config.extra.author}}{% endif %}</b>
+        </div>
+        {% if page.taxonomies.tags %}
+        <div class="margin-top-bottom-2x flex-layout horizontal wrap">
+            <div class="icon left"><i data-feather="tag"></i></div>
+            {% for tag in page.taxonomies.tags %}
+                {{macros::tag(tag=tag)}}
+            {% endfor %}
+        </div>
+        {% endif %}
+    {% endif %}
+    
 {{ page.content | safe }}
 </div>
 {% endblock content %}

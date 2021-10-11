@@ -7,6 +7,7 @@ weight = 2
 [extra]
 titlecard = "bg-gradient-a2"
 titlecard_text="fg-dark-color"
+hide_icons = true
 +++
   
 # Written Code

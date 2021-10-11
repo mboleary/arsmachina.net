@@ -24,6 +24,10 @@ Understandably, despite the hardware limitations, I still wanted to use an older
 
 ## How to modify your Raspad
 
+{{ iconleft(icon="alert-octagon", class="error-color-fg", content="<b>Warning</b>") }}
+
+<p class="error-color-fg">This mod has the potential to damage your raspad and the raspberry pi. Proceeed at your own risk. I cannot take responsibility for you breaking your hardware.</p>
+
 The mod is actually quite simple. though the forum states that there's another method to fix this, we're going to take the bodge wire approach. 
 
 ### Here's what you'll need

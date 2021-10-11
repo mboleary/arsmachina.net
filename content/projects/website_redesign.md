@@ -12,13 +12,10 @@ tags=["html", "css", "styling", "ui/ux", "design", "library"]
 titlecard = "bg-gradient-a1-a2"
 +++
 
+{{ iconleft(icon="git-branch", class="", content="<b>Source Code on Github: <a href='https://github.com/mboleary/ars-css-next'>https://github.com/mboleary/ars-css-next</a></b>")}}
 # Ars Materia
 
 Ars Materia is the new theme that this website, as well as several other projects will use for styling. This redesign is similar in style to the old arsmachina styling, but is written in such a way that makes it easier to implement these styles elsewhere, as well as cut down on the number of files required to implement the styling, making it better to use on the web, and also to make the code more managable.
-
-## Github Link
-
-[https://github.com/mboleary/ars-css-next](https://github.com/mboleary/ars-css-next)
 
 ## Project History
 

@@ -6,6 +6,7 @@ description="A Collection of Music that I've made"
 titlecard="accent-3 pattern-vertical-stripes-xl"
 titlecard_text="fg-color-dark"
 type="article"
+hide_icons = true
 +++
 
 # Music

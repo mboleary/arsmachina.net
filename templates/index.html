@@ -1,6 +1,7 @@
 {% import "macros.html" as macros %}
 
 <!Doctype html>
+<html>
 {% set data = load_data(path="content/menu.json") %}
 
 {% set cow = load_data(path="data/cow", format="plain") %}
@@ -142,7 +143,7 @@
             <div class="footer-bottom">
                 <div class="flex-layout horizontal wrap">
                     <div class="flex"> Icons Here </div>
-                    <div class="flex"> © 2021 - Brady O'Leary </div>
+                    <div class="flex"> © {{config.extra.copyright_year}} - {{config.extra.author}} </div>
                     <div> Links Here </div>
                 </div>
             </div>
@@ -150,3 +151,4 @@
         {% endblock footer %}
     {% endblock body %}
 </body>
+</html>
