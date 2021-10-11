@@ -6,6 +6,7 @@ cd ..
 
 rm -rf .temp
 rm -rf data
+rm -rf extern
 
 cd static
 

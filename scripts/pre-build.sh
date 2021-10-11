@@ -11,6 +11,7 @@ npm i
 cd .temp
 
 mkdir -p extern
+mkdir -p deploy
 
 cd extern
 
@@ -19,3 +20,4 @@ git clone https://github.com/mboleary/fractals-canvas.git
 cd fractals-canvas
 
 rm -rf .git
+

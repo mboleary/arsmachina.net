@@ -49,8 +49,8 @@ zola build --output-dir .temp/deploy/public
 # Fix the node modules
 cd .temp/deploy
 
-rm -rf node_modules
-cp -r ../../node_modules ./node_modules
+rm -rf ./public/node_modules
+cp -r ../../node_modules ./public/node_modules
 
 ## Clean up
 
