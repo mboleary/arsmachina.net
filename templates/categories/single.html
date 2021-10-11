@@ -1,17 +1,32 @@
 {% extends "index.html" %}
 
+
 {% block content %}
+{% set catData = load_data(path="categories.json") %}
 
-<div class="title-banner">
-    <div class="container text-center full-width">
-        <h1> Category Results for: </h1>
-        <hr>
-        <p>{{term.name}}</p>
+{% if catData[term.name] %}
+    {% set localCat = catData[term.name] %}
+    <div class="title-banner {% if localCat.class %} {{localCat.class}}{% endif %}" {% if localCat.fgColor or localCat.bgColor %}style="{% if localCat.fgColor %}color:{{localCat.fgColor}};{% endif %}{% if localCat.bgColor %}background-color:{{localCat.bgColor}};{% endif %}"{% endif %} >
+        <div class="container text-center full-width">
+            <h1> Category: {{term.name}}</h1>
+            {% if localCat.description %}
+            <hr>
+            <p>{{localCat.description}}</p>
+            {% endif %}
+        </div>
     </div>
-</div>
+{% else %}
+    <div class="title-banner">
+        <div class="container text-center full-width">
+            <h1> Category: {{term.name}}</h1>
+            
+        </div>
+    </div>
+{% endif %}
 
-{% for page in term.pages %}
-    <div class="container">
+<div class="container">
+    <div class="height-10"></div>
+    {% for page in term.pages %}
         <article class="article-brief content-card">
             <header class="hbar">
                 <h1 class="title"><a href="{{page.path}}"> {{page.title}} </a></h1>
@@ -50,7 +65,7 @@
                 </a>
             {% endif %}
         </article>
-    </div>
-{% endfor %}
+    {% endfor %}
+</div>
 
 {% endblock content %}
