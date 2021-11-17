@@ -34,6 +34,10 @@ These are links to some friends' websites
 
 [Chariot Chaser](https://chariot-chaser.net/) - Philip Conrad's website
 
+[Andrew Zah](https://andrewzah.com/) - Andrew Zah's website
+
+[JRS Systems](https://jrs-s.net/) - Jim Salter's Blog
+
 ## Related to Computing
 
 [Hacker News](https://news.ycombinator.com/) - News for Hackers
