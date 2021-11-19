@@ -17,7 +17,9 @@ taxonomies = [
     {name = "categories", rss = true}
 ]
 
+title = "ArsMachina.net; Art of the (Computer) Machine"
 [extra]
 # Put all your custom variables here
 author = "Brady O'Leary"
 copyright_year = 2021
+default_description = "ArsMachina is a collection of projects, music, and other media that Brady has created."

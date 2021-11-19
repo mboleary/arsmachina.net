@@ -20,10 +20,10 @@
     <link rel="stylesheet" type="text/css" href="/style/main.css">
     <link rel="stylesheet" type="text/css" href="/node_modules/pattern.css/dist/pattern.min.css">
     <meta charset="UTF-8">
-    <meta name="description" content="{% block description %}Index {% endblock description %}">
-    <meta name="author" content="Webtemplate">
+    <meta name="description" content="{% block description %}{{config.extra.default_description}}{% endblock description %}">
+    <meta name="author" content="{% block author %}{{config.extra.author}}{% endblock author %}">
     <meta name="generator" content="Zola">
-    <meta name="keywords" content="keywords, go, here">
+    <meta name="keywords" content="{% block keywords %}keywords, go, here{% endblock keywords %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#00121a"> <!-- Colored Chrome Mobile Tabs! -->
     <link rel="icon" type="image/png" href="/favicon.png">
@@ -85,7 +85,7 @@
                 <div class="menu-bar">
                     <div class="container">
                         {% block headerMenu %}
-                            <ul class="flex menu-bar flex-layout horizontal wrap">
+                            <ul class="flex menu-bar flex-layout responsive bp-0 wrap">
                                 {% for entry in data.topMenu %}
                                     <!-- @TODO Re-add support for dropdown menus -->
                                     <li class="flex menu-item {% if entry.children %}dropdown{% endif %} {% if entry.url != "/" and page and page.path is containing(entry.url) %}selected{% endif %} {% if entry.url != "/" and section and section.path is containing(entry.url) %}selected{% endif %}">
@@ -120,14 +120,14 @@
         <div class="container full-width">
             <hr>
             <button onclick="toggleDark()">Toggle Dark mode</button>
-            <div class="flex-layout horizontal center">
+            <div class="flex-layout horizontal center" data-nosnippet>
                 <code>{{cow | safe }}</code>
             </div>
         </div>
         <div class="height-20"></div>
         <footer class="footer box-shadow">
             <div class="footer-top">
-                <div class="container flex-layout horizontal wrap">
+                <div class="container flex-layout responsive bp-0 wrap">
                     {% for entry in data.footerMenu %}
                         <ul class="flex link-list">
                             <li class="title {{entry.class}}"><a href="{{entry.url}}">{{entry.name}}</a></li>

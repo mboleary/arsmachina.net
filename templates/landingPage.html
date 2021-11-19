@@ -10,14 +10,14 @@
                 <h1><span class="accent-1">Ars</span><span class="accent-2">Machina</span></h1>
                 <p>Art of the (Computer) Machine</p>
             </div>
-            <div>
+            <div data-nosnippet>
                 <code class="left">
                     {{ cow | safe }}
                 </code>
             </div>
         </div>
 
-        <ul class="menu-bar flex-layout horizontal wrap">
+        <ul class="menu-bar flex-layout responsive bp-0 wrap">
             {% set data = load_data(path="content/menu.json") %}
             {% for entry in data.topMenu %}
                 {% set childLen = entry.children | length %}

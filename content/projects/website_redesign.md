@@ -6,7 +6,7 @@ date=2021-07-15
 
 [taxonomies]
 categories=["projects", "css", "web"]
-tags=["html", "css", "styling", "ui/ux", "design", "library"]
+tags=["html", "css", "styling", "ui-ux", "design", "library"]
 
 [extra]
 titlecard = "bg-gradient-a1-a2"

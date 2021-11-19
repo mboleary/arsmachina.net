@@ -24,6 +24,15 @@
     "tag": {
         "tooltip": "Just a regular ole' tag."
     },
+    "am3": {
+        "tooltip": "Website redesign",
+        "class": "bg-gradient-a1-a2"
+    },
+    "ui-ux": {
+        "tooltip": "Related to UI / UX design",
+        "class": "bg-gradient-a3-a4",
+        "text": "ui/ux"
+    },
     "arduino": {
         "tooltip": "Involves using Arduinos",
         "bgColor": "#00979c",

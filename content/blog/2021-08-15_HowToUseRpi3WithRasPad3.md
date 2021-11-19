@@ -1,10 +1,11 @@
 +++
 title="How to use a Raspberry Pi 3 with a Raspad 3"
 description="When life gives you lemons, give it back a bodge wire."
+description_long="When life gives you lemons, give it back a bodge wire. This is how I got a Raspberry Pi 3 to work with the latest Raspad tablet case."
 
 date=2021-08-15
 
-draft = true
+draft = false
 
 [taxonomies]
 tags=["hack", "mod", "raspberry-pi", "raspad", "linux"]

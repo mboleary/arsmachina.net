@@ -435,6 +435,7 @@ pre, code {
   margin: 0% auto;
   overflow: auto;
   max-width: 1024px;
+  overflow: visible;
 }
 
 @media only screen and (max-width: 768px) {
@@ -442,6 +443,7 @@ pre, code {
     margin: 0% 5px;
     overflow: auto;
     max-width: unset;
+    overflow: visible;
   }
 }
 @media only screen and (max-width: 960px) and (min-width: 769px) {
@@ -449,6 +451,7 @@ pre, code {
     margin: 0% auto;
     overflow: auto;
     max-width: 758px;
+    overflow: visible;
   }
 }
 @media only screen and (max-width: 1080px) and (min-width: 961px) {
@@ -456,6 +459,7 @@ pre, code {
     margin: 0% auto;
     overflow: auto;
     max-width: 950px;
+    overflow: visible;
   }
 }
 .full-height {
@@ -502,6 +506,14 @@ pre, code {
   margin: auto 0;
 }
 
+.overflow-y {
+  overflow-y: auto;
+}
+
+.overflow-visible {
+  overflow: visible;
+}
+
 .flex-layout {
   display: flex;
 }
@@ -537,6 +549,54 @@ pre, code {
   flex: 0 1 auto;
 }
 
+@media only screen and (max-width: 768px) {
+  .flex-layout.responsive.bp-0 {
+    flex-direction: column;
+  }
+  .flex-layout.responsive.bp-0 .reverse {
+    flex-direction: column-reverse;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .flex-layout.responsive.bp-0 {
+    flex-direction: row;
+  }
+  .flex-layout.responsive.bp-0 .reverse {
+    flex-direction: row-reverse;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .flex-layout.responsive.bp-1 {
+    flex-direction: column;
+  }
+  .flex-layout.responsive.bp-1 .reverse {
+    flex-direction: column-reverse;
+  }
+}
+@media only screen and (min-width: 961px) {
+  .flex-layout.responsive.bp-1 {
+    flex-direction: row;
+  }
+  .flex-layout.responsive.bp-1 .reverse {
+    flex-direction: row-reverse;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .flex-layout.responsive.bp-2 {
+    flex-direction: column;
+  }
+  .flex-layout.responsive.bp-2 .reverse {
+    flex-direction: column-reverse;
+  }
+}
+@media only screen and (min-width: 1081px) {
+  .flex-layout.responsive.bp-2 {
+    flex-direction: row;
+  }
+  .flex-layout.responsive.bp-2 .reverse {
+    flex-direction: row-reverse;
+  }
+}
 .height-10 {
   height: 10px;
 }
@@ -651,6 +711,44 @@ img.contain {
 
 .grid-gap {
   gap: 10px;
+}
+
+.rel-layout {
+  position: relative;
+}
+.rel-layout > .abs {
+  position: absolute;
+}
+.rel-layout > .abs.fill {
+  height: 100%;
+  width: 100%;
+}
+.rel-layout > .abs.zero {
+  top: 0;
+  left: 0;
+}
+.rel-layout > .abs.bottom-right {
+  bottom: -20px;
+  right: -20px;
+}
+.rel-layout > .abs.bottom-right.p-10 {
+  bottom: -10px;
+  right: -10px;
+}
+.rel-layout > .abs.bottom-right.p-5 {
+  bottom: -5px;
+  right: -5px;
+}
+.rel-layout > .rel {
+  position: relative;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 .title-banner, .banner {
@@ -908,6 +1006,9 @@ textarea {
   border-radius: 5px 5px 0px 5px;
 }
 
+input {
+  accent-color: #BBE524;
+}
 input[type=image] {
   width: 100%;
 }
@@ -1062,6 +1163,17 @@ body[dark] .chip-lg:not([class*=bg-accent]):not(.outline), body[dark] .chip-md:n
 .dialog {
   border: 2px solid black;
   padding: 0;
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+  .dialog {
+    background-color: #111;
+    color: white;
+  }
+}
+body[dark] .dialog {
+  background-color: #111;
+  color: white;
 }
 
 .icon {
@@ -1321,6 +1433,30 @@ a.button:hover, a.button:active {
   color: #333;
 }
 
+.search-container {
+  width: 100%;
+  border-radius: 28px;
+  border: 2px solid #eee;
+}
+
+.search-icon {
+  margin: 7.5px 0 7.5px 7.5px;
+  height: 41px;
+  width: 41px;
+}
+
+input.search-input {
+  background-color: transparent;
+  height: 56px;
+  font-size: 41px;
+  border: 0;
+  outline: 0;
+}
+
+.search-helper-text {
+  margin-top: 5px;
+}
+
 .vbar {
   border-left: 5px solid currentColor;
   padding-left: 5px;
@@ -1427,9 +1563,15 @@ button:hover.accent-4, input[type=button]:hover.accent-4, input[type=submit]:hov
 .bg-darken {
   background-color: #00000077;
 }
+.bg-darken.hover-darken:hover {
+  background-color: #000000CC;
+}
 
 .bg-lighten {
   background-color: #FFFFFF77;
+}
+.bg-lighten.hover-lighten:hover {
+  background-color: #FFFFFFCC;
 }
 
 .bg-img {
