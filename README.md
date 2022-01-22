@@ -1,4 +1,6 @@
-# Arsmachina.net
+# Dead Computer Society (deadcomputersociety.com)
+
+(Formerly called arsmachina.net)
 
 This is a personal blog built using Zola SSG with some extra scripts. The website is hosted using gitlab pages.
 
