@@ -972,21 +972,21 @@ legend {
   text-align: center;
 }
 
-input:not([type=image]), textarea, select {
+input:not([type=image]):not([type=button]):not([type=reset]):not([type=submit]), textarea, select {
   font-family: light;
   padding: 5px;
   border-radius: 5px;
   border: 1px solid #aaa;
 }
 @media only screen and (prefers-color-scheme: dark) {
-  input:not([type=image]), textarea, select {
+  input:not([type=image]):not([type=button]):not([type=reset]):not([type=submit]), textarea, select {
     border-color: #333;
   }
 }
-body[dark] input:not([type=image]), body[dark] textarea, body[dark] select {
+body[dark] input:not([type=image]):not([type=button]):not([type=reset]):not([type=submit]), body[dark] textarea, body[dark] select {
   border-color: #333;
 }
-input[disabled]:not([type=image]), textarea[disabled], select[disabled] {
+input[disabled]:not([type=image]):not([type=button]):not([type=reset]):not([type=submit]), textarea[disabled], select[disabled] {
   background-color: #999;
 }
 
@@ -1246,6 +1246,1125 @@ body[dark] .icon-btn:hover:not(.light-backdrop), .icon-btn:hover.dark-backdrop {
   left: 0;
 }
 
+/**
+ * Contains styling for buttons
+ */
+.button, input[type=reset], input[type=submit], input[type=button], button {
+  padding: 10px;
+  font-family: medium;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button {
+  border: 1px solid currentColor;
+  color: currentColor;
+  background-color: transparent;
+}
+button:hover {
+  border-color: transparent;
+  color: #333;
+  background-color: #eee;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  button:hover {
+    color: #333;
+    background-color: #eee;
+  }
+}
+body[dark] button:hover {
+  color: #333;
+  background-color: #eee;
+}
+button.accent-1 {
+  border-color: #BBE524;
+  color: #BBE524;
+}
+button:hover.accent-1 {
+  border-color: transparent;
+  background-color: #BBE524;
+  color: black;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  button:hover.accent-1 {
+    color: black;
+    background-color: #BBE524;
+  }
+}
+body[dark] button:hover.accent-1 {
+  color: black;
+  background-color: #BBE524;
+}
+button.accent-2 {
+  border-color: #2682A6;
+  color: #2682A6;
+}
+button:hover.accent-2 {
+  border-color: transparent;
+  background-color: #2682A6;
+  color: black;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  button:hover.accent-2 {
+    color: black;
+    background-color: #2682A6;
+  }
+}
+body[dark] button:hover.accent-2 {
+  color: black;
+  background-color: #2682A6;
+}
+button.accent-3 {
+  border-color: #FF230F;
+  color: #FF230F;
+}
+button:hover.accent-3 {
+  border-color: transparent;
+  background-color: #FF230F;
+  color: white;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  button:hover.accent-3 {
+    color: white;
+    background-color: #FF230F;
+  }
+}
+body[dark] button:hover.accent-3 {
+  color: white;
+  background-color: #FF230F;
+}
+button.accent-4 {
+  border-color: #FB9902;
+  color: #FB9902;
+}
+button:hover.accent-4 {
+  border-color: transparent;
+  background-color: #FB9902;
+  color: white;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  button:hover.accent-4 {
+    color: white;
+    background-color: #FB9902;
+  }
+}
+body[dark] button:hover.accent-4 {
+  color: white;
+  background-color: #FB9902;
+}
+button.primary {
+  background-color: #333;
+  color: #eee;
+  border: 0;
+}
+button.primary.accent-1 {
+  background-color: #BBE524;
+  color: black;
+}
+button.primary:hover.accent-1 {
+  background-color: #eee;
+  color: #BBE524;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  button.primary:hover.accent-1 {
+    color: #BBE524;
+    background-color: #eee;
+  }
+}
+body[dark] button.primary:hover.accent-1 {
+  color: #BBE524;
+  background-color: #eee;
+}
+button.primary.accent-2 {
+  background-color: #2682A6;
+  color: black;
+}
+button.primary:hover.accent-2 {
+  background-color: #eee;
+  color: #2682A6;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  button.primary:hover.accent-2 {
+    color: #2682A6;
+    background-color: #eee;
+  }
+}
+body[dark] button.primary:hover.accent-2 {
+  color: #2682A6;
+  background-color: #eee;
+}
+button.primary.accent-3 {
+  background-color: #FF230F;
+  color: white;
+}
+button.primary:hover.accent-3 {
+  background-color: #eee;
+  color: #FF230F;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  button.primary:hover.accent-3 {
+    color: #FF230F;
+    background-color: #eee;
+  }
+}
+body[dark] button.primary:hover.accent-3 {
+  color: #FF230F;
+  background-color: #eee;
+}
+button.primary.accent-4 {
+  background-color: #FB9902;
+  color: white;
+}
+button.primary:hover.accent-4 {
+  background-color: #eee;
+  color: #FB9902;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  button.primary:hover.accent-4 {
+    color: #FB9902;
+    background-color: #eee;
+  }
+}
+body[dark] button.primary:hover.accent-4 {
+  color: #FB9902;
+  background-color: #eee;
+}
+button.tertiary {
+  border: 0;
+}
+
+input[type=button] {
+  border: 1px solid currentColor;
+  color: currentColor;
+  background-color: transparent;
+}
+input[type=button]:hover {
+  border-color: transparent;
+  color: #333;
+  background-color: #eee;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=button]:hover {
+    color: #333;
+    background-color: #eee;
+  }
+}
+body[dark] input[type=button]:hover {
+  color: #333;
+  background-color: #eee;
+}
+input[type=button].accent-1 {
+  border-color: #BBE524;
+  color: #BBE524;
+}
+input[type=button]:hover.accent-1 {
+  border-color: transparent;
+  background-color: #BBE524;
+  color: black;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=button]:hover.accent-1 {
+    color: black;
+    background-color: #BBE524;
+  }
+}
+body[dark] input[type=button]:hover.accent-1 {
+  color: black;
+  background-color: #BBE524;
+}
+input[type=button].accent-2 {
+  border-color: #2682A6;
+  color: #2682A6;
+}
+input[type=button]:hover.accent-2 {
+  border-color: transparent;
+  background-color: #2682A6;
+  color: black;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=button]:hover.accent-2 {
+    color: black;
+    background-color: #2682A6;
+  }
+}
+body[dark] input[type=button]:hover.accent-2 {
+  color: black;
+  background-color: #2682A6;
+}
+input[type=button].accent-3 {
+  border-color: #FF230F;
+  color: #FF230F;
+}
+input[type=button]:hover.accent-3 {
+  border-color: transparent;
+  background-color: #FF230F;
+  color: white;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=button]:hover.accent-3 {
+    color: white;
+    background-color: #FF230F;
+  }
+}
+body[dark] input[type=button]:hover.accent-3 {
+  color: white;
+  background-color: #FF230F;
+}
+input[type=button].accent-4 {
+  border-color: #FB9902;
+  color: #FB9902;
+}
+input[type=button]:hover.accent-4 {
+  border-color: transparent;
+  background-color: #FB9902;
+  color: white;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=button]:hover.accent-4 {
+    color: white;
+    background-color: #FB9902;
+  }
+}
+body[dark] input[type=button]:hover.accent-4 {
+  color: white;
+  background-color: #FB9902;
+}
+input[type=button].primary {
+  background-color: #333;
+  color: #eee;
+  border: 0;
+}
+input[type=button].primary.accent-1 {
+  background-color: #BBE524;
+  color: black;
+}
+input[type=button].primary:hover.accent-1 {
+  background-color: #eee;
+  color: #BBE524;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=button].primary:hover.accent-1 {
+    color: #BBE524;
+    background-color: #eee;
+  }
+}
+body[dark] input[type=button].primary:hover.accent-1 {
+  color: #BBE524;
+  background-color: #eee;
+}
+input[type=button].primary.accent-2 {
+  background-color: #2682A6;
+  color: black;
+}
+input[type=button].primary:hover.accent-2 {
+  background-color: #eee;
+  color: #2682A6;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=button].primary:hover.accent-2 {
+    color: #2682A6;
+    background-color: #eee;
+  }
+}
+body[dark] input[type=button].primary:hover.accent-2 {
+  color: #2682A6;
+  background-color: #eee;
+}
+input[type=button].primary.accent-3 {
+  background-color: #FF230F;
+  color: white;
+}
+input[type=button].primary:hover.accent-3 {
+  background-color: #eee;
+  color: #FF230F;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=button].primary:hover.accent-3 {
+    color: #FF230F;
+    background-color: #eee;
+  }
+}
+body[dark] input[type=button].primary:hover.accent-3 {
+  color: #FF230F;
+  background-color: #eee;
+}
+input[type=button].primary.accent-4 {
+  background-color: #FB9902;
+  color: white;
+}
+input[type=button].primary:hover.accent-4 {
+  background-color: #eee;
+  color: #FB9902;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=button].primary:hover.accent-4 {
+    color: #FB9902;
+    background-color: #eee;
+  }
+}
+body[dark] input[type=button].primary:hover.accent-4 {
+  color: #FB9902;
+  background-color: #eee;
+}
+input[type=button].tertiary {
+  border: 0;
+}
+
+input[type=submit] {
+  border: 0;
+  color: currentColor;
+  background-color: #333;
+}
+input[type=submit]:hover {
+  border-color: transparent;
+  color: #333;
+  background-color: #eee;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=submit]:hover {
+    color: #333;
+    background-color: #eee;
+  }
+}
+body[dark] input[type=submit]:hover {
+  color: #333;
+  background-color: #eee;
+}
+input[type=submit].accent-1 {
+  background-color: #BBE524;
+  color: black;
+}
+input[type=submit]:hover.accent-1 {
+  background-color: #eee;
+  color: #BBE524;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=submit]:hover.accent-1 {
+    color: #BBE524;
+    background-color: #eee;
+  }
+}
+body[dark] input[type=submit]:hover.accent-1 {
+  color: #BBE524;
+  background-color: #eee;
+}
+input[type=submit].accent-2 {
+  background-color: #2682A6;
+  color: black;
+}
+input[type=submit]:hover.accent-2 {
+  background-color: #eee;
+  color: #2682A6;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=submit]:hover.accent-2 {
+    color: #2682A6;
+    background-color: #eee;
+  }
+}
+body[dark] input[type=submit]:hover.accent-2 {
+  color: #2682A6;
+  background-color: #eee;
+}
+input[type=submit].accent-3 {
+  background-color: #FF230F;
+  color: white;
+}
+input[type=submit]:hover.accent-3 {
+  background-color: #eee;
+  color: #FF230F;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=submit]:hover.accent-3 {
+    color: #FF230F;
+    background-color: #eee;
+  }
+}
+body[dark] input[type=submit]:hover.accent-3 {
+  color: #FF230F;
+  background-color: #eee;
+}
+input[type=submit].accent-4 {
+  background-color: #FB9902;
+  color: white;
+}
+input[type=submit]:hover.accent-4 {
+  background-color: #eee;
+  color: #FB9902;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=submit]:hover.accent-4 {
+    color: #FB9902;
+    background-color: #eee;
+  }
+}
+body[dark] input[type=submit]:hover.accent-4 {
+  color: #FB9902;
+  background-color: #eee;
+}
+input[type=submit].secondary {
+  border: 1px solid currentColor;
+  color: currentColor;
+  background-color: transparent;
+}
+input[type=submit].secondary:hover {
+  border-color: transparent;
+  color: #333;
+  background-color: #eee;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=submit].secondary:hover {
+    color: #333;
+    background-color: #eee;
+  }
+}
+body[dark] input[type=submit].secondary:hover {
+  color: #333;
+  background-color: #eee;
+}
+input[type=submit].secondary.accent-1 {
+  border-color: #BBE524;
+  color: #BBE524;
+}
+input[type=submit].secondary:hover.accent-1 {
+  border-color: transparent;
+  background-color: #BBE524;
+  color: black;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=submit].secondary:hover.accent-1 {
+    color: black;
+    background-color: #BBE524;
+  }
+}
+body[dark] input[type=submit].secondary:hover.accent-1 {
+  color: black;
+  background-color: #BBE524;
+}
+input[type=submit].secondary.accent-2 {
+  border-color: #2682A6;
+  color: #2682A6;
+}
+input[type=submit].secondary:hover.accent-2 {
+  border-color: transparent;
+  background-color: #2682A6;
+  color: black;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=submit].secondary:hover.accent-2 {
+    color: black;
+    background-color: #2682A6;
+  }
+}
+body[dark] input[type=submit].secondary:hover.accent-2 {
+  color: black;
+  background-color: #2682A6;
+}
+input[type=submit].secondary.accent-3 {
+  border-color: #FF230F;
+  color: #FF230F;
+}
+input[type=submit].secondary:hover.accent-3 {
+  border-color: transparent;
+  background-color: #FF230F;
+  color: white;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=submit].secondary:hover.accent-3 {
+    color: white;
+    background-color: #FF230F;
+  }
+}
+body[dark] input[type=submit].secondary:hover.accent-3 {
+  color: white;
+  background-color: #FF230F;
+}
+input[type=submit].secondary.accent-4 {
+  border-color: #FB9902;
+  color: #FB9902;
+}
+input[type=submit].secondary:hover.accent-4 {
+  border-color: transparent;
+  background-color: #FB9902;
+  color: white;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=submit].secondary:hover.accent-4 {
+    color: white;
+    background-color: #FB9902;
+  }
+}
+body[dark] input[type=submit].secondary:hover.accent-4 {
+  color: white;
+  background-color: #FB9902;
+}
+input[type=submit].tertiary {
+  border: 0;
+  color: currentColor;
+  background-color: transparent;
+}
+input[type=submit].tertiary:hover {
+  border-color: transparent;
+  color: #333;
+  background-color: #eee;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=submit].tertiary:hover {
+    color: #333;
+    background-color: #eee;
+  }
+}
+body[dark] input[type=submit].tertiary:hover {
+  color: #333;
+  background-color: #eee;
+}
+input[type=submit].tertiary.accent-1 {
+  border-color: #BBE524;
+  color: #BBE524;
+}
+input[type=submit].tertiary:hover.accent-1 {
+  border-color: transparent;
+  background-color: #BBE524;
+  color: black;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=submit].tertiary:hover.accent-1 {
+    color: black;
+    background-color: #BBE524;
+  }
+}
+body[dark] input[type=submit].tertiary:hover.accent-1 {
+  color: black;
+  background-color: #BBE524;
+}
+input[type=submit].tertiary.accent-2 {
+  border-color: #2682A6;
+  color: #2682A6;
+}
+input[type=submit].tertiary:hover.accent-2 {
+  border-color: transparent;
+  background-color: #2682A6;
+  color: black;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=submit].tertiary:hover.accent-2 {
+    color: black;
+    background-color: #2682A6;
+  }
+}
+body[dark] input[type=submit].tertiary:hover.accent-2 {
+  color: black;
+  background-color: #2682A6;
+}
+input[type=submit].tertiary.accent-3 {
+  border-color: #FF230F;
+  color: #FF230F;
+}
+input[type=submit].tertiary:hover.accent-3 {
+  border-color: transparent;
+  background-color: #FF230F;
+  color: white;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=submit].tertiary:hover.accent-3 {
+    color: white;
+    background-color: #FF230F;
+  }
+}
+body[dark] input[type=submit].tertiary:hover.accent-3 {
+  color: white;
+  background-color: #FF230F;
+}
+input[type=submit].tertiary.accent-4 {
+  border-color: #FB9902;
+  color: #FB9902;
+}
+input[type=submit].tertiary:hover.accent-4 {
+  border-color: transparent;
+  background-color: #FB9902;
+  color: white;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=submit].tertiary:hover.accent-4 {
+    color: white;
+    background-color: #FB9902;
+  }
+}
+body[dark] input[type=submit].tertiary:hover.accent-4 {
+  color: white;
+  background-color: #FB9902;
+}
+
+input[type=reset] {
+  border: 0;
+  color: white;
+  background-color: #FF230F;
+}
+input[type=reset]:hover {
+  border-color: transparent;
+  color: #FF230F;
+  background-color: #eee;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=reset]:hover {
+    color: #FF230F;
+    background-color: #eee;
+  }
+}
+body[dark] input[type=reset]:hover {
+  color: #FF230F;
+  background-color: #eee;
+}
+input[type=reset].accent-1 {
+  background-color: #BBE524;
+  color: black;
+}
+input[type=reset]:hover.accent-1 {
+  background-color: #eee;
+  color: #BBE524;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=reset]:hover.accent-1 {
+    color: #BBE524;
+    background-color: #eee;
+  }
+}
+body[dark] input[type=reset]:hover.accent-1 {
+  color: #BBE524;
+  background-color: #eee;
+}
+input[type=reset].accent-2 {
+  background-color: #2682A6;
+  color: black;
+}
+input[type=reset]:hover.accent-2 {
+  background-color: #eee;
+  color: #2682A6;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=reset]:hover.accent-2 {
+    color: #2682A6;
+    background-color: #eee;
+  }
+}
+body[dark] input[type=reset]:hover.accent-2 {
+  color: #2682A6;
+  background-color: #eee;
+}
+input[type=reset].accent-3 {
+  background-color: #FF230F;
+  color: white;
+}
+input[type=reset]:hover.accent-3 {
+  background-color: #eee;
+  color: #FF230F;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=reset]:hover.accent-3 {
+    color: #FF230F;
+    background-color: #eee;
+  }
+}
+body[dark] input[type=reset]:hover.accent-3 {
+  color: #FF230F;
+  background-color: #eee;
+}
+input[type=reset].accent-4 {
+  background-color: #FB9902;
+  color: white;
+}
+input[type=reset]:hover.accent-4 {
+  background-color: #eee;
+  color: #FB9902;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=reset]:hover.accent-4 {
+    color: #FB9902;
+    background-color: #eee;
+  }
+}
+body[dark] input[type=reset]:hover.accent-4 {
+  color: #FB9902;
+  background-color: #eee;
+}
+input[type=reset].secondary {
+  border: 1px solid #FF230F;
+  color: #FF230F;
+  background-color: transparent;
+}
+input[type=reset].secondary:hover {
+  border-color: transparent;
+  color: #333;
+  background-color: #FF230F;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=reset].secondary:hover {
+    color: #333;
+    background-color: #FF230F;
+  }
+}
+body[dark] input[type=reset].secondary:hover {
+  color: #333;
+  background-color: #FF230F;
+}
+input[type=reset].secondary.accent-1 {
+  border-color: #BBE524;
+  color: #BBE524;
+}
+input[type=reset].secondary:hover.accent-1 {
+  border-color: transparent;
+  background-color: #BBE524;
+  color: black;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=reset].secondary:hover.accent-1 {
+    color: black;
+    background-color: #BBE524;
+  }
+}
+body[dark] input[type=reset].secondary:hover.accent-1 {
+  color: black;
+  background-color: #BBE524;
+}
+input[type=reset].secondary.accent-2 {
+  border-color: #2682A6;
+  color: #2682A6;
+}
+input[type=reset].secondary:hover.accent-2 {
+  border-color: transparent;
+  background-color: #2682A6;
+  color: black;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=reset].secondary:hover.accent-2 {
+    color: black;
+    background-color: #2682A6;
+  }
+}
+body[dark] input[type=reset].secondary:hover.accent-2 {
+  color: black;
+  background-color: #2682A6;
+}
+input[type=reset].secondary.accent-3 {
+  border-color: #FF230F;
+  color: #FF230F;
+}
+input[type=reset].secondary:hover.accent-3 {
+  border-color: transparent;
+  background-color: #FF230F;
+  color: white;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=reset].secondary:hover.accent-3 {
+    color: white;
+    background-color: #FF230F;
+  }
+}
+body[dark] input[type=reset].secondary:hover.accent-3 {
+  color: white;
+  background-color: #FF230F;
+}
+input[type=reset].secondary.accent-4 {
+  border-color: #FB9902;
+  color: #FB9902;
+}
+input[type=reset].secondary:hover.accent-4 {
+  border-color: transparent;
+  background-color: #FB9902;
+  color: white;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=reset].secondary:hover.accent-4 {
+    color: white;
+    background-color: #FB9902;
+  }
+}
+body[dark] input[type=reset].secondary:hover.accent-4 {
+  color: white;
+  background-color: #FB9902;
+}
+input[type=reset].tertiary {
+  border: 0;
+  color: #FF230F;
+  background-color: transparent;
+}
+input[type=reset].tertiary:hover {
+  border-color: transparent;
+  color: #333;
+  background-color: #FF230F;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=reset].tertiary:hover {
+    color: #333;
+    background-color: #FF230F;
+  }
+}
+body[dark] input[type=reset].tertiary:hover {
+  color: #333;
+  background-color: #FF230F;
+}
+input[type=reset].tertiary.accent-1 {
+  border-color: #BBE524;
+  color: #BBE524;
+}
+input[type=reset].tertiary:hover.accent-1 {
+  border-color: transparent;
+  background-color: #BBE524;
+  color: black;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=reset].tertiary:hover.accent-1 {
+    color: black;
+    background-color: #BBE524;
+  }
+}
+body[dark] input[type=reset].tertiary:hover.accent-1 {
+  color: black;
+  background-color: #BBE524;
+}
+input[type=reset].tertiary.accent-2 {
+  border-color: #2682A6;
+  color: #2682A6;
+}
+input[type=reset].tertiary:hover.accent-2 {
+  border-color: transparent;
+  background-color: #2682A6;
+  color: black;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=reset].tertiary:hover.accent-2 {
+    color: black;
+    background-color: #2682A6;
+  }
+}
+body[dark] input[type=reset].tertiary:hover.accent-2 {
+  color: black;
+  background-color: #2682A6;
+}
+input[type=reset].tertiary.accent-3 {
+  border-color: #FF230F;
+  color: #FF230F;
+}
+input[type=reset].tertiary:hover.accent-3 {
+  border-color: transparent;
+  background-color: #FF230F;
+  color: white;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=reset].tertiary:hover.accent-3 {
+    color: white;
+    background-color: #FF230F;
+  }
+}
+body[dark] input[type=reset].tertiary:hover.accent-3 {
+  color: white;
+  background-color: #FF230F;
+}
+input[type=reset].tertiary.accent-4 {
+  border-color: #FB9902;
+  color: #FB9902;
+}
+input[type=reset].tertiary:hover.accent-4 {
+  border-color: transparent;
+  background-color: #FB9902;
+  color: white;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  input[type=reset].tertiary:hover.accent-4 {
+    color: white;
+    background-color: #FB9902;
+  }
+}
+body[dark] input[type=reset].tertiary:hover.accent-4 {
+  color: white;
+  background-color: #FB9902;
+}
+
+.button {
+  border: 1px solid currentColor;
+  color: currentColor;
+  background-color: transparent;
+}
+.button:link, .button:visited {
+  color: #eee;
+}
+.button:hover, .button:active {
+  background-color: #eee;
+  color: #333;
+}
+.button:hover {
+  border-color: transparent;
+  color: #333;
+  background-color: #eee;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  .button:hover {
+    color: #333;
+    background-color: #eee;
+  }
+}
+body[dark] .button:hover {
+  color: #333;
+  background-color: #eee;
+}
+.button.accent-1 {
+  border-color: #BBE524;
+  color: #BBE524;
+}
+.button:hover.accent-1 {
+  border-color: transparent;
+  background-color: #BBE524;
+  color: black;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  .button:hover.accent-1 {
+    color: black;
+    background-color: #BBE524;
+  }
+}
+body[dark] .button:hover.accent-1 {
+  color: black;
+  background-color: #BBE524;
+}
+.button.accent-2 {
+  border-color: #2682A6;
+  color: #2682A6;
+}
+.button:hover.accent-2 {
+  border-color: transparent;
+  background-color: #2682A6;
+  color: black;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  .button:hover.accent-2 {
+    color: black;
+    background-color: #2682A6;
+  }
+}
+body[dark] .button:hover.accent-2 {
+  color: black;
+  background-color: #2682A6;
+}
+.button.accent-3 {
+  border-color: #FF230F;
+  color: #FF230F;
+}
+.button:hover.accent-3 {
+  border-color: transparent;
+  background-color: #FF230F;
+  color: white;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  .button:hover.accent-3 {
+    color: white;
+    background-color: #FF230F;
+  }
+}
+body[dark] .button:hover.accent-3 {
+  color: white;
+  background-color: #FF230F;
+}
+.button.accent-4 {
+  border-color: #FB9902;
+  color: #FB9902;
+}
+.button:hover.accent-4 {
+  border-color: transparent;
+  background-color: #FB9902;
+  color: white;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  .button:hover.accent-4 {
+    color: white;
+    background-color: #FB9902;
+  }
+}
+body[dark] .button:hover.accent-4 {
+  color: white;
+  background-color: #FB9902;
+}
+.button.primary {
+  background-color: #333;
+  color: #eee;
+  border: 0;
+}
+.button.primary.accent-1 {
+  background-color: #BBE524;
+  color: black;
+}
+.button.primary:hover.accent-1 {
+  background-color: #eee;
+  color: #BBE524;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  .button.primary:hover.accent-1 {
+    color: #BBE524;
+    background-color: #eee;
+  }
+}
+body[dark] .button.primary:hover.accent-1 {
+  color: #BBE524;
+  background-color: #eee;
+}
+.button.primary.accent-2 {
+  background-color: #2682A6;
+  color: black;
+}
+.button.primary:hover.accent-2 {
+  background-color: #eee;
+  color: #2682A6;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  .button.primary:hover.accent-2 {
+    color: #2682A6;
+    background-color: #eee;
+  }
+}
+body[dark] .button.primary:hover.accent-2 {
+  color: #2682A6;
+  background-color: #eee;
+}
+.button.primary.accent-3 {
+  background-color: #FF230F;
+  color: white;
+}
+.button.primary:hover.accent-3 {
+  background-color: #eee;
+  color: #FF230F;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  .button.primary:hover.accent-3 {
+    color: #FF230F;
+    background-color: #eee;
+  }
+}
+body[dark] .button.primary:hover.accent-3 {
+  color: #FF230F;
+  background-color: #eee;
+}
+.button.primary.accent-4 {
+  background-color: #FB9902;
+  color: white;
+}
+.button.primary:hover.accent-4 {
+  background-color: #eee;
+  color: #FB9902;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  .button.primary:hover.accent-4 {
+    color: #FB9902;
+    background-color: #eee;
+  }
+}
+body[dark] .button.primary:hover.accent-4 {
+  color: #FB9902;
+  background-color: #eee;
+}
+.button.tertiary {
+  border: 0;
+}
+
 /*
     There are 2 variations:
     - The default, where the background color is opaque
@@ -1416,47 +2535,6 @@ body[dark] .article-brief .info {
   margin: auto 5px;
 }
 
-a.button {
-  border: 0;
-  border-radius: 5px;
-  background-color: #333;
-  padding: 10px;
-  font-family: semibold;
-  text-align: center;
-  display: inline-block;
-}
-a.button:link, a.button:visited {
-  color: #eee;
-}
-a.button:hover, a.button:active {
-  background-color: #eee;
-  color: #333;
-}
-
-.search-container {
-  width: 100%;
-  border-radius: 28px;
-  border: 2px solid #eee;
-}
-
-.search-icon {
-  margin: 7.5px 0 7.5px 7.5px;
-  height: 41px;
-  width: 41px;
-}
-
-input.search-input {
-  background-color: transparent;
-  height: 56px;
-  font-size: 41px;
-  border: 0;
-  outline: 0;
-}
-
-.search-helper-text {
-  margin-top: 5px;
-}
-
 .vbar {
   border-left: 5px solid currentColor;
   padding-left: 5px;
@@ -1493,66 +2571,6 @@ kbd {
 kbd.dark {
   background-color: #111;
   border-color: white;
-  color: white;
-}
-
-button, input[type=button], input[type=submit], input[type=reset] {
-  padding: 10px;
-  font-family: medium;
-  border-radius: 2px;
-  border: 1px solid currentColor;
-  color: currentColor;
-  background-color: transparent;
-}
-button:hover, input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
-  border-color: transparent;
-  color: white;
-  background-color: black;
-}
-@media only screen and (prefers-color-scheme: dark) {
-  button:hover, input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
-    color: #111;
-    background-color: white;
-  }
-}
-body[dark] button:hover, body[dark] input[type=button]:hover, body[dark] input[type=submit]:hover, body[dark] input[type=reset]:hover {
-  color: #111;
-  background-color: white;
-}
-button .accent-1, input[type=button] .accent-1, input[type=submit] .accent-1, input[type=reset] .accent-1 {
-  border-color: #BBE524;
-  color: #BBE524;
-}
-button:hover.accent-1, input[type=button]:hover.accent-1, input[type=submit]:hover.accent-1, input[type=reset]:hover.accent-1 {
-  border-color: transparent;
-  background-color: #BBE524;
-  color: black;
-}
-button .accent-2, input[type=button] .accent-2, input[type=submit] .accent-2, input[type=reset] .accent-2 {
-  border-color: #2682A6;
-  color: #2682A6;
-}
-button:hover.accent-2, input[type=button]:hover.accent-2, input[type=submit]:hover.accent-2, input[type=reset]:hover.accent-2 {
-  border-color: transparent;
-  background-color: #2682A6;
-  color: black;
-}
-button .accent-3, input[type=button] .accent-3, input[type=submit] .accent-3, input[type=reset] .accent-3 {
-  border-color: #FF230F;
-  color: #FF230F;
-}
-button:hover.accent-3, input[type=button]:hover.accent-3, input[type=submit]:hover.accent-3, input[type=reset]:hover.accent-3 {
-  border-color: transparent;
-  background-color: #FF230F;
-  color: white;
-}
-button .accent-4, input[type=button] .accent-4, input[type=submit] .accent-4, input[type=reset] .accent-4 {
-  border-color: #FB9902;
-  color: #FB9902;
-}
-button:hover.accent-4, input[type=button]:hover.accent-4, input[type=submit]:hover.accent-4, input[type=reset]:hover.accent-4 {
-  border-color: transparent;
-  background-color: #FB9902;
   color: white;
 }
 
