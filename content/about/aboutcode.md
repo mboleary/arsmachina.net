@@ -16,13 +16,9 @@ Since I'm a professional software developer, I write a lot of code for various p
 
 ## Github
 
-Of the code that I upload, I put it on Github mainly.
+You can find most of my code on Github.
 
 [https://github.com/mboleary](https://github.com/mboleary)
-
-I do have an older Github account that I used mainly when I was a student at the University of South Carolina.
-
-[https://github.com/nesdood007](https://github.com/nesdood007)
 
 ## Gitlab
 

@@ -1,5 +1,6 @@
 # The URL the site will be built for
-base_url = "https://arsmachina.net"
+# base_url = "https://arsmachina.net"
+base_url = "https://deadcomputersociety.com"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = false

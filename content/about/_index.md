@@ -1,6 +1,6 @@
 +++
 title="About"
-description="This page contains information about the content on ArsMachina"
+description="This page contains information about the content on this website"
 sort_by="weight"
 
 [extra]

@@ -56,7 +56,7 @@ Be careful not to bridge the gap between the 2 capacitors (?)
 
 6. Connect the battery to the controller board, then connect the flat flex cable to the power button and LED board, and attempt to turn on the tablet
 - This is what's commonly known as a "smoke test", or a test to see if something lets out the magic smoke. If nothing happens, that's a good sign.
-- Might be worth plugging the tablet's interal
+- Might be worth plugging the tablet's internal
 
 7. Make sure that the tablet is off, disconnect the batter, and reconnect the display's flat flex cable, and the touch screen controller board cable. Also take the time to tape down the wire to the board to ensure that it doesn't get ripped out accidentally.
 
@@ -68,12 +68,12 @@ Bus 001 Device 006: ID 222a:0001
 ... other devices
 ```
 
-If the touch screen doesn't work on your Pi, but you see the usb devices, you can take a longer cable and connect it to a windows computer to see if it recognises it.
+If the touch screen doesn't work on your Pi, but you see the usb devices, you can take a longer cable and connect it to a windows computer to see if it recognizes it.
 
 9. Screw down the controller board and ensure that the rest of the cables are reconnected. You may now re-assemble the tablet.
 
 ## Installing a Pi 3 into the Raspad 3
 
-Now that your raspad is properly modified to always enable the touch screen, you'll need some adapters to properly connect the pi:
+Now that your Raspad is properly modified to always enable the touch screen, you'll need some adapters to properly connect the pi:
 
 - 

@@ -22,7 +22,7 @@ The Data directory is how I include some build information into the webpage itse
 
 There are a collection of scripts that build and deploy the website.
 
-If instaling for the first time, run `init.sh`.
+If installing for the first time, run `init.sh`.
 
 To build the website, run `build.sh`.
 
@@ -32,7 +32,7 @@ To clear build artifacts, run `clean.sh`
 
 ## Other directories
 
-Most of the directories and files are pretty self-explainatory, but are listed here nonetheless.
+Most of the directories and files are pretty self-explanatory, but are listed here nonetheless.
 
 - `content` - This holds the content for the website
 

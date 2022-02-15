@@ -10,8 +10,6 @@ titlecard_text="fg-dark-color"
 hide_icons = true
 +++
 
-I am Brady O’Leary. 
+## Who am I?
 
-I write computer software, and have a proficiency in multiple programming languages. I also am a musician, whereas I played in the Carolina Band for 4 years, and write small compositions in the Linux MultiMedia Studio. My interests are largely in Computers and Music, as well as combining the two.
-
-Eventually, this will become my personal website to show off not only my personal projects, but also will feature a blog, and a collection of links to other various websites around the internet.
+My name is Brady O'Leary. I am a software engineer that currently specializes in full-stack web application development. In my off-time, you can find me listening to, writing, or playing music. I played the clarinet in a collegiate marching band for all 4 years while attending the [University of South Carolina](https://sc.edu) (Go Gamecocks!), and I write music using an open-source DAW called [LMMS](https://lmms.io).

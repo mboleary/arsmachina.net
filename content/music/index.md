@@ -15,9 +15,9 @@ I make music using the Linux Multi-Media Studio [LMMS](https://lmms.io). Even th
 
 I post some of my music online in a few places.
 
-## Soundcloud
+## SoundCloud
 
-I promise, I'm not a shitty soundcloud rapper. I update this from time to time.
+I promise, I'm not a shitty SoundCloud rapper. I update this from time to time.
 
 [https://soundcloud.com/nesdood007](https://soundcloud.com/nesdood007)
 
