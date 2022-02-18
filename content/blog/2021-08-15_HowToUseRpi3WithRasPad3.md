@@ -17,7 +17,7 @@ titlecard="bg-black fg-a1"
 
 ## Motivation
 
-About a year ago, I backed the [Raspad 3 Kickstarter](https://www.kickstarter.com/projects/raspad3/raspad-3-portable-raspberry-pipad-for-hardware-programming) because at the time, I was interested in building a linux tablet of some type. I ended up with a somewhat flaky Raspberry Pi 3 that when I first got it would segfault when booting known good SD cards that worked fine in a different Pi 3. After a while, the Pi 3 seemed to become more stable (still not sure why, though I think I dropped it at some point) and I decided that I was going to try to put this pi into the Raspad 3, despite it being specifically designed to accomodate a Pi 4. Well, I come to find out that the internal touch screen wouldn't appear in the list of USB devices, and I initially thought I had a defective product. After contacting their customer support, I learned that the controller board disables the touch screen if it detects that a screen is plugged into the Raspad by checking to see if a connection in the HDMI connector is grounded or something like that, and as a byproduct of this, the touchscreen also gets disabled if the 2nd HDMI connector isn't connected to the Pi 4.
+About a year ago, I backed the [Raspad 3 Kickstarter](https://www.kickstarter.com/projects/raspad3/raspad-3-portable-raspberry-pipad-for-hardware-programming) because at the time, I was interested in building a linux tablet of some type. I ended up with a somewhat flaky Raspberry Pi 3 that when I first got it would segfault when booting known good SD cards that worked fine in a different Pi 3. After a while, the Pi 3 seemed to become more stable (still not sure why, though I think I dropped it at some point) and I decided that I was going to try to put this pi into the Raspad 3, despite it being specifically designed to accommodate a Pi 4. Well, I come to find out that the internal touch screen wouldn't appear in the list of USB devices, and I initially thought I had a defective product. After contacting their customer support, I learned that the controller board disables the touch screen if it detects that a screen is plugged into the Raspad by checking to see if a connection in the HDMI connector is grounded or something like that, and as a byproduct of this, the touchscreen also gets disabled if the 2nd HDMI connector isn't connected to the Pi 4.
 
 ## Mitigations
 
@@ -27,7 +27,7 @@ Understandably, despite the hardware limitations, I still wanted to use an older
 
 {{ iconleft(icon="alert-octagon", class="error-color-fg", content="<b>Warning</b>") }}
 
-<p class="error-color-fg">This mod has the potential to damage your raspad and the raspberry pi. Proceeed at your own risk. I cannot take responsibility for you breaking your hardware.</p>
+<p class="error-color-fg">This mod has the potential to damage your Raspad and the raspberry pi. Proceed at your own risk. I cannot take responsibility for you breaking your hardware.</p>
 
 The mod is actually quite simple. though the forum states that there's another method to fix this, we're going to take the bodge wire approach. 
 
@@ -58,7 +58,7 @@ Be careful not to bridge the gap between the 2 capacitors (?)
 - This is what's commonly known as a "smoke test", or a test to see if something lets out the magic smoke. If nothing happens, that's a good sign.
 - Might be worth plugging the tablet's internal
 
-7. Make sure that the tablet is off, disconnect the batter, and reconnect the display's flat flex cable, and the touch screen controller board cable. Also take the time to tape down the wire to the board to ensure that it doesn't get ripped out accidentally.
+7. Make sure that the tablet is off, disconnect the battery, and reconnect the display's flat flex cable, and the touch screen controller board cable. Also take the time to tape down the wire to the board to ensure that it doesn't get ripped out accidentally.
 
 8. Reconnect the raspberry pi, and check to see if the touch screen works
 - At this point, the touch screen should be connected. On your linux system, open a terminal and run `lsusb`. You should see the following line:
