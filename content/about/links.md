@@ -38,11 +38,17 @@ These are links to some friends' websites
 
 [JRS Systems](https://jrs-s.net/) - Jim Salter's Blog
 
+## Columbia Tech Stuff
+
+[ColaHack Meetup](https://colahack.com/) - The ColaHack Meetup Group Website
+
+[Open Source South Carolina](https://www.meetup.com/Open-Source-South-Carolina/) - A group that meets monthly in the Soda City
+
 ## Related to Computing
 
 [Hacker News](https://news.ycombinator.com/) - News for Hackers
 
-[Lobsters](https://lobste.rs/) - Computing News for Lobsters
+[Lobsters](https://lobste.rs/) - Computing News for Rustaceans
 
 [Free Software Foundation](https://www.fsf.org/) - The Free Software Foundation Website
 
