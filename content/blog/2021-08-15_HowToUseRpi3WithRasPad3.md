@@ -72,8 +72,7 @@ If the touch screen doesn't work on your Pi, but you see the usb devices, you ca
 
 9. Screw down the controller board and ensure that the rest of the cables are reconnected. You may now re-assemble the tablet.
 
-## Installing a Pi 3 into the Raspad 3
+---
 
-Now that your Raspad is properly modified to always enable the touch screen, you'll need some adapters to properly connect the pi:
-
-- 
+In the next article, we'll explore a linux installation that takes advantage of the tablet form-factor.
+ 
