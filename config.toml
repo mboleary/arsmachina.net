@@ -18,9 +18,10 @@ taxonomies = [
     {name = "categories", rss = true}
 ]
 
-title = "Code made extraordinary - DeadComputerSociety.com"
+title = "The Dead Computer Society"
 [extra]
 # Put all your custom variables here
+subtitle = "Carpe codice; Sieze the code"
 author = "Brady O'Leary"
 copyright_year = 2022
 default_description = "The DeadComputerSociety is a collection of projects, music, and other media that Brady has created."
