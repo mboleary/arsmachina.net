@@ -82,14 +82,48 @@ In splitting those modules, I created NPM packages to house those features, in a
 
 ### Entity-Component System
 
-This was one of the larger changes made in the engine. This modified the structure of the engine to allow for reusable components and less boilerplate code. In short, the Modules provide Components that can be used by Entities to add features to the game. This also invloved expanding the original scripts to be descended from components.
+This was one of the larger changes made in the engine. This modified the structure of the engine to allow for reusable components and less boilerplate code. In short, the Modules provide Components that can be used by Entities to add features to the game. This also involved expanding the original scripts to be descended from components.
 
 #### Modules
 
+The modules are designed to contain all of the actual implementation of the features provided by the components, and are called into during initialization and the game loop.
+
+Taking a look at an example, the graphics module contains all of the code necessary to draw a frame to a 2D canvas. This module initializes the canvas, and contains references to all renderable components so that they can be drawn onto the canvas during the game loop so as to help optimize the process.
+
 #### Entities
+
+The Entities are called GameObjects in this engine, and serve as attachment points for components. Entities by themselves don't do much and require Components to provide some functionality.
 
 #### Components
 
+The Components add functionality to the Entities and provide a way for modules to do work each frame in terms of running the game. Examples of components include renderable components for drawing graphics to the screen, audio sources and listeners, and even custom Scripts, which allow a developer to add extra functionality and interactivity to the game being developed.
+
+Components generally rely on modules to do the actual work for implementing features in the engine, such as in the case of the 2D graphics module where a component may contain instructions on how or where to draw things to the screen, but the graphics module is the one to call back into the components and let that happen.
+
 ### Typescript conversion
 
-In working on this codebase, I discovered many bugs that were caused by having the wrong object in the wrong place, which caused many hard-to-debug issues. This was around the same time that i started to use Typescript in a different project and wanted to take the opportunity to learn more about it.
+In working on this codebase, I discovered many bugs that were caused by having the wrong object in the wrong place, which caused many hard-to-debug issues. This was around the same time that i started to use Typescript in a different project and wanted to take the opportunity to learn more about it. While there was a little bit of a learning curve at first in terms of figuring out how to deal with type errors, I've found it to be very useful in finding hard-to-track bugs that would have been a pain to find otherwise, and with the right type definitions, somewhat of an insurance policy against bugs related to passing the wrong type of object into a function and other related issues.
+
+I'm likely going to keep utilizing Typescript in other projects going forwards.
+
+## Work in Progress
+
+As mentioned above, this project has largely been refactored to follow a different pattern than it was initially built with. This has resulted in many original features being broken during this transition and also put me in a position where I would need to (still) do a lot of work to get everything reimplemented. I would go so far as to say that this is an entirely new project from the previous iteration despite sharing the same git repo and history (which by the way is [definitely worth taking a look at](https://github.com/mboleary/JsGameEngine/network) to see the evolution of the engine over the past few years).
+
+### What's done so far
+
+I've been focusing on the engine and other core modules so far, including the Asset Loader and `jsge-core` package. I also began rewriting and converting the Input Module, however that might need further changes as of the time of writing this. I also created new testing projects to use when developing and converting the old modules, with the end goal being to develop a game while also cleaning up the engine and making it more ergonomic to use.
+
+### What's left
+
+There are still some important modules that need to be converted to work with the new Module / Entity / Component system as well as be rewritten in Typescript such as the Networking module which used to provide basic multiplayer functionality using Websockets, the Graphics2D module, which while converted to work with the Entity / Component system still needs to be converted to Typescript, and the Audio module which will allow sounds and music to be played in-game.
+
+I anticipate adding some additional functionality to the Networking module to support different transport systems (such as WebRTC) in addition to Websockets, and providing a way to sync game time and gameplay across clients, but getting a working proof-of-concept is a priority.
+
+## Project Future
+
+One thing that's worth mentioning is that projects like this can snowball in complexity and amount of work needing to be done to the point where it's no longer fun to work on. I feel like this turned into that, and will need a lot of work to finish up some of the loose ends of where it was when I started the conversion to the new architecture.
+
+Given that [there are future plans to allow WwebAssembly to call Web APIs directly](https://github.com/WebAssembly/gc/blob/master/README.md), I can't say for sure where the future of the project lies since many game engines already support exporting to WASM. To me it's served its purpose in terms of being a learning project for both Web APIs and Software Architecture, and I might continue to develop parts for use in other applications. That being said, I designed this to be modular so feel free to take the parts you like and write something cool with it, or build your own engine using parts of this and other libraries out there.
+
+This project has been a good learning experience for me and, at least in the beginning, a fun project to work on. I'll put up a demo at some point for people to check out and try building with.
