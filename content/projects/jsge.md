@@ -2,7 +2,7 @@
 title = "Javascript Game Engine (JSGE)"
 description = "A modular game engine written in JS"
 
-date=2022-06-29
+date=2023-04-06
 
 draft = true
 
