@@ -122,7 +122,7 @@ I anticipate adding some additional functionality to the Networking module to su
 
 ## Project Future
 
-One thing that's worth mentioning is that projects like this can snowball in complexity and amount of work needing to be done to the point where it's no longer fun to work on. I feel like this turned into that, and will need a lot of work to finish up some of the loose ends of where it was when I started the conversion to the new architecture.
+One thing that's worth mentioning is that projects like this can snowball in complexity and amount of work needing to be done to the point where it's no longer fun to work on. While this isn't necessarily the fault of the project, I feel like this turned into that, and will need a lot of work to finish up some of the loose ends of where it was when I started the conversion to the new architecture.
 
 Given that [there are future plans to allow WwebAssembly to call Web APIs directly](https://github.com/WebAssembly/gc/blob/master/README.md), I can't say for sure where the future of the project lies since many game engines already support exporting to WASM. To me it's served its purpose in terms of being a learning project for both Web APIs and Software Architecture, and I might continue to develop parts for use in other applications. That being said, I designed this to be modular so feel free to take the parts you like and write something cool with it, or build your own engine using parts of this and other libraries out there.
 
