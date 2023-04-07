@@ -31,7 +31,7 @@ In addition, there were plans to have a way to serialize the nodes and their con
 
 ## Web Demo
 
-I ended up building a demo of this library using React. The demo visualizes connections between nodes, and allows the user to connect up these nodes in order to control where the sound goes, in addition to directly controlling some of the parameters of these nodes, such as the frequency and the start/stop playback.
+BOrk, or Browser Orchestra, is a demo of this library using React. The demo visualizes connections between nodes, and allows the user to connect up these nodes in order to control where the sound goes, in addition to directly controlling some of the parameters of these nodes, such as the frequency and the start/stop playback.
 
 {{ figure(src="/libjame/bork.png", caption="The React Webapp demo") }}
 
