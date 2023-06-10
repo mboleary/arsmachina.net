@@ -44,7 +44,7 @@ pwd
 ## Build website with Zola
 
 # Set output dir https://www.getzola.org/documentation/getting-started/cli-usage/
-zola build --output-dir .temp/deploy/public
+zola build --output-dir .temp/deploy/public --force
 
 # Fix the node modules
 cd .temp/deploy
