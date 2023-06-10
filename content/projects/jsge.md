@@ -2,9 +2,7 @@
 title = "Javascript Game Engine (JSGE)"
 description = "A modular game engine written in JS"
 
-date=2023-04-06
-
-draft = true
+date=2023-06-09
 
 [taxonomies]
 categories=["projects", "jsge"]

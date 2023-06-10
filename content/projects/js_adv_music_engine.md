@@ -2,9 +2,7 @@
 title = "Javascript Advanced Music Engine (libJAME)"
 description = "An advanced music and audio engine written in JS"
 
-date=2023-04-06
-
-draft = true
+date=2023-06-09
 
 [taxonomies]
 categories=["projects", "libjame"]
@@ -33,7 +31,7 @@ In addition, there were plans to have a way to serialize the nodes and their con
 
 BOrk, or Browser Orchestra, is a demo of this library using React. The demo visualizes connections between nodes, and allows the user to connect up these nodes in order to control where the sound goes, in addition to directly controlling some of the parameters of these nodes, such as the frequency and the start/stop playback.
 
-{{ figure(src="/libjame/bork.png", caption="The React Webapp demo") }}
+{{ figure(src="/asset/libjame/bork.png", caption="The React Webapp demo") }}
 
 ## Use in the Game Engine
 
