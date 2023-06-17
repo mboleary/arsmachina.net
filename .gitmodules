@@ -1,0 +1,3 @@
+[submodule "themes/arsmateria-zola-theme"]
+	path = themes/arsmateria-zola-theme
+	url = git@github.com:mboleary/arsmateria-zola-theme.git

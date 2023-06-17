@@ -19,6 +19,7 @@ taxonomies = [
 ]
 
 title = "The Dead Computer Society"
+theme="arsmateria-zola-theme"
 [extra]
 # Put all your custom variables here
 subtitle = "Carpe codice; Sieze the code"
