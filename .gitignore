@@ -2,7 +2,6 @@ public
 .temp
 data
 node_modules
-package-lock.json
 extern/
 .env
 public*
