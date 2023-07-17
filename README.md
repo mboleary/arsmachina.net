@@ -1,5 +1,7 @@
 # Dead Computer Society (deadcomputersociety.com)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/63f324b0-f9d6-4fff-b4a0-173bd9bd682b/deploy-status)](https://app.netlify.com/sites/dead-computer-society/deploys)
+
 (Formerly called arsmachina.net)
 
 This is a personal blog built using Zola SSG with some extra scripts. The website is hosted using gitlab pages.
