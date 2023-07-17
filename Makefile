@@ -16,4 +16,4 @@ deploy: build $(DEPLOY_FILE)
 	./script/export_netlify.sh $(DEPLOY_FILE)
 
 clean:
-	rm -rf public
+	rm -rf $(DEPLOY_FILE) $(DEPLOY_DIR)
