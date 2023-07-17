@@ -6,6 +6,9 @@ SHELL := /bin/bash
 build:
 	zola build
 
+run:
+	zola serve
+
 $(DEPLOY_FILE):
 	zip -r $(DEPLOY_FILE) $(DEPLOY_DIR)
 
