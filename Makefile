@@ -9,7 +9,7 @@ install:
 	git submodule update --init
 	mkdir -p data
 	./scripts/motd.sh "I mount my soul at /dev/null" > data/cow
-	cd ./themes/arsmateria-zola-theme && ./script/postinstall.sh
+	cd ./themes/arsmateria-zola-theme && npm i && ./script/postinstall.sh
 
 build:
 	zola build
