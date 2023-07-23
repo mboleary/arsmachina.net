@@ -3,6 +3,14 @@ DEPLOY_FILE=public.zip
 
 SHELL := /bin/bash
 
+# Setup dev environment
+install:
+	npm i
+	git submodule update --init
+	mkdir -p data
+	./scripts/motd.sh "I mount my soul at /dev/null" > data/cow
+	cd ./themes/arsmateria-zola-theme && ./script/postinstall.sh
+
 build:
 	zola build
 
