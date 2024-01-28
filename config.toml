@@ -26,3 +26,9 @@ subtitle = "Carpe codice; Sieze the code"
 author = "Brady O'Leary"
 copyright_year = 2023
 default_description = "The DeadComputerSociety is a collection of projects, music, and other media that Brady has created."
+keywords = []
+
+# Menu Config
+menu_data_path="menu.json" # Load menu data from a path
+# Tag config
+tag_data_path="menu.json" # Load menu data from a path

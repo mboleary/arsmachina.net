@@ -1,6 +1,8 @@
 DEPLOY_DIR=public
 DEPLOY_FILE=public.zip
 
+THEME_SRC="https://github.com/mboleary/arsmateria-zola-theme.git"
+
 SHELL := /bin/bash
 
 # Setup dev environment
@@ -14,7 +16,7 @@ install:
 build:
 	zola build
 
-run:
+serve:
 	zola serve
 
 $(DEPLOY_FILE):
