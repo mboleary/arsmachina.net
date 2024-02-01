@@ -4,34 +4,35 @@
 
 {% set cow = load_data(path="data/cow", format="plain") %}
 
-{% set catData = load_data(path="categories.json") %}
+{% if config.extra.cat_data_path %}
+    {% set catData = load_data(path=config.extra.cat_data_path) %}
+{% elif config.extra.cat_data %}
+    {% set catData = config.extra.cat_data %}
+{% else %}
+    {% set catData = load_data(path="data/categories.json") %}
+{% endif %}
 
 {% block head %}
 <link rel="stylesheet" type="text/css" href="/style/extra.css">
 {% endblock %}
 
-{% block headerTitleLanding %}
-<div class="flex">
-  <h1>
-      <span class="accent-1">Dead</span><br>
-      <span class="accent-2">Computer</span><br>
-      <span class="accent-3">Society</span>.com
-  </h1>
-  <p>{{ config.extra.subtitle }}</p>
-</div>
-<div data-nosnippet>
-  <code class="left gay-text">
-      {#{{ cow | safe }}#}
-  </code>
+{% block headerTitle %}
+<div class="flex-layout horizontal wrap">
+  <div class="flex">
+      <h1>
+          <a href="/" class="fg-color"><span class="accent-1">Dead</span><span class="accent-2">Computer</span><span class="accent-3">Society</span>.com</a>
+      </h1>
+  </div>
 </div>
 {% endblock %}
 
 {% block footerFront %}
+{% set cow = load_data(path="data/cow", format="plain") %}
 <div class="container full-width">
   <hr>
   <button onclick="toggleDark()">Toggle Dark mode</button>
   <div class="flex-layout horizontal center" data-nosnippet>
-      <code class="gay-text">{#{{ cow | safe }}#}</code>
+      <code class="gay-text">{{ cow | safe }}</code>
   </div>
 </div>
 {% endblock %}

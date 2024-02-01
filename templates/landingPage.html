@@ -1,1 +1,20 @@
 {% extends "arsmateria-zola-theme/templates/landingPage.html" %}
+
+{% block headerTitleLanding %}
+{% set cow = load_data(path="data/cow", format="plain") %}
+<div class="flex-layout horizontal wrap">
+    <div class="flex">
+    <h1>
+        <span class="accent-1">Dead</span><br>
+        <span class="accent-2">Computer</span><br>
+        <span class="accent-3">Society</span>.com
+    </h1>
+    <p>{{ config.extra.subtitle }}</p>
+    </div>
+    <div data-nosnippet>
+    <code class="left gay-text">
+        {{ cow | safe }}
+    </code>
+    </div>
+</div>
+{% endblock %}

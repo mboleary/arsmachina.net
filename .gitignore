@@ -1,6 +1,5 @@
 public
 .temp
-data
 node_modules
 extern/
 .env

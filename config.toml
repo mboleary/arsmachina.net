@@ -29,6 +29,6 @@ default_description = "The DeadComputerSociety is a collection of projects, musi
 keywords = []
 
 # Menu Config
-menu_data_path="menu.json" # Load menu data from a path
+menu_data_path="data/menu.json" # Load menu data from a path
 # Tag config
-tag_data_path="menu.json" # Load menu data from a path
+tag_data_path="data/tags.json" # Load menu data from a path
