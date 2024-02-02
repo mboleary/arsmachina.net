@@ -13,6 +13,10 @@ categories=["blog"]
 
 [extra]
 titlecard="bg-black fg-a1"
+[extra.card]
+image="/asset/rpi3_raspad/0.jpg"
+rowspan=2
+colspan=1
 +++
 
 ## Motivation

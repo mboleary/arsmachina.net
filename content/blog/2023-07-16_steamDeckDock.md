@@ -10,6 +10,11 @@ categories=["hardware"]
 
 [extra]
 titlecard="accent-1"
+[extra.card]
+title_class="accent-4"
+type="light"
+rowspan=1
+colspan=2
 +++
 
 Today's blog post is a small and sweet one about what devices I have that work with a Steam Deck USB-C dock. I recently bought one during the Steam Summer Sale to use with my Steam Deck. However I was curious to see what else works with it.
