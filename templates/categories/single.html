@@ -41,7 +41,7 @@
                     </span>
                     {% if page.taxonomies.tags %}
                         {% for tag in page.taxonomies.tags %}
-                            {{macros::tag(tag=tag)}}
+                            {{tags::tag(tag=tag)}}
                         {% endfor %}
                     {% endif %}
                 </div>

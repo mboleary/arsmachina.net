@@ -11,9 +11,8 @@ tags=["code", "js", "html", "audio", "music", "engine", "library", "opensource"]
 [extra]
 titlecard = "bg-gradient-a3-a4"
 titlecard_text="fg-dark-color text-shadow-dark"
+git_link = "https://github.com/mboleary/JsAdvancedMusicEngine"
 +++
-
-{{ iconleft(icon="git-branch", class="", content="<b>Engine Source Code on Github: <a href='https://github.com/mboleary/JsAdvancedMusicEngine'>https://github.com/mboleary/JsAdvancedMusicEngine</a></b>")}}
 
 {{ iconleft(icon="git-branch", class="", content="<b>Demo Source Code on Github: <a href='https://github.com/mboleary/BOrk'>https://github.com/mboleary/BOrk</a></b>")}}
 
