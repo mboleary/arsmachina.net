@@ -1,5 +1,6 @@
 +++
 title="Projects"
+description="A collection of my projects"
 
 sort_by="date"
 

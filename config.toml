@@ -20,12 +20,12 @@ taxonomies = [
 
 title = "The Dead Computer Society"
 theme = "arsmateria-zola-theme"
+author = "Brady O'Leary"
+description = "The DeadComputerSociety is a collection of projects, music, and other media that Brady has created."
 [extra]
 # Put all your custom variables here
 subtitle = "Carpe codice; Sieze the code"
-author = "Brady O'Leary"
 copyright_year = 2023
-default_description = "The DeadComputerSociety is a collection of projects, music, and other media that Brady has created."
 keywords = []
 
 # Menu Config
