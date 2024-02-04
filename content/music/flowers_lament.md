@@ -25,7 +25,13 @@ Most of the music was actually composed using Apple GarageBand, except for the f
 
 I was a part of a student organization called the Carolina Gamers' Club (CGC), which was dedicated to playing and developing games. That semester, we were divided into several groups and given the task of creating a game based on some randomly picked words.
 
-While I don't recall all of the words, I know some of them were:
+~~While I don't recall all of the words, I know some of them were~~ I found them, see link below. The words were:
+- wife
 - cancer
+- disaster
+- trainer
+
 
 I don't have a copy of the game on-hand as this was developed a long time ago.
+
+_Update:_ I FOUND IT: See [https://web.archive.org/web/20170929061410/http://web.sa.sc.edu/cgc/meetings/](https://web.archive.org/web/20170929061410/http://web.sa.sc.edu/cgc/meetings/) and scroll down
