@@ -27,6 +27,9 @@ These are links to some friends' websites
 - [Chariot Chaser](https://chariot-chaser.net/) - Philip Conrad's website
 - [Andrew Zah](https://andrewzah.com/) - Andrew Zah's website
 - [JRS Systems](https://jrs-s.net/) - Jim Salter's Blog
+- [Taylor Clingenpeel](https://taylorlcling.github.io/) - Taylor's website
+- [Regan Willis](http://reganwillis-softwaredeveloper.com/) - Regan's website
+- [Cody Shearer](https://www.cjshearer.dev/) - Cody's website
 
 ## Columbia Tech Stuff
 - [ColaHack Meetup](https://colahack.com/) - The ColaHack Meetup Group Website

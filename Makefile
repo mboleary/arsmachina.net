@@ -17,9 +17,13 @@ build:
 	zola build
 
 serve:
+	zola serve --drafts
+
+serve_prod:
 	zola serve
 
 $(DEPLOY_FILE):
+	rm -f $(DEPLOY_FILE)
 	zip -r $(DEPLOY_FILE) $(DEPLOY_DIR)
 
 deploy: build $(DEPLOY_FILE)
