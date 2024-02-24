@@ -13,6 +13,7 @@ taxonomies:
     - contest
 
 extra:
+  titlecard: bg-gradient-a2
   music_link: https://soundcloud.com/nesdood007/sets/kde-plasma-mobile-ringtone-submissions
   git_link: https://github.com/Nesdood007/kde-plasma-ringtones
 ---

@@ -20,7 +20,7 @@ These are links to some friends' websites
 - [Circle Limit](https://nglaeser.github.io/) - Noemi Glaser
 - [Clay's Code](https://www.clayscode.com/) - Clay Norris
 - [Jeremy Day's Blog](https://jaday.io/) - Jeremy Day
-- [Joshua Nelson's Blog](https://jyn514.github.io/) - Joshua Nelson
+- [Jynn Nelson's Blog](https://jyn514.github.io/) - Jynn Nelson
 - [Kelevra](https://kelevra.io/) - Kevin Madison
 - [The Spicy Stew](http://thespicystew.com/) - Kenny Johnson
 - [Justin Baum's Personal Website](https://justinba1010.github.io/) - Justin Baum

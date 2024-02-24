@@ -1,12 +1,11 @@
-+++
-title="Photo Album"
-description="Pictures I've taken"
+---
+title: Photo Album
+description: Pictures I've taken
 
-[extra]
-titlecard="bg-gradient-a3-a4"
-titlecard_text="fg-dark-color"
-type="bg-a2-a4"
-+++
+extra:
+  titlecard: bg-gradient-a3-a4
+  titlecard_text: fg-dark-color
+---
 
 # Photo Album
 

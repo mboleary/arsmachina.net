@@ -12,6 +12,9 @@ taxonomies:
 weight: 0
 
 extra:
+  titlecard: img
+  titlecard_text: fg-dark-color text-shadow-dark
+  titlecard_image: /asset/music/escape_ost_bg.png
   music_link: https://soundcloud.com/nesdood007/sets/escape-ost
   see_also:
     - projects/p3.md
