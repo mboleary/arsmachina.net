@@ -1,9 +1,7 @@
 ---
 title: Typescript Game Engine
 description: A continuation of JSGE
-date: 2025-04-02
-
-draft: true
+date: 2025-04-04
 
 taxonomies:
   tags:
@@ -25,7 +23,7 @@ extra:
 
 This project was a continuation of [JsGameEngine](@/projects/jsge.md) in an effort to start from scratch in Typescript and fix the issues present in the archetectual design of that project. There were some good ideas present here, including the modular archetecture allowing for different libraries and web standards to be used, and the code separation which would allow the game to be run on different Javascript runtines, such as the browser and NodeJS. This project is one of my first ones to include unit tests as a part of the initial development, which has helped to find bugs at the library level that would otherwise be hard to trace in such a big project.
 
-See [So about that game engine...](@/blog/2025-04-02_game_engine.md) for more information on one of its first demos.
+See [So about that game engine...](@/blog/2025-04-04_game_engine.md) for more information on one of its first demos.
 
 ## Framework
 

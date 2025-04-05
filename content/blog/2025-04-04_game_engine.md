@@ -1,9 +1,7 @@
 ---
 title: So about that game engine...
 description: The framework makes the game work
-date: 2025-04-02
-
-draft: true
+date: 2025-04-04
 
 taxonomies:
   tags:
