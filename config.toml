@@ -5,9 +5,7 @@ base_url = "https://deadcomputersociety.com"
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
 
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = true
+
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
@@ -22,6 +20,13 @@ title = "The Dead Computer Society"
 theme = "arsmateria-zola-theme"
 author = "Brady O'Leary"
 description = "The DeadComputerSociety is a collection of projects, music, and other media that Brady has created."
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+bottom_footnotes = true
+
 [extra]
 # Put all your custom variables here
 subtitle = "Carpe codice; Sieze the code"
