@@ -1,0 +1,28 @@
+<!-- Additional Macros (Shortcodes for Templates) -->
+
+{% macro category(name) %}
+    <a href="/categories/{{name}}">{{name}}</a>
+{% endmacro %}
+
+{% macro categoryBlock(cat) %}
+    {% if catData[cat] %}
+        {% set localCat = catData[cat] %}
+        <a href="/categories/{{cat}}">
+            <div class="content-square fg-color flex-layout horizontal center {% if localCat.class %} {{localCat.class}}{% endif %}" {% if localCat.fgColor or localCat.bgColor %}style="{% if localCat.fgColor %}color:{{localCat.fgColor}};{% endif %}{% if localCat.bgColor %}background-color:{{localCat.bgColor}};{% endif %}"{% endif %}>
+                <div class="flex text-center">
+                    <h2>{% if localCat.title %}{{localCat.title}}{% else %}{{cat}}{% endif %}</h2>
+                    <p>{% if localCat.description %}{{localCat.description}}{% endif %}</p>
+                </div>
+            </div>
+        </a>
+    {% else %}
+        <!-- This cat isn't in category.json! -->
+        <a href="/categories/{{cat}}">
+            <div class="content-square fg-color flex-layout horizontal center">
+                <div class="flex text-center">
+                    <h2>{{cat}}</h2>
+                </div>
+            </div>
+        </a>
+    {% endif %}
+{% endmacro categoryBlock %}

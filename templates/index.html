@@ -1,5 +1,34 @@
 {% extends "arsmateria-zola-theme/templates/index.html" %}
 
+{% import "extraMacros.html" as extraMacros %}
+
+{% set cow = load_data(path="data/cow", format="plain") %}
+
+{% if config.extra.cat_data_path %}
+    {% set catData = load_data(path=config.extra.cat_data_path) %}
+{% elif config.extra.cat_data %}
+    {% set catData = config.extra.cat_data %}
+{% else %}
+    {% set catData = load_data(path="data/categories.json") %}
+{% endif %}
+
 {% block head %}
 <link rel="stylesheet" type="text/css" href="/style/extra.css">
+{% endblock %}
+
+{% block headerTitle %}
+<b>
+    <span class="accent-1">Dead</span><span class="accent-2">Computer</span><span class="accent-3">Society</span>.com
+</b>
+{% endblock %}
+
+{% block footerFront %}
+{% set cow = load_data(path="data/cow", format="plain") %}
+<div class="container full-width">
+  <hr>
+  <button onclick="toggleDark()">Toggle Dark mode</button>
+  <div class="flex-layout horizontal center" data-nosnippet>
+      <code class="gay-text">{{ cow | safe }}</code>
+  </div>
+</div>
 {% endblock %}

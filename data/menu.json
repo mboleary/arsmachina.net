@@ -1,12 +1,6 @@
 {
     "topMenu": [
         {
-            "name": "Home",
-            "url": "/",
-            "class":"accent-3",
-            "children": []
-        },
-        {
             "name": "Blog",
             "url": "/blog",
             "class":"",

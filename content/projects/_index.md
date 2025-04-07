@@ -1,10 +1,10 @@
 +++
 title="Projects"
+description="A collection of my projects"
 
 sort_by="date"
 
 [extra]
-titlecard="bg-dark-color"
 titlecard_text="fg-gradient-a2"
 type="flashcard"
 +++

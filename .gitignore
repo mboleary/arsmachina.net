@@ -1,7 +1,7 @@
 public
 .temp
-data
 node_modules
 extern/
 .env
-public*
+**/processed_images/*
+public.zip

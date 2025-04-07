@@ -20,13 +20,16 @@ These are links to some friends' websites
 - [Circle Limit](https://nglaeser.github.io/) - Noemi Glaser
 - [Clay's Code](https://www.clayscode.com/) - Clay Norris
 - [Jeremy Day's Blog](https://jaday.io/) - Jeremy Day
-- [Joshua Nelson's Blog](https://jyn514.github.io/) - Joshua Nelson
+- [Jynn Nelson's Blog](https://jyn514.github.io/) - Jynn Nelson
 - [Kelevra](https://kelevra.io/) - Kevin Madison
 - [The Spicy Stew](http://thespicystew.com/) - Kenny Johnson
 - [Justin Baum's Personal Website](https://justinba1010.github.io/) - Justin Baum
 - [Chariot Chaser](https://chariot-chaser.net/) - Philip Conrad's website
 - [Andrew Zah](https://andrewzah.com/) - Andrew Zah's website
 - [JRS Systems](https://jrs-s.net/) - Jim Salter's Blog
+- [Taylor Clingenpeel](https://taylorlcling.github.io/) - Taylor's website
+- [Regan Willis](http://reganwillis-softwaredeveloper.com/) - Regan's website
+- [Cody Shearer](https://www.cjshearer.dev/) - Cody's website
 
 ## Columbia Tech Stuff
 - [ColaHack Meetup](https://colahack.com/) - The ColaHack Meetup Group Website

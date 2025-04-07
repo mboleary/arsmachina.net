@@ -11,10 +11,9 @@ tags=["code", "js", "mandelbrot", "canvas"]
 [extra]
 titlecard = "img"
 titlecard_text="fg-dark-color text-shadow-dark"
-img = "/asset/mandelbrot.png"
+titlecard_image = "/asset/mandelbrot.png"
+git_link = "https://github.com/mboleary/fractals-canvas"
 +++
-
-{{ iconleft(icon="git-branch", class="", content="<b>Source Code on Github: <a href='https://github.com/mboleary/fractals-canvas'>https://github.com/mboleary/fractals-canvas</a></b>")}}
 
 {{ iconleft(icon="link", class="", content="<b><a href='/extern/fractals-canvas'>Go here to see it in action</a></b>")}}
 

@@ -2,6 +2,8 @@
 title="Music"
 description="A Collection of Music that I've made"
 
+sort_by="weight"
+
 [extra]
 titlecard="bg-gradient-a3"
 titlecard_text="fg-dark-color"
